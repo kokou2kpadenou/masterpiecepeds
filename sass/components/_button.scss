@@ -1,0 +1,33 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__link {
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid $color-white;
+    padding: .8rem 6rem;
+    font-size: 2rem;
+    position: relative;
+    @include transition(all .3s);
+    cursor: pointer;
+
+    &:link,
+    &:visited {
+      color: $color-white;
+    }
+
+    &:hover {
+      @include transform(scale(1.1));
+      background-color: $color-white;
+      color: $color-primary;
+    }
+
+    &:active {
+      @include transform(scale(1.05));
+      background-color: $color-white;
+      color: $color-primary;
+    }
+  }
+
+}

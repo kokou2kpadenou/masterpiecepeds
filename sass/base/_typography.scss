@@ -1,0 +1,32 @@
+/* ********** Body ********** */
+body {
+  font-family: 'Lato', sans-serif;
+  color: $color-white;
+  font-size: 1.6rem;
+
+}
+
+
+/* ********** Headings ********** */
+.heading {
+  font-family: 'Dancing Script', cursive;
+  &--1 {
+    font-size: 6rem;
+    margin: 2rem 0 .5rem 0;
+  }
+
+  &--2 {
+    font-size: 4.5rem;
+    margin: 2rem 0 .5rem 0;
+  }
+
+  &--3 {
+    font-size: 1.8rem;
+    margin: 1.2rem 0;
+  }
+}
+
+/* ********** Paragraphs ********** */
+.paragraph {
+  font-size: 2rem;
+}
