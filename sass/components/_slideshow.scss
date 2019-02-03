@@ -1,0 +1,115 @@
+.slideshow {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &__radio {
+    display: none;
+  }
+
+  &__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -5;
+    opacity: 0;
+    transition: all 1.3s;
+    &__content {
+      width: inherit;
+      height: inherit;
+      & > * {
+        width: inherit;
+        height: inherit;
+      }
+    }
+  }
+
+
+
+  #ind1:checked ~ #one,
+  #ind2:checked ~ #two,
+  #ind3:checked ~ #three,
+  #ind4:checked ~ #four {
+    z-index: -4;
+    opacity: 1;
+  }
+
+
+  // #ind1:checked ~ .slideshow__content {
+  //   background-image: url("../images/slideshow-1.jpg"),
+  //                     url("../images/slideshow-2.jpg"),
+  //                     url("../images/slideshow-3.jpg"),
+  //                     url("../images/slideshow-4.jpg");
+  //
+  //  }
+  // #ind2:checked ~ .slideshow__content { background-image: url("../images/slideshow-2.jpg"); }
+  // #ind3:checked ~ .slideshow__content { background-image: url("../images/slideshow-3.jpg"); }
+  // #ind4:checked ~ .slideshow__content { background-image: url("../images/slideshow-4.jpg"); }
+
+
+
+  #ind1:checked ~ .slideshow__nav #nav-btn1 { background-color: #795548; transform: scale(1.5);}
+  #ind2:checked ~ .slideshow__nav #nav-btn2 { background-color: #2196F3; transform: scale(1.5);}
+  #ind3:checked ~ .slideshow__nav #nav-btn3 { background-color: #4CAF50; transform: scale(1.5);}
+  #ind4:checked ~ .slideshow__nav #nav-btn4 { background-color: #F44336; transform: scale(1.5);}
+
+
+  &__content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-gray-1;
+    background-size: cover;
+    background-position: center;
+    transition: background-image .4s;
+  }
+
+  &__nav {
+    position: absolute;
+    top: 50%;
+    left: 4rem;
+    width: 25rem;
+    text-align: center;
+    transform: translateY(-50%);
+
+
+    @include responsive(phone) {
+      left: 50%;
+      transform: translate(-50%, 0);
+      top: 90%;
+    }
+
+    &__btn {
+      display: block;
+      width: 2rem;
+      height: 2rem;
+      margin: 1.5rem 1.5rem;
+      border-radius: 100%;
+      cursor: pointer;
+      transition: all .4s;
+      background-color: $color-white-dark;
+      box-shadow: 0 1rem 3rem $color-gray-1;
+      z-index: 1000;
+
+      @media only screen and (hover: hover) {
+        &:hover {
+          transform: scale(1.5);
+        }
+      }
+
+      @include responsive(phone) {
+        display: inline-block;
+      }
+    }
+
+    @media only screen and (hover: hover) {
+      #nav-btn1:hover { background-color: #795548; }
+      #nav-btn2:hover { background-color: #2196F3; }
+      #nav-btn3:hover { background-color: #4CAF50; }
+      #nav-btn4:hover { background-color: #F44336; }
+    }
+
+
+  }
+}

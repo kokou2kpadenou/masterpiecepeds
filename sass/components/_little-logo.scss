@@ -1,0 +1,22 @@
+.little-logo {
+  display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+  font-family: 'Galindo', cursive;
+
+  @include responsive(phone) {
+    // font-size: 2rem;
+    align-items: flex-start;
+  }
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: $color-white;
+  }
+
+  &__img {
+    width: 3rem;
+    height: 3rem;
+  }
+
+}

@@ -1,0 +1,38 @@
+.card {
+  width: 26rem;
+  background-color: $color-primary;
+  color: $color-white-dark;
+  box-shadow: 6px 6px 4px $color-gray-1;
+  text-align: center;
+  padding-bottom: 2rem;
+
+  &__img {
+    width: 100%;
+    overflow: hidden;
+    &__src {
+      width: 100%;
+      transition: transform .4s;
+    }
+  }
+
+  &__name {
+    font-family: 'Noto Serif', serif;
+    font-size: 2.2rem;
+    margin: 1.8rem 0 .5rem 0;
+  }
+
+  &__title {
+    font-size: 1.2rem;
+  }
+
+
+  &:hover .card__img__src {
+    transform: scale(1.08);
+  }
+  &:hover {
+    background-color: $color-primary-ligth;
+    color: $color-white;
+  }
+
+
+}

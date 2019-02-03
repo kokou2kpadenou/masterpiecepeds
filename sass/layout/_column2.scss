@@ -1,0 +1,31 @@
+.col2 {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
+  @include responsive(table-port) {
+    // flex-direction: column;
+    display: block;
+  }
+
+  &__elt {
+    flex: 1 0 calc((100% - 16rem) / 2) ;
+    padding: 4rem;
+
+    @include responsive(table-port) {
+      height: 60rem;
+      // flex: 1 0 calc(100% - 8rem) ;
+
+      // flex: 1 0 55rem;
+      // padding: 4rem 3rem;
+    }
+
+    &--center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+}

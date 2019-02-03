@@ -1,0 +1,98 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: none;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  background-color: $color-gray-2;
+  z-index: 30;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+
+  &__content {
+    position: relative;
+    width: 70%;
+    background-color: $color-white;
+    border-radius: 5px;
+    box-shadow: 8px 8px 4px $color-gray-1;
+
+    &__close {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      top: 2rem;
+      right: 2rem;
+      height: 3.5rem;
+      width: 3.5rem;
+      font-size: 3rem;
+
+
+      &:link,
+      &:visited {
+
+
+        text-decoration: none;
+        color: $color-white;
+        border: 2px solid $color-white;
+        border-radius: 100%;
+      }
+    }
+    &__heading {
+      height: 35rem;
+      background-position: top;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      background-color: $color-gray-2;
+      @include responsive(phone) {
+        height: 25rem;
+        justify-content: center;
+        text-align: center;
+      }
+
+    }
+
+    #prenatal {
+      background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal.jpg);
+    }
+    #breastfeeding {
+      background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding.jpg);
+    }
+    #check-examen {
+      background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen.jpg);
+    }
+    #sports {
+      background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports.jpg);
+    }
+    #adhd {
+      background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd.jpg);
+    }
+    #sameday {
+      background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday.jpg);
+    }
+
+
+    &__text {
+      padding: 2rem;
+    }
+  }
+
+  &:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    visibility: visible;
+  }
+
+}

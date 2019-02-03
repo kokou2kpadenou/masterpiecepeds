@@ -1,0 +1,25 @@
+.open {
+  list-style: none;
+  font-size: 2rem;
+
+
+  &__elt {
+
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5rem 0;
+
+    &:not(:last-of-type) {
+
+      border-bottom: 2px solid $color-white;
+    }
+
+    &__day {
+
+    }
+
+    &__hour {
+
+    }
+  }
+}

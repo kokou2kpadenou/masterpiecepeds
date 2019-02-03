@@ -7,7 +7,24 @@
 @import "base/typography";
 @import "base/utilities";
 
+@import "components/copyright";
+@import "components/warning-message";
+@import "components/little-logo";
+@import "components/card";
+@import "components/opening";
 @import "components/button";
+@import "components/slideshow";
+@import "components/social-link";
+@import "components/quotation";
+@import "components/address";
+@import "components/form-appointment";
+@import "components/popup";
 
 
-@import "pages/home"
+@import "layout/navigation";
+@import "layout/column2";
+@import "layout/service";
+@import "layout/testimonials";
+@import "layout/header-other";
+
+@import "pages/home";

@@ -1,0 +1,40 @@
+.testimonials {
+  position: relative;
+  margin: 4rem auto;
+  max-width: 90rem;
+  &__icon {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    top: -3.8rem;
+    fill: $color-primary;
+  }
+
+  &__all {
+    list-style: none;
+    display: flex;
+    margin: 0 2.5rem;
+    &__tile {
+      flex: 0 0 calc((100% - 9rem) / 3);
+      padding: 1.5rem;
+      border: 1px solid $color-primary;
+      box-shadow: 4px 4px 4px $color-gray-1;
+      &:not(:last-of-type) {
+        margin-right: 4rem;
+      }
+    }
+    @include responsive(table-port) {
+      flex-direction: column;
+      &__tile {
+        &:not(:last-of-type) {
+          margin-right: 0rem;
+        }
+        margin-bottom: 5rem;
+      }
+    }
+
+  }
+  @include responsive(table-port) {
+    max-width: 50rem
+  }
+}

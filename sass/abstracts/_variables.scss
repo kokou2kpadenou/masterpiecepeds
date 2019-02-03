@@ -1,22 +1,25 @@
 // Colors
+$color-primary: #234b77;
 
-$color-primary: #4CA1AF;
-$color-secondary: #C4E0E5;
+$color-primary-ligth: #2a93c9;
+
+$color-primary-dark: #234b77;
+
+$color-secondary: #ef6888;
+
+$color-2: rgb(42,84,131);
+$color-3: #b4c5d8;
+$color-4: #244e7d;
+
 
 $color-white: #fff;
+$color-white-dark: rgba(255, 255, 255, .5);
+$color-white-dark-1: rgba(255, 255, 255, .2);
 
 
+$color-black: #000;
+$color-gray: #555;
+$color-gray-light: rgba(0, 0, 0, .05);
 $color-gray-1: rgba(0, 0, 0, .2);
 $color-gray-2: rgba(0, 0, 0, .4);
-
-$color-facebook: #3b5998;
-$color-github: #6e5494;
-$color-twitter: #1da1f2;
-$color-mail: #ea4335;
-$color-telephone: #003c71;
-
-
-$color-html: #e34f26;
-$color-css: #00539C;
-$color-javascript: #f7df1e;
-$color-sass: #c6538c;
+$color-gray-3: rgba(0, 0, 0, .8);
