@@ -1,9 +1,3 @@
-section {
-  padding: 5rem 0;
-}
-
-
-
 // header
 .header {
   height: 85vh;
@@ -90,10 +84,16 @@ section {
 // team
 
 #team {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, .1)  50%, #234b77 50%, #234b77 100%);
+
   color: $color-white-dark;
-  @include responsive(table-port) {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, .1) 0%, rgba(0, 0, 0, .1)  50%, #234b77 50%, #234b77 100%);
+
+  #team1 {
+    background-color: rgba(0, 0, 0, .1);
+  }
+
+  #team2 {
+
+    background-color: $color-primary;
   }
   .message {
     padding: 2rem;
@@ -110,7 +110,7 @@ section {
       height: 5rem;
       fill: $color-white-dark;
       float: left;
-      margin: 3rem 2rem 3rem 0;
+      margin: 1rem 2rem 0 0;
     }
 
     &__content {
@@ -136,69 +136,78 @@ section {
 
 // Appointment
 #appointment {
-  // color: $color-gray-3;
-  background-image: linear-gradient(to right, rgba(54, 139, 176, .3) 0%, rgba(54, 139, 176, .3) 50%, rgba(91, 91, 93, .1) 50%, rgba(91, 91, 91, .1) 100%);
 
-  @include responsive(table-port) {
-    background-image: linear-gradient(to bottom, rgba(54, 139, 176, .3) 0%, rgba(54, 139, 176, .3) 50%, rgba(91, 91, 93, .1) 50%, rgba(91, 91, 91, .1) 100%);
+  #officehours {
+    background-color: rgba(54, 139, 176, .3);
+  }
+
+  #makeappointment {
+    background-color: rgba(91, 91, 93, .1);
   }
 
 }
 
 // testimonials
-.no-webp #testimonials {
+#testimonials {
   color: $color-gray-3;
-  background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1500.jpg); background-size: cover;
+  background-size: cover;
+}
+
+
+.no-webp #testimonials {
+  background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1500.jpg);
 
   @include responsive(table-land) {
-    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1200.jpg); background-size: cover;
+    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1200.jpg);
   }
 
   @include responsive(table-port) {
-    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-900.jpg); background-size: cover;
+    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-900.jpg);
   }
 
   @include responsive(phone) {
-    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-600.jpg); background-size: cover;
+    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-600.jpg);
   }
 
   @include responsive(big-desktop) {
-    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1800.jpg); background-size: cover;
+    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1800.jpg);
   }
 }
 
 .webp #testimonials {
   color: $color-gray-3;
-  background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1500.webp); background-size: cover;
+  background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1500.webp);
 
   @include responsive(table-land) {
-    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1200.webp); background-size: cover;
+    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1200.webp);
   }
 
   @include responsive(table-port) {
-    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-900.webp); background-size: cover;
+    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-900.webp);
   }
 
   @include responsive(phone) {
-    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-600.webp); background-size: cover;
+    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-600.webp);
   }
 
   @include responsive(big-desktop) {
-    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1800.webp); background-size: cover;
+    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1800.webp);
   }
 }
 
 // contacts
 #contacts {
-  background-image: linear-gradient(to right, transparent 0%, transparent 50%, rgba(0, 0, 0, .1) 50%, rgba(0, 0, 0, .1) 100%);
-  @include responsive(table-port) {
-    background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, rgba(0, 0, 0, .1) 50%, rgba(0, 0, 0, .1) 100%);
+
+  #maps {
+    padding: 0;
   }
+
   #gmap_canvas {
     width: 100%;
     height: 100%;
     border: none;
-     // frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+    min-height: 50rem;
+
   }
 }
 
@@ -289,6 +298,8 @@ section {
   .partition {
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
     @include responsive(table-port) {
       flex-wrap: wrap;
     }
@@ -345,41 +356,24 @@ section {
 
 
     #partition-desc {
-      flex: 0 1 60rem;
-
-      // @include responsive(table-land) {
-      //      font-size: 56.25%;
-      //  }
-
+      max-width: 60rem;
        @include responsive(table-port) {
-           flex: 0 1 100%;
+           width: 100%;
+           max-width: none;
        }
-
-       // @include responsive(phone) {
-       //     font-size: 50%;
-       // }
 
     }
 
 
     #partition-office {
-      flex: 1;
-      // @include responsive(table-land) {
-      //      font-size: 56.25%;
-      //  }
-
-       // @include responsive(table-port) {
-       //     flex: 0 1 100%;
-       // }
-
        @include responsive(phone) {
-          flex: 0 1 100%;
+          width: 100%;
        }
     }
 
 
     #partition-links {
-      flex: 0 1 15rem;
+      width: 15rem;
     }
 
   }

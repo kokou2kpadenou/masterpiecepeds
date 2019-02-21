@@ -6,25 +6,27 @@
 
   &__elt {
     margin: 3rem;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: calc((100% - 18rem) / 3);
+    // flex-grow: 0;
+    // flex-shrink: 1;
+    // flex-basis: calc((100% - 18rem) / 3);
     // flex: 0 1 calc((100% - 18rem) / 3);
+    width: calc((100% - 18rem) / 3);
     box-shadow: 4px 4px 4px $color-gray-1;
     @include responsive(table-port) {
-      flex: 0 1 calc((100% - 12rem) / 2);
+      width: calc((100% - 12rem) / 2);
     }
     @include responsive(phone) {
-      flex: 0 1 calc((100% - 6rem));
+      width: calc((100% - 6rem));
     }
   }
 
   &__link {
     height: 25rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    text-align: center;
     padding: 3rem;
 
     &:link,
@@ -48,7 +50,7 @@
     width: 12rem;
     height: 12rem;
     // border: 1px solid $color-black;
-    margin: 2rem;
+    // margin: 2rem;
     // flex: 0 0 6.5rem;
   }
 

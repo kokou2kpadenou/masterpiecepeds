@@ -90,6 +90,9 @@ body {
 .paragraph {
   line-height: 3rem; }
 
+.section-padding {
+  padding: 5rem 0; }
+
 .copy {
   color: #fff;
   font-size: 1.3rem;
@@ -476,18 +479,6 @@ body {
           height: 25rem;
           justify-content: center;
           text-align: center; } }
-    .popup__content #prenatal {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/prenatal.jpg); }
-    .popup__content #breastfeeding {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/breastfeeding.jpg); }
-    .popup__content #check-examen {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/check-examen.jpg); }
-    .popup__content #sports {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sports.jpg); }
-    .popup__content #adhd {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/adhd.jpg); }
-    .popup__content #sameday {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sameday.jpg); }
     .popup__content__text {
       padding: 2rem; }
   .popup:target {
@@ -496,6 +487,171 @@ body {
     align-items: center;
     opacity: 1;
     visibility: visible; }
+
+.no-webp #prenatal {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/prenatal/prenatal_1500.jpg); }
+  @media only screen and (max-width: 75em) {
+    .no-webp #prenatal {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/prenatal/prenatal_1200.jpg); } }
+  @media only screen and (max-width: 56.25em) {
+    .no-webp #prenatal {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/prenatal/prenatal_900.jpg); } }
+  @media only screen and (max-width: 37.5em) {
+    .no-webp #prenatal {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/prenatal/prenatal_600.jpg); } }
+  @media only screen and (min-width: 112.5em) {
+    .no-webp #prenatal {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/prenatal/prenatal_1800.jpg); } }
+
+.webp #prenatal {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/prenatal/prenatal_1500.webp); }
+  @media only screen and (max-width: 75em) {
+    .webp #prenatal {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/prenatal/prenatal_1200.webp); } }
+  @media only screen and (max-width: 37.5em) {
+    .webp #prenatal {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/prenatal/prenatal_600.webp); } }
+  @media only screen and (min-width: 112.5em) {
+    .webp #prenatal {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/prenatal/prenatal_1800.webp); } }
+
+.no-webp #breastfeeding {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/breastfeeding/breastfeeding_1500.jpg); }
+  @media only screen and (max-width: 75em) {
+    .no-webp #breastfeeding {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/breastfeeding/breastfeeding_1200.jpg); } }
+  @media only screen and (max-width: 56.25em) {
+    .no-webp #breastfeeding {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/breastfeeding/breastfeeding_900.jpg); } }
+  @media only screen and (max-width: 37.5em) {
+    .no-webp #breastfeeding {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/breastfeeding/breastfeeding_600.jpg); } }
+  @media only screen and (min-width: 112.5em) {
+    .no-webp #breastfeeding {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/breastfeeding/breastfeeding_1800.jpg); } }
+
+.webp #breastfeeding {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/breastfeeding/breastfeeding_1500.webp); }
+  @media only screen and (max-width: 75em) {
+    .webp #breastfeeding {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/breastfeeding/breastfeeding_1200.webp); } }
+  @media only screen and (max-width: 56.25em) {
+    .webp #breastfeeding {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/breastfeeding/breastfeeding_900.webp); } }
+  @media only screen and (max-width: 37.5em) {
+    .webp #breastfeeding {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/breastfeeding/breastfeeding_600.webp); } }
+  @media only screen and (min-width: 112.5em) {
+    .webp #breastfeeding {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/breastfeeding/breastfeeding_1800.webp); } }
+
+.no-webp #check-examen {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/check-examen/check-examen_1500.jpg); }
+  @media only screen and (max-width: 75em) {
+    .no-webp #check-examen {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/check-examen/check-examen_1200.jpg); } }
+  @media only screen and (max-width: 56.25em) {
+    .no-webp #check-examen {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/check-examen/check-examen_900.jpg); } }
+  @media only screen and (max-width: 37.5em) {
+    .no-webp #check-examen {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/check-examen/check-examen_600.jpg); } }
+  @media only screen and (min-width: 112.5em) {
+    .no-webp #check-examen {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/check-examen/check-examen_1800.jpg); } }
+
+.webp #check-examen {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/check-examen/check-examen_1500.webp); }
+  @media only screen and (max-width: 75em) {
+    .webp #check-examen {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/check-examen/check-examen_1200.webp); } }
+  @media only screen and (max-width: 37.5em) {
+    .webp #check-examen {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/check-examen/check-examen_600.webp); } }
+  @media only screen and (min-width: 112.5em) {
+    .webp #check-examen {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/check-examen/check-examen_1800.webp); } }
+
+.no-webp #sports {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sports/sports_1500.jpg); }
+  @media only screen and (max-width: 75em) {
+    .no-webp #sports {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sports/sports_1200.jpg); } }
+  @media only screen and (max-width: 56.25em) {
+    .no-webp #sports {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sports/sports_900.jpg); } }
+  @media only screen and (max-width: 37.5em) {
+    .no-webp #sports {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sports/sports_600.jpg); } }
+  @media only screen and (min-width: 112.5em) {
+    .no-webp #sports {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sports/sports_1800.jpg); } }
+
+.webp #sports {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sports/sports_1500.webp); }
+  @media only screen and (max-width: 75em) {
+    .webp #sports {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sports/sports_1200.webp); } }
+  @media only screen and (max-width: 56.25em) {
+    .webp #sports {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sports/sports_900.webp); } }
+  @media only screen and (max-width: 37.5em) {
+    .webp #sports {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sports/sports_600.webp); } }
+  @media only screen and (min-width: 112.5em) {
+    .webp #sports {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sports/sports_1800.webp); } }
+
+.no-webp #adhd {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/adhd/adhd_1500.jpg); }
+  @media only screen and (max-width: 75em) {
+    .no-webp #adhd {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/adhd/adhd_1200.jpg); } }
+  @media only screen and (max-width: 56.25em) {
+    .no-webp #adhd {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/adhd/adhd_900.jpg); } }
+  @media only screen and (max-width: 37.5em) {
+    .no-webp #adhd {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/adhd/adhd_600.jpg); } }
+  @media only screen and (min-width: 112.5em) {
+    .no-webp #adhd {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/adhd/adhd_1800.jpg); } }
+
+.webp #adhd {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/adhd/adhd_1500.webp); }
+  @media only screen and (max-width: 75em) {
+    .webp #adhd {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/adhd/adhd_1200.webp); } }
+  @media only screen and (max-width: 37.5em) {
+    .webp #adhd {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/adhd/adhd_600.webp); } }
+  @media only screen and (min-width: 112.5em) {
+    .webp #adhd {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/adhd/adhd_1800.webp); } }
+
+.no-webp #sameday {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sameday/sameday_1500.jpg); }
+  @media only screen and (max-width: 75em) {
+    .no-webp #sameday {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sameday/sameday_1200.jpg); } }
+  @media only screen and (max-width: 56.25em) {
+    .no-webp #sameday {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sameday/sameday_900.jpg); } }
+  @media only screen and (max-width: 37.5em) {
+    .no-webp #sameday {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sameday/sameday_600.jpg); } }
+  @media only screen and (min-width: 112.5em) {
+    .no-webp #sameday {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sameday/sameday_1800.jpg); } }
+
+.webp #sameday {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sameday/sameday_1500.webp); }
+  @media only screen and (max-width: 75em) {
+    .webp #sameday {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sameday/sameday_1200.webp); } }
+  @media only screen and (max-width: 37.5em) {
+    .webp #sameday {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sameday/sameday_600.webp); } }
 
 .navigation__checkbox {
   display: none; }
@@ -664,11 +820,10 @@ body {
     .col2 {
       display: block; } }
   .col2__elt {
-    flex: 1 0 calc((100% - 16rem) / 2);
-    padding: 4rem; }
-    @media only screen and (max-width: 56.25em) {
-      .col2__elt {
-        height: 60rem; } }
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: calc((100% - 16rem) / 2);
+    padding: 6rem 4rem; }
     .col2__elt--center {
       display: flex;
       justify-content: center;
@@ -682,22 +837,18 @@ body {
   flex-wrap: wrap; }
   .service__elt {
     margin: 3rem;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: calc((100% - 18rem) / 3);
+    width: calc((100% - 18rem) / 3);
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); }
     @media only screen and (max-width: 56.25em) {
       .service__elt {
-        flex: 0 1 calc((100% - 12rem) / 2); } }
+        width: calc((100% - 12rem) / 2); } }
     @media only screen and (max-width: 37.5em) {
       .service__elt {
-        flex: 0 1 calc((100% - 6rem)); } }
+        width: calc((100% - 6rem)); } }
   .service__link {
     height: 25rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: block;
+    text-align: center;
     padding: 3rem; }
     .service__link:link, .service__link:visited {
       text-decoration: none;
@@ -711,8 +862,7 @@ body {
       border-color: #2a93c9; }
   .service__img {
     width: 12rem;
-    height: 12rem;
-    margin: 2rem; }
+    height: 12rem; }
   .service__desc {
     text-align: center; }
 
@@ -768,9 +918,6 @@ body {
     .header-other__title a:hover,
     .header-other__title a:active {
       color: rgba(255, 255, 255, 0.5); }
-
-section {
-  padding: 5rem 0; }
 
 .header {
   height: 85vh;
@@ -830,11 +977,11 @@ section {
     text-align: center; }
 
 #team {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 50%, #234b77 50%, #234b77 100%);
   color: rgba(255, 255, 255, 0.5); }
-  @media only screen and (max-width: 56.25em) {
-    #team {
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 50%, #234b77 50%, #234b77 100%); } }
+  #team #team1 {
+    background-color: rgba(0, 0, 0, 0.1); }
+  #team #team2 {
+    background-color: #234b77; }
   #team .message {
     padding: 2rem;
     width: 100%;
@@ -848,7 +995,7 @@ section {
       height: 5rem;
       fill: rgba(255, 255, 255, 0.5);
       float: left;
-      margin: 3rem 2rem 3rem 0; }
+      margin: 1rem 2rem 0 0; }
     #team .message__content {
       font-size: 2.5rem;
       font-weight: 100;
@@ -865,63 +1012,55 @@ section {
       transform: rotate(45deg);
       background-color: inherit; }
 
-#appointment {
-  background-image: linear-gradient(to right, rgba(54, 139, 176, 0.3) 0%, rgba(54, 139, 176, 0.3) 50%, rgba(91, 91, 93, 0.1) 50%, rgba(91, 91, 91, 0.1) 100%); }
-  @media only screen and (max-width: 56.25em) {
-    #appointment {
-      background-image: linear-gradient(to bottom, rgba(54, 139, 176, 0.3) 0%, rgba(54, 139, 176, 0.3) 50%, rgba(91, 91, 93, 0.1) 50%, rgba(91, 91, 91, 0.1) 100%); } }
+#appointment #officehours {
+  background-color: rgba(54, 139, 176, 0.3); }
+
+#appointment #makeappointment {
+  background-color: rgba(91, 91, 93, 0.1); }
+
+#testimonials {
+  color: rgba(0, 0, 0, 0.8);
+  background-size: cover; }
 
 .no-webp #testimonials {
-  color: rgba(0, 0, 0, 0.8);
-  background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1500.jpg);
-  background-size: cover; }
+  background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1500.jpg); }
   @media only screen and (max-width: 75em) {
     .no-webp #testimonials {
-      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1200.jpg);
-      background-size: cover; } }
+      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1200.jpg); } }
   @media only screen and (max-width: 56.25em) {
     .no-webp #testimonials {
-      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-900.jpg);
-      background-size: cover; } }
+      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-900.jpg); } }
   @media only screen and (max-width: 37.5em) {
     .no-webp #testimonials {
-      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-600.jpg);
-      background-size: cover; } }
+      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-600.jpg); } }
   @media only screen and (min-width: 112.5em) {
     .no-webp #testimonials {
-      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1800.jpg);
-      background-size: cover; } }
+      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1800.jpg); } }
 
 .webp #testimonials {
   color: rgba(0, 0, 0, 0.8);
-  background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1500.webp);
-  background-size: cover; }
+  background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1500.webp); }
   @media only screen and (max-width: 75em) {
     .webp #testimonials {
-      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1200.webp);
-      background-size: cover; } }
+      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1200.webp); } }
   @media only screen and (max-width: 56.25em) {
     .webp #testimonials {
-      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-900.webp);
-      background-size: cover; } }
+      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-900.webp); } }
   @media only screen and (max-width: 37.5em) {
     .webp #testimonials {
-      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-600.webp);
-      background-size: cover; } }
+      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-600.webp); } }
   @media only screen and (min-width: 112.5em) {
     .webp #testimonials {
-      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1800.webp);
-      background-size: cover; } }
+      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1800.webp); } }
 
-#contacts {
-  background-image: linear-gradient(to right, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 100%); }
-  @media only screen and (max-width: 56.25em) {
-    #contacts {
-      background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 100%); } }
-  #contacts #gmap_canvas {
-    width: 100%;
-    height: 100%;
-    border: none; }
+#contacts #maps {
+  padding: 0; }
+
+#contacts #gmap_canvas {
+  width: 100%;
+  height: 100%;
+  border: none;
+  min-height: 50rem; }
 
 .emergency {
   text-align: center; }
@@ -989,6 +1128,8 @@ section {
   .footer .partition {
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
     list-style: none; }
     @media only screen and (max-width: 56.25em) {
       .footer .partition {
@@ -1020,14 +1161,13 @@ section {
         .footer .partition__content ul a:hover, .footer .partition__content ul a:active {
           color: #fff; }
     .footer .partition #partition-desc {
-      flex: 0 1 60rem; }
+      max-width: 60rem; }
       @media only screen and (max-width: 56.25em) {
         .footer .partition #partition-desc {
-          flex: 0 1 100%; } }
-    .footer .partition #partition-office {
-      flex: 1; }
-      @media only screen and (max-width: 37.5em) {
-        .footer .partition #partition-office {
-          flex: 0 1 100%; } }
+          width: 100%;
+          max-width: none; } }
+    @media only screen and (max-width: 37.5em) {
+      .footer .partition #partition-office {
+        width: 100%; } }
     .footer .partition #partition-links {
-      flex: 0 1 15rem; }
+      width: 15rem; }

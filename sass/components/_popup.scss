@@ -5,9 +5,6 @@
   width: 100%;
   height: 100vh;
   display: none;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   background-color: $color-gray-2;
   z-index: 30;
   opacity: 0;
@@ -62,25 +59,6 @@
 
     }
 
-    #prenatal {
-      background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal.jpg);
-    }
-    #breastfeeding {
-      background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding.jpg);
-    }
-    #check-examen {
-      background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen.jpg);
-    }
-    #sports {
-      background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports.jpg);
-    }
-    #adhd {
-      background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd.jpg);
-    }
-    #sameday {
-      background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday.jpg);
-    }
-
 
     &__text {
       padding: 2rem;
@@ -93,6 +71,235 @@
     align-items: center;
     opacity: 1;
     visibility: visible;
+  }
+
+}
+
+// Prenatal
+.no-webp #prenatal {
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_1500.jpg);
+
+  @include responsive(table-land) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_1200.jpg);
+  }
+
+  @include responsive(table-port) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_900.jpg);
+  }
+
+  @include responsive(phone) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_600.jpg);
+  }
+
+  @include responsive(big-desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_1800.jpg);
+  }
+}
+
+.webp #prenatal {
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_1500.webp);
+
+  @include responsive(table-land) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_1200.webp);
+  }
+
+  @include responsive(phone) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_600.webp);
+  }
+
+  @include responsive(big-desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_1800.webp);
+  }
+}
+
+// breastfeeding
+.no-webp #breastfeeding {
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_1500.jpg);
+
+  @include responsive(table-land) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_1200.jpg);
+  }
+
+  @include responsive(table-port) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_900.jpg);
+  }
+
+  @include responsive(phone) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_600.jpg);
+  }
+
+  @include responsive(big-desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_1800.jpg);
+  }
+}
+
+.webp #breastfeeding {
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_1500.webp);
+
+  @include responsive(table-land) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_1200.webp);
+  }
+
+  @include responsive(table-port) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_900.webp);
+  }
+
+  @include responsive(phone) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_600.webp);
+  }
+
+  @include responsive(big-desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_1800.webp);
+  }
+}
+
+
+// Check Examen
+.no-webp #check-examen {
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen/check-examen_1500.jpg);
+
+  @include responsive(table-land) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen/check-examen_1200.jpg);
+  }
+
+  @include responsive(table-port) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen/check-examen_900.jpg);
+  }
+
+  @include responsive(phone) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen/check-examen_600.jpg);
+  }
+
+  @include responsive(big-desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen/check-examen_1800.jpg);
+  }
+}
+
+.webp #check-examen {
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen/check-examen_1500.webp);
+
+  @include responsive(table-land) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen/check-examen_1200.webp);
+  }
+
+  @include responsive(phone) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen/check-examen_600.webp);
+  }
+
+  @include responsive(big-desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen/check-examen_1800.webp);
+  }
+}
+
+
+// Sports
+.no-webp #sports {
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_1500.jpg);
+
+  @include responsive(table-land) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_1200.jpg);
+  }
+
+  @include responsive(table-port) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_900.jpg);
+  }
+
+  @include responsive(phone) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_600.jpg);
+  }
+
+  @include responsive(big-desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_1800.jpg);
+  }
+}
+
+.webp #sports {
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_1500.webp);
+
+  @include responsive(table-land) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_1200.webp);
+  }
+
+  @include responsive(table-port) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_900.webp);
+  }
+
+  @include responsive(phone) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_600.webp);
+  }
+
+  @include responsive(big-desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_1800.webp);
+  }
+}
+
+// ADHD
+.no-webp #adhd {
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd/adhd_1500.jpg);
+
+  @include responsive(table-land) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd/adhd_1200.jpg);
+  }
+
+  @include responsive(table-port) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd/adhd_900.jpg);
+  }
+
+  @include responsive(phone) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd/adhd_600.jpg);
+  }
+
+  @include responsive(big-desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd/adhd_1800.jpg);
+  }
+}
+
+.webp #adhd {
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd/adhd_1500.webp);
+
+  @include responsive(table-land) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd/adhd_1200.webp);
+  }
+
+  @include responsive(phone) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd/adhd_600.webp);
+  }
+
+  @include responsive(big-desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd/adhd_1800.webp);
+  }
+}
+
+// Same Day Emergency
+.no-webp #sameday {
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday/sameday_1500.jpg);
+
+  @include responsive(table-land) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday/sameday_1200.jpg);
+  }
+
+  @include responsive(table-port) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday/sameday_900.jpg);
+  }
+
+  @include responsive(phone) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday/sameday_600.jpg);
+  }
+
+  @include responsive(big-desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday/sameday_1800.jpg);
+  }
+}
+
+.webp #sameday {
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday/sameday_1500.webp);
+
+  @include responsive(table-land) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday/sameday_1200.webp);
+  }
+
+  @include responsive(phone) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday/sameday_600.webp);
   }
 
 }
