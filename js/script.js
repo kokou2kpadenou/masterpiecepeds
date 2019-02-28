@@ -278,4 +278,17 @@ function translation(lang) {
 	for (var i = 0; i < text.length; i++) {
 		text[i].textContent = langDict[lang][text[i].getAttribute('data-key')];
 	}
+
+	// Tranlate the google maps
+	var gmaps = document.getElementById('gmap_canvas');
+	if (gmaps != null) {
+		if (lang === 'es') {
+			gmaps.setAttribute('src', 'https://maps.google.com/maps?q=Middlebrook%20Pediatrics&t=&z=9&ie=UTF8&iwloc=&output=embed&hl=es-419');
+		} else {
+			gmaps.setAttribute('src', 'https://maps.google.com/maps?q=Middlebrook%20Pediatrics&t=&z=9&ie=UTF8&iwloc=&output=embed');
+		}
+	}
+
+	// Tranlate reCAPTCHA
+
 }
