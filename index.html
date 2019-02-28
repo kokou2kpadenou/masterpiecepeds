@@ -9,6 +9,7 @@
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Galindo|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
       /*! modernizr 3.6.0 (Custom Build) | MIT *
       * https://modernizr.com/download/?-webp-setclasses !*/
@@ -693,8 +694,10 @@
               <input type="text" class="appointment__section__input" name="object" id="object" value="" required>
               <label for="object" class="appointment__section__label translate" data-key="main-appointment-object">Object</label>
             </div>
-<!-- Do something here to fix the translation -->
             <div class="appointment__section">
+              <br>
+              <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" data-theme="light"></div>
+              <br>
               <button class="btn btn--white translate" data-key="main-appointment-btn" type="submit">Sent Request</button>
             </div>
 
