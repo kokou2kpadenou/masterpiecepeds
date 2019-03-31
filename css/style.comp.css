@@ -90,6 +90,9 @@ body {
 .paragraph {
   line-height: 3rem; }
 
+.section-padding {
+  padding: 5rem 0; }
+
 .copy {
   color: #fff;
   font-size: 1.3rem;
@@ -820,10 +823,7 @@ body {
     flex-grow: 1;
     flex-shrink: 0;
     flex-basis: calc((100% - 16rem) / 2);
-    padding: 4rem; }
-    @media only screen and (max-width: 56.25em) {
-      .col2__elt {
-        height: 60rem; } }
+    padding: 6rem 4rem; }
     .col2__elt--center {
       display: flex;
       justify-content: center;
@@ -919,15 +919,12 @@ body {
     .header-other__title a:active {
       color: rgba(255, 255, 255, 0.5); }
 
-section {
-  padding: 5rem 0; }
-
 .header {
-  height: 85vh;
+  height: calc(100vw / 1.50);
   overflow: hidden; }
-  @media only screen and (max-height: 500px) {
+  @media only screen and (max-width: 767px) {
     .header {
-      height: 100vh; } }
+      height: calc(100vw / .67); } }
   .header__area {
     max-width: 80rem;
     width: 70%;
@@ -980,11 +977,11 @@ section {
     text-align: center; }
 
 #team {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 50%, #234b77 50%, #234b77 100%);
   color: rgba(255, 255, 255, 0.5); }
-  @media only screen and (max-width: 56.25em) {
-    #team {
-      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 50%, #234b77 50%, #234b77 100%); } }
+  #team #team1 {
+    background-color: rgba(0, 0, 0, 0.1); }
+  #team #team2 {
+    background-color: #234b77; }
   #team .message {
     padding: 2rem;
     width: 100%;
@@ -1015,11 +1012,16 @@ section {
       transform: rotate(45deg);
       background-color: inherit; }
 
-#appointment {
-  background-image: linear-gradient(to right, rgba(54, 139, 176, 0.3) 0%, rgba(54, 139, 176, 0.3) 50%, rgba(91, 91, 93, 0.1) 50%, rgba(91, 91, 91, 0.1) 100%); }
-  @media only screen and (max-width: 56.25em) {
-    #appointment {
-      background-image: linear-gradient(to bottom, rgba(54, 139, 176, 0.3) 0%, rgba(54, 139, 176, 0.3) 50%, rgba(91, 91, 93, 0.1) 50%, rgba(91, 91, 91, 0.1) 100%); } }
+#appointment #officehours {
+  background-color: rgba(54, 139, 176, 0.3); }
+
+#appointment #makeappointment {
+  background-color: rgba(91, 91, 93, 0.1); }
+
+@media only screen and (max-width: 355px) {
+  .g-recaptcha {
+    transform: scale(0.7);
+    transform-origin: 0 0; } }
 
 #testimonials {
   color: rgba(0, 0, 0, 0.8);
@@ -1056,15 +1058,14 @@ section {
     .webp #testimonials {
       background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1800.webp); } }
 
-#contacts {
-  background-image: linear-gradient(to right, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 100%); }
-  @media only screen and (max-width: 56.25em) {
-    #contacts {
-      background-image: linear-gradient(to bottom, transparent 0%, transparent 50%, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 100%); } }
-  #contacts #gmap_canvas {
-    width: 100%;
-    height: 100%;
-    border: none; }
+#contacts #maps {
+  padding: 0; }
+
+#contacts #gmap_canvas {
+  width: 100%;
+  height: 100%;
+  border: none;
+  min-height: 50rem; }
 
 .emergency {
   text-align: center; }

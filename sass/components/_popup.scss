@@ -14,8 +14,12 @@
   &__content {
     position: relative;
     width: 70%;
+    @include responsive(phone) {
+      width: 90%;
+    }
+    border: 1px solid $color-white;
     background-color: $color-white;
-    border-radius: 5px;
+    border-radius: 1.5rem;
     box-shadow: 8px 8px 4px $color-gray-1;
 
     &__close {
@@ -28,16 +32,25 @@
       height: 3.5rem;
       width: 3.5rem;
       font-size: 3rem;
+      transition: all .3s;
 
 
       &:link,
       &:visited {
-
-
         text-decoration: none;
         color: $color-white;
         border: 2px solid $color-white;
         border-radius: 100%;
+      }
+
+      &:hover {
+        color: $color-primary;
+        border: 2px solid $color-primary;
+        transform: translateY(-3px);
+      }
+
+      &:active {
+        transform: translateY(-1px);
       }
     }
     &__heading {
@@ -45,8 +58,8 @@
       background-position: top;
       background-repeat: no-repeat;
       background-size: cover;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
+      border-top-left-radius: 1.5rem;
+      border-top-right-radius: 1.5rem;
       display: flex;
       justify-content: flex-end;
       align-items: flex-end;

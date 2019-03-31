@@ -1,26 +1,22 @@
 .testimonials {
   position: relative;
-  margin: 4rem auto;
-  max-width: 90rem;
-  &__icon {
-    position: absolute;
-    width: 5rem;
-    height: 5rem;
-    top: -3.8rem;
-    fill: $color-primary;
-  }
+  margin: 6rem auto;
+  max-width: 110rem;
+
 
   &__all {
     list-style: none;
     display: flex;
     margin: 0 2.5rem;
     &__tile {
-      flex: 0 0 calc((100% - 9rem) / 3);
-      padding: 1.5rem;
+      position: relative;
+      flex: 0 0 calc((100% - 12rem) / 3);
+      padding: 6.5rem 1.5rem 1rem 1.5rem;
       border: 1px solid $color-primary;
-      box-shadow: 4px 4px 4px $color-gray-1;
+      box-shadow: 6px 6px 6px rgba(0, 0, 0, .6);
+      border-radius: .8rem;
       &:not(:last-of-type) {
-        margin-right: 4rem;
+        margin-right: 6rem;
       }
     }
     @include responsive(table-port) {
@@ -29,12 +25,12 @@
         &:not(:last-of-type) {
           margin-right: 0rem;
         }
-        margin-bottom: 5rem;
+        margin-bottom: 6rem;
       }
     }
 
   }
   @include responsive(table-port) {
-    max-width: 50rem
+    max-width: 50rem;
   }
 }

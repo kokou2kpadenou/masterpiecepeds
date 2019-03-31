@@ -35,18 +35,6 @@
   }
 
 
-  // #ind1:checked ~ .slideshow__content {
-  //   background-image: url("../images/slideshow-1.jpg"),
-  //                     url("../images/slideshow-2.jpg"),
-  //                     url("../images/slideshow-3.jpg"),
-  //                     url("../images/slideshow-4.jpg");
-  //
-  //  }
-  // #ind2:checked ~ .slideshow__content { background-image: url("../images/slideshow-2.jpg"); }
-  // #ind3:checked ~ .slideshow__content { background-image: url("../images/slideshow-3.jpg"); }
-  // #ind4:checked ~ .slideshow__content { background-image: url("../images/slideshow-4.jpg"); }
-
-
 
   #ind1:checked ~ .slideshow__nav #nav-btn1 { background-color: #795548; transform: scale(1.5);}
   #ind2:checked ~ .slideshow__nav #nav-btn2 { background-color: #2196F3; transform: scale(1.5);}

@@ -176,19 +176,20 @@ function start() {
 		document.getElementById('ind' + curr).checked = true;
 	}
 
-	if (slideshowNavBtn.length > 0) {
-
-		for (var i = 0; i < slideshowNavBtn.length; i++) {
-			slideshowNavBtn[i].addEventListener('click', function() {
-				clearInterval(slideshowIntervalId);
-				curr = this.getAttribute('data-id');
-				slideshowIntervalId = setInterval(Move, 10000);
-			});
-		}
-
+	function slideBtnClickHandle() {
+		clearInterval(slideshowIntervalId);
+		curr = this.getAttribute('data-id');
 		slideshowIntervalId = setInterval(Move, 10000);
 	}
 
+	if (slideshowNavBtn.length > 0) {
+		for (var i = 0; i < slideshowNavBtn.length; i++) {
+			slideshowNavBtn[i].addEventListener('click', slideBtnClickHandle);
+		}
+		slideshowIntervalId = setInterval(Move, 10000);
+	}
+
+	// Try to retrieve the old lang code from localStorage if exist
 	if ('localStorage' in window) {
 		var local = localStorage.getItem('uiLang');
 		if (local) {
@@ -204,7 +205,7 @@ function start() {
 			}
 		}
 	}
-
+	// If the lang code retrieved is es swith language
 	if (defaultLang === 'es') {
 		switchLang('es');
 	}
@@ -216,21 +217,27 @@ function start() {
 // Close the menu when a mene element is clicked
 var navigationToggle = document.getElementById('navigation-toggle');
 var navigationItem = document.getElementsByClassName('menu-item');
+
+function navToggleClickHandle() {
+	navigationToggle.checked = false;
+}
+
 for (var i = 0; i < navigationItem.length; i++) {
-	navigationItem[i].addEventListener('click', function() {
-		navigationToggle.checked = false;
-	});
+	navigationItem[i].addEventListener('click', navToggleClickHandle);
 }
 
 
 // Close popup menu when click outside the popup
 var popup = document.getElementsByClassName('popup');
+
+function closePopupHandle(e) {
+	if (e.target.className === 'popup') {
+		window.location.hash = 'services';
+	}
+}
+
 for (var j=0; j < popup.length; j++) {
-	popup[j].addEventListener('click', function(e) {
-		if (e.target.className === 'popup') {
-			window.location.hash = 'services';
-		}
-	});
+	popup[j].addEventListener('click', closePopupHandle);
 }
 
 
@@ -245,18 +252,22 @@ var text = document.getElementsByClassName('translate');
 
 
 // Click on the switch language buttons
-for (var i = 0; i < btnLang.length; i++) {
-  btnLang[i].addEventListener('click', function(e) {
+function switchBtnClickHandle(e) {
 
-		e.preventDefault();
-		if (this.classList.contains('btn--enabled')) {
-			defaultLang = (this.getAttribute('id') === 'es') ? 'es' : 'en';
-			switchLang(defaultLang);
-		}
+	e.preventDefault();
+	if (this.classList.contains('btn--enabled')) {
+		defaultLang = (this.getAttribute('id') === 'es') ? 'es' : 'en';
+		switchLang(defaultLang);
+	}
 
-	});
 }
 
+for (var i = 0; i < btnLang.length; i++) {
+  btnLang[i].addEventListener('click', switchBtnClickHandle);
+}
+
+
+// This function switch lang btn on the interface and update the localStorage
 function switchLang(lang) {
 	//Set document lang
 	document.getElementsByTagName('html')[0].setAttribute('lang', lang);
@@ -273,7 +284,7 @@ function switchLang(lang) {
 	translation(lang);
 }
 
-
+// this function change the language on the UI
 function translation(lang) {
 	for (var i = 0; i < text.length; i++) {
 		text[i].textContent = langDict[lang][text[i].getAttribute('data-key')];
