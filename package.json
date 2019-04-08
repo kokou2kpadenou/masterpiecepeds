@@ -19,6 +19,7 @@
     "copy:privacy:html": "html-minifier --collapse-whitespace --remove-comments privacy.html -o build/privacy.html",
     "copy:assets": "mkdir build/images build/js; cp -R ./images/* build/images; cp -t build favicon.png",
     "copy:js": "uglifyjs --compress --mangle -o ./build/js/script.js -- ./js/script.js ",
+    "critical": "inline-critical --extract ./build/index.html ./build/css/styles.css > ./build/index1.html",
     "build": "npm-run-all compile:sass prefix:css compress:css copy:index:html copy:terms:html copy:privacy:html copy:assets copy:js"
   },
   "author": "Kokou Kpadenou",
@@ -26,6 +27,7 @@
   "devDependencies": {
     "autoprefixer": "^9.4.6",
     "html-minifier": "^3.5.21",
+    "inline-critical": "^5.2.0",
     "node-sass": "^4.11.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^6.1.1",

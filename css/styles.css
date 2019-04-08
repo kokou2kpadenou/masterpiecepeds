@@ -93,6 +93,25 @@ body {
 .section-padding {
   padding: 5rem 0; }
 
+.main-doc {
+  margin: 6rem 4rem; }
+
+.main-doc__heading {
+  font-size: 2.5rem;
+  line-height: 3rem; }
+
+.main-doc__paragraph {
+  line-height: 3rem;
+  margin: 3rem 0; }
+
+.main-doc__paragraph-top {
+  line-height: 2rem;
+  margin: 1rem 0; }
+
+.main-doc__list {
+  padding: 0 0 4rem 4rem;
+  line-height: 3rem; }
+
 .copy {
   color: #fff;
   font-size: 1.3rem;
@@ -210,15 +229,15 @@ body {
   .btn:hover {
     -webkit-transform: translateY(-3px);
     transform: translateY(-3px);
-    -moz-box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
-    -webkit-box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4); }
+    -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); }
   .btn:active {
     -webkit-transform: translateY(-1px);
     transform: translateY(-1px);
-    -moz-box-shadow: 0 2px 5px rgba(255, 255, 255, 0.4);
-    -webkit-box-shadow: 0 2px 5px rgba(255, 255, 255, 0.4);
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.4); }
+    -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); }
   .btn--enabled {
     border: 1px solid #fff; }
   .btn--disabled {
@@ -802,6 +821,7 @@ body {
   background-image: linear-gradient(transparent 0%, transparent 50%, #fff 50%);
   background-size: 100% 220%;
   background-position: top;
+  border-radius: 5px;
   transition: all .4s; }
   @media only screen and (max-height: 500px) {
     .navigation__link:link, .navigation__link:visited {
@@ -809,11 +829,19 @@ body {
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 0 100%;
-  color: #ef6888;
-  transform: translateY(-1rem); }
+  color: #ef6888; }
+
+.navigation__link:hover {
+  transform: translateY(-1rem);
+  -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); }
 
 .navigation__link:active {
-  transform: translateY(-0.5rem); }
+  transform: translateY(-0.5rem);
+  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); }
 
 .navigation__checkbox:checked ~ .navigation__background {
   transform: scale(100); }
@@ -823,25 +851,27 @@ body {
   width: 100%;
   left: 0; }
 
-.navigation__menu-buttom {
+.navigation__menu-bottom {
   text-align: center;
   margin-top: 3rem;
   width: 100vw; }
   @media only screen and (max-height: 500px) {
-    .navigation__menu-buttom {
+    .navigation__menu-bottom {
       width: auto;
       margin-left: 5px; } }
-  .navigation__menu-buttom__switch {
+  .navigation__menu-bottom__switch {
     margin-bottom: 2rem; }
-  .navigation__menu-buttom__extra {
+    .navigation__menu-bottom__switch .switch-lang:first-child {
+      margin: 1rem; }
+  .navigation__menu-bottom__extra {
     padding-top: 1rem; }
-    .navigation__menu-buttom__extra a:link, .navigation__menu-buttom__extra a:visited {
+    .navigation__menu-bottom__extra a:link, .navigation__menu-bottom__extra a:visited {
       text-decoration: none;
       color: rgba(255, 255, 255, 0.5);
       font-size: 1.4rem; }
-    .navigation__menu-buttom__extra a:hover, .navigation__menu-buttom__extra a:active {
+    .navigation__menu-bottom__extra a:hover, .navigation__menu-bottom__extra a:active {
       color: #fff; }
-  .navigation__menu-buttom__contacts {
+  .navigation__menu-bottom__contacts {
     display: flex;
     justify-content: center; }
 
@@ -916,7 +946,7 @@ body {
     margin: 0 2.5rem; }
     .testimonials__all__tile {
       position: relative;
-      flex: 0 0 calc((100% - 12rem) / 3);
+      width: calc((100% - 12rem) / 3);
       padding: 6.5rem 1.5rem 1rem 1.5rem;
       border: 1px solid #234b77;
       box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6);
@@ -925,11 +955,10 @@ body {
         margin-right: 6rem; }
     @media only screen and (max-width: 56.25em) {
       .testimonials__all {
-        flex-direction: column; }
+        display: block; }
         .testimonials__all__tile {
-          margin-bottom: 6rem; }
-          .testimonials__all__tile:not(:last-of-type) {
-            margin-right: 0rem; } }
+          width: 100%;
+          margin-bottom: 6rem; } }
   @media only screen and (max-width: 56.25em) {
     .testimonials {
       max-width: 50rem; } }

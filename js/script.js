@@ -317,3 +317,22 @@ function translation(lang) {
 	// Tranlate reCAPTCHA
 
 }
+
+// TODO submit form
+var formApt = document.getElementById('form-apt');
+
+function submitHandle(e) {
+	e.preventDefault();
+	var gResponse = grecaptcha.getResponse();
+	if (gResponse === '' || gResponse === undefined || gResponse.length === 0) {
+		// TODO: ACTION WHEN reCAPTCHA IS NOT ACTIVE
+		alert('no');
+	} else {
+		// TODO: ACTION WHEN reCAPTCHA IS ACTIVE
+		alert('yes');
+	}
+
+}
+if (formApt != null) {
+	formApt.addEventListener('submit', submitHandle);
+}

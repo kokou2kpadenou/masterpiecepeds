@@ -1,3 +1,24 @@
 .section-padding {
   padding: 5rem 0;
 }
+
+// For term / privacy
+.main-doc {
+  margin: 6rem 4rem;
+}
+.main-doc__heading {
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+.main-doc__paragraph {
+  line-height: 3rem;
+  margin: 3rem 0;
+}
+.main-doc__paragraph-top {
+  line-height: 2rem;
+  margin: 1rem 0;
+}
+.main-doc__list {
+  padding: 0 0 4rem 4rem ;
+  line-height: 3rem;
+}

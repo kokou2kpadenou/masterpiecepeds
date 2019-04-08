@@ -27,17 +27,16 @@
 
   &:hover {
     @include transform(translateY(-3px));
-    @include box-shadow(0 6px 12px rgba(255, 255, 255, .4));
+    @include box-shadow(0 6px 12px rgba(0, 0, 0, .4));
   }
 
   &:active {
     @include transform(translateY(-1px));
-    @include box-shadow(0 2px 5px rgba(255, 255, 255, .4));
+    @include box-shadow(0 2px 5px rgba(0, 0, 0, .4));
   }
 
   &--enabled {
     border: 1px solid $color-white;
-
 
   }
 

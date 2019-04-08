@@ -84,7 +84,7 @@ body {
     color: #234b77;
     background-color: rgba(255, 255, 255, 0.5);
     margin: 2rem;
-    border-radius: 3px; }
+    border-radius: .3rem; }
 
 /* ********** Paragraphs ********** */
 .paragraph {
@@ -92,6 +92,25 @@ body {
 
 .section-padding {
   padding: 5rem 0; }
+
+.main-doc {
+  margin: 6rem 4rem; }
+
+.main-doc__heading {
+  font-size: 2.5rem;
+  line-height: 3rem; }
+
+.main-doc__paragraph {
+  line-height: 3rem;
+  margin: 3rem 0; }
+
+.main-doc__paragraph-top {
+  line-height: 2rem;
+  margin: 1rem 0; }
+
+.main-doc__list {
+  padding: 0 0 4rem 4rem;
+  line-height: 3rem; }
 
 .copy {
   color: #fff;
@@ -122,8 +141,8 @@ body {
   align-items: center;
   margin-top: 4rem; }
   .warning-msg svg {
-    width: 3rem;
-    height: 3rem;
+    width: 2rem;
+    height: 2rem;
     flex-shrink: 0;
     margin-right: 1rem;
     fill: brown; }
@@ -139,20 +158,27 @@ body {
   .little-logo:link, .little-logo:visited {
     text-decoration: none;
     color: #fff; }
+  .little-logo__text {
+    vertical-align: sub; }
   .little-logo__img {
     width: 3rem;
-    height: 3rem; }
+    height: 3rem;
+    margin-right: 1rem; }
 
 .card {
   width: 26rem;
   background-color: #234b77;
   color: rgba(255, 255, 255, 0.5);
-  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.3);
   text-align: center;
-  padding-bottom: 2rem; }
+  padding-bottom: 2rem;
+  border-radius: 1rem;
+  border: 1px solid #234b77; }
   .card__img {
     width: 100%;
-    overflow: hidden; }
+    overflow: hidden;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem; }
     .card__img__src {
       width: 100%;
       transition: transform .4s; }
@@ -203,15 +229,15 @@ body {
   .btn:hover {
     -webkit-transform: translateY(-3px);
     transform: translateY(-3px);
-    -moz-box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
-    -webkit-box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
-    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4); }
+    -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); }
   .btn:active {
     -webkit-transform: translateY(-1px);
     transform: translateY(-1px);
-    -moz-box-shadow: 0 2px 5px rgba(255, 255, 255, 0.4);
-    -webkit-box-shadow: 0 2px 5px rgba(255, 255, 255, 0.4);
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.4); }
+    -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); }
   .btn--enabled {
     border: 1px solid #fff; }
   .btn--disabled {
@@ -269,7 +295,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.3);
     background-size: cover;
     background-position: center;
     transition: background-image .4s; }
@@ -294,7 +320,7 @@ body {
       cursor: pointer;
       transition: all .4s;
       background-color: rgba(255, 255, 255, 0.5);
-      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
       z-index: 1000; }
       @media only screen and (hover: hover) {
         .slideshow__nav__btn:hover {
@@ -329,29 +355,36 @@ body {
     height: 2.5rem; }
 
 .quotation__text {
-  margin: 1rem 0;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 2rem;
-  height: 12rem;
-  text-align: justify; }
+  text-align: center; }
   @media only screen and (max-width: 56.25em) {
     .quotation__text {
       height: auto; } }
+  .quotation__text__icon {
+    width: 2rem;
+    height: 2rem;
+    fill: #234b77;
+    margin-right: .5rem; }
 
 .quotation__author {
-  display: flex;
-  align-items: center; }
+  position: absolute;
+  top: -2.8rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center; }
   .quotation__author__img {
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 100%; }
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 100%;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6); }
   .quotation__author__desc {
     margin-left: 1rem; }
     .quotation__author__desc__name {
       font-size: 1.6rem;
       font-weight: bold; }
     .quotation__author__desc__title {
-      font-size: 1.4rem; }
+      font-size: 1.2rem; }
 
 .address {
   display: flex;
@@ -445,9 +478,13 @@ body {
   .popup__content {
     position: relative;
     width: 70%;
+    border: 1px solid #fff;
     background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.2); }
+    border-radius: 1.5rem;
+    box-shadow: 8px 8px 4px rgba(0, 0, 0, 0.3); }
+    @media only screen and (max-width: 37.5em) {
+      .popup__content {
+        width: 90%; } }
     .popup__content__close {
       position: absolute;
       display: flex;
@@ -457,19 +494,26 @@ body {
       right: 2rem;
       height: 3.5rem;
       width: 3.5rem;
-      font-size: 3rem; }
+      font-size: 3rem;
+      transition: all .3s; }
       .popup__content__close:link, .popup__content__close:visited {
         text-decoration: none;
         color: #fff;
         border: 2px solid #fff;
         border-radius: 100%; }
+      .popup__content__close:hover {
+        color: #234b77;
+        border: 2px solid #234b77;
+        transform: translateY(-3px); }
+      .popup__content__close:active {
+        transform: translateY(-1px); }
     .popup__content__heading {
       height: 35rem;
       background-position: top;
       background-repeat: no-repeat;
       background-size: cover;
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
+      border-top-left-radius: 1.5rem;
+      border-top-right-radius: 1.5rem;
       display: flex;
       justify-content: flex-end;
       align-items: flex-end;
@@ -489,169 +533,169 @@ body {
     visibility: visible; }
 
 .no-webp #prenatal {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/prenatal/prenatal_1500.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/prenatal/prenatal_1500.jpg); }
   @media only screen and (max-width: 75em) {
     .no-webp #prenatal {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/prenatal/prenatal_1200.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/prenatal/prenatal_1200.jpg); } }
   @media only screen and (max-width: 56.25em) {
     .no-webp #prenatal {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/prenatal/prenatal_900.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/prenatal/prenatal_900.jpg); } }
   @media only screen and (max-width: 37.5em) {
     .no-webp #prenatal {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/prenatal/prenatal_600.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/prenatal/prenatal_600.jpg); } }
   @media only screen and (min-width: 112.5em) {
     .no-webp #prenatal {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/prenatal/prenatal_1800.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/prenatal/prenatal_1800.jpg); } }
 
 .webp #prenatal {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/prenatal/prenatal_1500.webp); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/prenatal/prenatal_1500.webp); }
   @media only screen and (max-width: 75em) {
     .webp #prenatal {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/prenatal/prenatal_1200.webp); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/prenatal/prenatal_1200.webp); } }
   @media only screen and (max-width: 37.5em) {
     .webp #prenatal {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/prenatal/prenatal_600.webp); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/prenatal/prenatal_600.webp); } }
   @media only screen and (min-width: 112.5em) {
     .webp #prenatal {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/prenatal/prenatal_1800.webp); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/prenatal/prenatal_1800.webp); } }
 
 .no-webp #breastfeeding {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/breastfeeding/breastfeeding_1500.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/breastfeeding/breastfeeding_1500.jpg); }
   @media only screen and (max-width: 75em) {
     .no-webp #breastfeeding {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/breastfeeding/breastfeeding_1200.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/breastfeeding/breastfeeding_1200.jpg); } }
   @media only screen and (max-width: 56.25em) {
     .no-webp #breastfeeding {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/breastfeeding/breastfeeding_900.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/breastfeeding/breastfeeding_900.jpg); } }
   @media only screen and (max-width: 37.5em) {
     .no-webp #breastfeeding {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/breastfeeding/breastfeeding_600.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/breastfeeding/breastfeeding_600.jpg); } }
   @media only screen and (min-width: 112.5em) {
     .no-webp #breastfeeding {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/breastfeeding/breastfeeding_1800.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/breastfeeding/breastfeeding_1800.jpg); } }
 
 .webp #breastfeeding {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/breastfeeding/breastfeeding_1500.webp); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/breastfeeding/breastfeeding_1500.webp); }
   @media only screen and (max-width: 75em) {
     .webp #breastfeeding {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/breastfeeding/breastfeeding_1200.webp); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/breastfeeding/breastfeeding_1200.webp); } }
   @media only screen and (max-width: 56.25em) {
     .webp #breastfeeding {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/breastfeeding/breastfeeding_900.webp); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/breastfeeding/breastfeeding_900.webp); } }
   @media only screen and (max-width: 37.5em) {
     .webp #breastfeeding {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/breastfeeding/breastfeeding_600.webp); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/breastfeeding/breastfeeding_600.webp); } }
   @media only screen and (min-width: 112.5em) {
     .webp #breastfeeding {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/breastfeeding/breastfeeding_1800.webp); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/breastfeeding/breastfeeding_1800.webp); } }
 
 .no-webp #check-examen {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/check-examen/check-examen_1500.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/check-examen/check-examen_1500.jpg); }
   @media only screen and (max-width: 75em) {
     .no-webp #check-examen {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/check-examen/check-examen_1200.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/check-examen/check-examen_1200.jpg); } }
   @media only screen and (max-width: 56.25em) {
     .no-webp #check-examen {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/check-examen/check-examen_900.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/check-examen/check-examen_900.jpg); } }
   @media only screen and (max-width: 37.5em) {
     .no-webp #check-examen {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/check-examen/check-examen_600.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/check-examen/check-examen_600.jpg); } }
   @media only screen and (min-width: 112.5em) {
     .no-webp #check-examen {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/check-examen/check-examen_1800.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/check-examen/check-examen_1800.jpg); } }
 
 .webp #check-examen {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/check-examen/check-examen_1500.webp); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/check-examen/check-examen_1500.webp); }
   @media only screen and (max-width: 75em) {
     .webp #check-examen {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/check-examen/check-examen_1200.webp); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/check-examen/check-examen_1200.webp); } }
   @media only screen and (max-width: 37.5em) {
     .webp #check-examen {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/check-examen/check-examen_600.webp); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/check-examen/check-examen_600.webp); } }
   @media only screen and (min-width: 112.5em) {
     .webp #check-examen {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/check-examen/check-examen_1800.webp); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/check-examen/check-examen_1800.webp); } }
 
 .no-webp #sports {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sports/sports_1500.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sports/sports_1500.jpg); }
   @media only screen and (max-width: 75em) {
     .no-webp #sports {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sports/sports_1200.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sports/sports_1200.jpg); } }
   @media only screen and (max-width: 56.25em) {
     .no-webp #sports {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sports/sports_900.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sports/sports_900.jpg); } }
   @media only screen and (max-width: 37.5em) {
     .no-webp #sports {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sports/sports_600.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sports/sports_600.jpg); } }
   @media only screen and (min-width: 112.5em) {
     .no-webp #sports {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sports/sports_1800.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sports/sports_1800.jpg); } }
 
 .webp #sports {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sports/sports_1500.webp); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sports/sports_1500.webp); }
   @media only screen and (max-width: 75em) {
     .webp #sports {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sports/sports_1200.webp); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sports/sports_1200.webp); } }
   @media only screen and (max-width: 56.25em) {
     .webp #sports {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sports/sports_900.webp); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sports/sports_900.webp); } }
   @media only screen and (max-width: 37.5em) {
     .webp #sports {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sports/sports_600.webp); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sports/sports_600.webp); } }
   @media only screen and (min-width: 112.5em) {
     .webp #sports {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sports/sports_1800.webp); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sports/sports_1800.webp); } }
 
 .no-webp #adhd {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/adhd/adhd_1500.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/adhd/adhd_1500.jpg); }
   @media only screen and (max-width: 75em) {
     .no-webp #adhd {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/adhd/adhd_1200.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/adhd/adhd_1200.jpg); } }
   @media only screen and (max-width: 56.25em) {
     .no-webp #adhd {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/adhd/adhd_900.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/adhd/adhd_900.jpg); } }
   @media only screen and (max-width: 37.5em) {
     .no-webp #adhd {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/adhd/adhd_600.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/adhd/adhd_600.jpg); } }
   @media only screen and (min-width: 112.5em) {
     .no-webp #adhd {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/adhd/adhd_1800.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/adhd/adhd_1800.jpg); } }
 
 .webp #adhd {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/adhd/adhd_1500.webp); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/adhd/adhd_1500.webp); }
   @media only screen and (max-width: 75em) {
     .webp #adhd {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/adhd/adhd_1200.webp); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/adhd/adhd_1200.webp); } }
   @media only screen and (max-width: 37.5em) {
     .webp #adhd {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/adhd/adhd_600.webp); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/adhd/adhd_600.webp); } }
   @media only screen and (min-width: 112.5em) {
     .webp #adhd {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/adhd/adhd_1800.webp); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/adhd/adhd_1800.webp); } }
 
 .no-webp #sameday {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sameday/sameday_1500.jpg); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sameday/sameday_1500.jpg); }
   @media only screen and (max-width: 75em) {
     .no-webp #sameday {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sameday/sameday_1200.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sameday/sameday_1200.jpg); } }
   @media only screen and (max-width: 56.25em) {
     .no-webp #sameday {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sameday/sameday_900.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sameday/sameday_900.jpg); } }
   @media only screen and (max-width: 37.5em) {
     .no-webp #sameday {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sameday/sameday_600.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sameday/sameday_600.jpg); } }
   @media only screen and (min-width: 112.5em) {
     .no-webp #sameday {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sameday/sameday_1800.jpg); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sameday/sameday_1800.jpg); } }
 
 .webp #sameday {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sameday/sameday_1500.webp); }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sameday/sameday_1500.webp); }
   @media only screen and (max-width: 75em) {
     .webp #sameday {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sameday/sameday_1200.webp); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sameday/sameday_1200.webp); } }
   @media only screen and (max-width: 37.5em) {
     .webp #sameday {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../images/services/sameday/sameday_600.webp); } }
+      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sameday/sameday_600.webp); } }
 
 .navigation__checkbox {
   display: none; }
@@ -665,11 +709,15 @@ body {
   border-radius: 50%;
   z-index: 10;
   background-color: #fff;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3);
   cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .navigation__button {
+      top: 3rem;
+      right: 3rem; } }
 
 .navigation__icon {
   position: relative;
@@ -725,6 +773,10 @@ body {
   background-image: radial-gradient(#234b77, #2a93c9);
   z-index: 8;
   transition: all .8s; }
+  @media only screen and (max-width: 37.5em) {
+    .navigation__background {
+      top: 3.5rem;
+      right: 3.5rem; } }
 
 .navigation__menu {
   height: 100vh;
@@ -769,6 +821,7 @@ body {
   background-image: linear-gradient(transparent 0%, transparent 50%, #fff 50%);
   background-size: 100% 220%;
   background-position: top;
+  border-radius: 5px;
   transition: all .4s; }
   @media only screen and (max-height: 500px) {
     .navigation__link:link, .navigation__link:visited {
@@ -776,11 +829,19 @@ body {
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 0 100%;
-  color: #ef6888;
-  transform: translateY(-1rem); }
+  color: #ef6888; }
+
+.navigation__link:hover {
+  transform: translateY(-1rem);
+  -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); }
 
 .navigation__link:active {
-  transform: translateY(-0.5rem); }
+  transform: translateY(-0.5rem);
+  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); }
 
 .navigation__checkbox:checked ~ .navigation__background {
   transform: scale(100); }
@@ -790,25 +851,27 @@ body {
   width: 100%;
   left: 0; }
 
-.navigation__menu-buttom {
+.navigation__menu-bottom {
   text-align: center;
   margin-top: 3rem;
   width: 100vw; }
   @media only screen and (max-height: 500px) {
-    .navigation__menu-buttom {
+    .navigation__menu-bottom {
       width: auto;
       margin-left: 5px; } }
-  .navigation__menu-buttom__switch {
+  .navigation__menu-bottom__switch {
     margin-bottom: 2rem; }
-  .navigation__menu-buttom__extra {
+    .navigation__menu-bottom__switch .switch-lang:first-child {
+      margin: 1rem; }
+  .navigation__menu-bottom__extra {
     padding-top: 1rem; }
-    .navigation__menu-buttom__extra a:link, .navigation__menu-buttom__extra a:visited {
+    .navigation__menu-bottom__extra a:link, .navigation__menu-bottom__extra a:visited {
       text-decoration: none;
       color: rgba(255, 255, 255, 0.5);
       font-size: 1.4rem; }
-    .navigation__menu-buttom__extra a:hover, .navigation__menu-buttom__extra a:active {
+    .navigation__menu-bottom__extra a:hover, .navigation__menu-bottom__extra a:active {
       color: #fff; }
-  .navigation__menu-buttom__contacts {
+  .navigation__menu-bottom__contacts {
     display: flex;
     justify-content: center; }
 
@@ -837,8 +900,7 @@ body {
   flex-wrap: wrap; }
   .service__elt {
     margin: 3rem;
-    width: calc((100% - 18rem) / 3);
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); }
+    width: calc((100% - 18rem) / 3); }
     @media only screen and (max-width: 56.25em) {
       .service__elt {
         width: calc((100% - 12rem) / 2); } }
@@ -849,17 +911,25 @@ body {
     height: 25rem;
     display: block;
     text-align: center;
-    padding: 3rem; }
+    padding: 3rem;
+    transition: all 0.4s;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 1rem; }
     .service__link:link, .service__link:visited {
       text-decoration: none;
       color: #234b77;
       font-size: 2rem;
-      border: 1px solid #234b77;
-      transition: all 0.4s; }
+      border: 1px solid #234b77; }
     .service__link:hover, .service__link:active {
-      background-color: rgba(0, 0, 0, 0.05);
-      color: #2a93c9;
+      background-color: #234b77;
+      color: #fff;
       border-color: #2a93c9; }
+    .service__link:hover {
+      transform: translateY(-6px);
+      box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.3); }
+    .service__link:active {
+      transform: translateY(-2px);
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3); }
   .service__img {
     width: 12rem;
     height: 12rem; }
@@ -868,32 +938,27 @@ body {
 
 .testimonials {
   position: relative;
-  margin: 4rem auto;
-  max-width: 90rem; }
-  .testimonials__icon {
-    position: absolute;
-    width: 5rem;
-    height: 5rem;
-    top: -3.8rem;
-    fill: #234b77; }
+  margin: 6rem auto;
+  max-width: 110rem; }
   .testimonials__all {
     list-style: none;
     display: flex;
     margin: 0 2.5rem; }
     .testimonials__all__tile {
-      flex: 0 0 calc((100% - 9rem) / 3);
-      padding: 1.5rem;
+      position: relative;
+      width: calc((100% - 12rem) / 3);
+      padding: 6.5rem 1.5rem 1rem 1.5rem;
       border: 1px solid #234b77;
-      box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2); }
+      box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6);
+      border-radius: .8rem; }
       .testimonials__all__tile:not(:last-of-type) {
-        margin-right: 4rem; }
+        margin-right: 6rem; }
     @media only screen and (max-width: 56.25em) {
       .testimonials__all {
-        flex-direction: column; }
+        display: block; }
         .testimonials__all__tile {
-          margin-bottom: 5rem; }
-          .testimonials__all__tile:not(:last-of-type) {
-            margin-right: 0rem; } }
+          width: 100%;
+          margin-bottom: 6rem; } }
   @media only screen and (max-width: 56.25em) {
     .testimonials {
       max-width: 50rem; } }
@@ -929,13 +994,10 @@ body {
     max-width: 80rem;
     width: 70%;
     height: 40rem;
-    border: 1px solid #234b77;
-    background-color: rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 10px;
-    box-shadow: 6px 10px 30px rgba(255, 255, 255, 0.2); }
+    border-radius: 10px; }
     @media only screen and (max-width: 37.5em) {
       .header__area {
         width: 95%; } }
