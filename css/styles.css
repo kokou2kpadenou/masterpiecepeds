@@ -157,8 +157,6 @@ body {
   .little-logo:link, .little-logo:visited {
     text-decoration: none;
     color: #fff; }
-  .little-logo__text {
-    vertical-align: sub; }
   .little-logo__img {
     width: 3rem;
     height: 3rem;
