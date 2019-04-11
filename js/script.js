@@ -253,6 +253,12 @@ for (var j=0; j < popup.length; j++) {
 	popup[j].addEventListener('click', closePopupHandle);
 }
 
+// When ever the menu is opened and the browser next/previous button is pressed close the menu
+window.addEventListener('hashchange', function(event) {
+	if ((event.oldURL !== event.newURL) || navigationToggle.checked ) {
+		navigationToggle.checked = false;
+	}
+});
 
 
 // switch language functionality
