@@ -153,6 +153,7 @@ body {
   font-family: 'Galindo', cursive; }
   @media only screen and (max-width: 37.5em) {
     .little-logo {
+      margin-top: 2rem;
       align-items: flex-start; } }
   .little-logo:link, .little-logo:visited {
     text-decoration: none;
@@ -348,8 +349,8 @@ body {
   .social__link:hover .social__img, .social__link:active .social__img {
     fill: #fff; }
   .social__img {
-    width: 2.5rem;
-    height: 2.5rem; }
+    width: 3rem;
+    height: 3rem; }
 
 .quotation__text {
   font-size: 1.6rem;
@@ -859,7 +860,7 @@ body {
   .navigation__menu-bottom__switch {
     margin-bottom: 2rem; }
     .navigation__menu-bottom__switch .switch-lang:first-child {
-      margin: 1rem; }
+      margin-right: 1rem; }
   .navigation__menu-bottom__extra {
     padding-top: 1rem; }
     .navigation__menu-bottom__extra a:link, .navigation__menu-bottom__extra a:visited {
