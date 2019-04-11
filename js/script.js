@@ -320,23 +320,44 @@ function translation(lang) {
 		}
 	}
 
-	// Tranlate reCAPTCHA
+	// TODO: Tranlate reCAPTCHA
 
 }
 
 // TODO submit form
 var formApt = document.getElementById('form-apt');
+var submitBtn = document.getElementById('submit');
+
+function enabledBtn() {
+	submitBtn.disabled = false;
+}
+
+function desabledBtn() {
+	submitBtn.disabled = true;
+}
 
 function submitHandle(e) {
 	e.preventDefault();
-	var gResponse = grecaptcha.getResponse();
-	if (gResponse === '' || gResponse === undefined || gResponse.length === 0) {
-		// TODO: ACTION WHEN reCAPTCHA IS NOT ACTIVE
-		alert('no');
-	} else {
-		// TODO: ACTION WHEN reCAPTCHA IS ACTIVE
-		alert('yes');
-	}
+
+	// var gResponse = grecaptcha.getResponse();
+	// if (gResponse === '' || gResponse === undefined || gResponse.length === 0) {
+	// 	// TODO: ACTION WHEN reCAPTCHA IS NOT ACTIVE
+	// 	alert('no');
+	// } else {
+	// 	// TODO: ACTION WHEN reCAPTCHA IS ACTIVE
+	// 	alert('yes');
+	// }
+
+
+	// TODO: show message, don't forget to put timer
+	
+	// TODO: reset reCAPTCHA
+	grecaptcha.reset();
+	// TODO: disable submit
+	submitBtn.disabled = true;
+	// TODO: reset form
+	formApt.reset();
+	// TODO: send email
 
 }
 if (formApt != null) {

@@ -696,9 +696,21 @@
             </div>
             <div class="appointment__section">
               <br>
-              <div class="g-recaptcha" data-sitekey="6LeGb5sUAAAAANA20jsHOWcqXRQu1oSjGh1_JWT1" data-theme="light"></div>
+              <!-- live -->
+              <!-- data-sitekey="6LeGb5sUAAAAANA20jsHOWcqXRQu1oSjGh1_JWT1" -->
+              <!-- test -->
+              <!-- data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" -->
+              <div
+                class="g-recaptcha"
+                data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                data-theme="light"
+                data-callback="enabledBtn"
+                data-expired-callback="desabledBtn"
+                data-error-callback="desabledBtn"
+              >
+              </div>
               <br>
-              <button class="btn btn--white translate" data-key="main-appointment-btn" type="submit">Sent Request</button>
+              <button class="btn btn--white translate" id="submit" data-key="main-appointment-btn" type="submit" disabled>Sent Request</button>
             </div>
 
           </form>

@@ -8,6 +8,15 @@
   cursor: pointer;
   letter-spacing: 2.5px;
 
+  // &:disabled {
+  //   background: red;
+  //   &:hover,
+  //   &:active {
+  //     transform: none;
+  //     box-shadow: none;
+  //   }
+  // }
+
   &--red {
     border: 1px solid $color-secondary;
     background-color: $color-secondary;
@@ -19,20 +28,38 @@
     border: 1px solid $color-primary;
     background-color: transparent;
     color: $color-primary;
+    &:disabled {
+      border: 1px solid grey;
+      background-color: transparent;
+      color: grey;
+      cursor: default;
+    }
     &:hover, &:active {
       background-color: $color-primary;
       color: $color-white;
+      &:disabled {
+        background-color: transparent;
+        color: grey;
+      }
     }
   }
 
   &:hover {
     @include transform(translateY(-3px));
     @include box-shadow(0 6px 12px rgba(0, 0, 0, .4));
+    &:disabled {
+      transform: none;
+      box-shadow: none;
+    }
   }
 
   &:active {
     @include transform(translateY(-1px));
     @include box-shadow(0 2px 5px rgba(0, 0, 0, .4));
+    &:disabled {
+      transform: none;
+      box-shadow: none;      
+    }
   }
 
   &--enabled {

@@ -220,21 +220,35 @@ body {
     border: 1px solid #234b77;
     background-color: transparent;
     color: #234b77; }
+    .btn--white:disabled {
+      border: 1px solid grey;
+      background-color: transparent;
+      color: grey;
+      cursor: default; }
     .btn--white:hover, .btn--white:active {
       background-color: #234b77;
       color: #fff; }
+      .btn--white:hover:disabled, .btn--white:active:disabled {
+        background-color: transparent;
+        color: grey; }
   .btn:hover {
     -webkit-transform: translateY(-3px);
     transform: translateY(-3px);
     -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
     -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); }
+    .btn:hover:disabled {
+      transform: none;
+      box-shadow: none; }
   .btn:active {
     -webkit-transform: translateY(-1px);
     transform: translateY(-1px);
     -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); }
+    .btn:active:disabled {
+      transform: none;
+      box-shadow: none; }
   .btn--enabled {
     border: 1px solid #fff; }
   .btn--disabled {
