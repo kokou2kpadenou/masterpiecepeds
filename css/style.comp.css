@@ -37,8 +37,7 @@ body {
     @media only screen and (max-width: 37.5em) {
       .heading--1 {
         font-size: 11vw;
-        line-height: 4.8rem;
-        line-height: 11vw; } }
+        line-height: 12.5vw; } }
     .heading--1 svg {
       width: 8rem;
       height: 8rem; }
@@ -154,12 +153,11 @@ body {
   font-family: 'Galindo', cursive; }
   @media only screen and (max-width: 37.5em) {
     .little-logo {
+      margin-top: 2rem;
       align-items: flex-start; } }
   .little-logo:link, .little-logo:visited {
     text-decoration: none;
     color: #fff; }
-  .little-logo__text {
-    vertical-align: sub; }
   .little-logo__img {
     width: 3rem;
     height: 3rem;
@@ -351,8 +349,8 @@ body {
   .social__link:hover .social__img, .social__link:active .social__img {
     fill: #fff; }
   .social__img {
-    width: 2.5rem;
-    height: 2.5rem; }
+    width: 3rem;
+    height: 3rem; }
 
 .quotation__text {
   font-size: 1.6rem;
@@ -862,7 +860,7 @@ body {
   .navigation__menu-bottom__switch {
     margin-bottom: 2rem; }
     .navigation__menu-bottom__switch .switch-lang:first-child {
-      margin: 1rem; }
+      margin-right: 1rem; }
   .navigation__menu-bottom__extra {
     padding-top: 1rem; }
     .navigation__menu-bottom__extra a:link, .navigation__menu-bottom__extra a:visited {
@@ -1015,7 +1013,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 3rem; }
+    margin-top: 4rem; }
     .header__buttons .telephone a:link,
     .header__buttons .telephone a:visited {
       text-decoration: none;
@@ -1031,7 +1029,7 @@ body {
         fill: #ef6888; }
     @media only screen and (max-width: 37.5em) {
       .header__buttons .telephone {
-        margin-bottom: 1rem; } }
+        margin-bottom: 2rem; } }
     @media only screen and (max-width: 37.5em) {
       .header__buttons {
         flex-direction: column; } }

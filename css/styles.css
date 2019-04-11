@@ -153,7 +153,6 @@ body {
   font-family: 'Galindo', cursive; }
   @media only screen and (max-width: 37.5em) {
     .little-logo {
-      margin-top: 2rem;
       align-items: flex-start; } }
   .little-logo:link, .little-logo:visited {
     text-decoration: none;
@@ -1202,10 +1201,10 @@ body {
     .footer .partition__elt:not(:last-of-type) {
       padding-right: 5rem; }
     .footer .partition__title {
-      height: 6rem;
+      min-height: 6rem;
       display: flex;
       align-items: center;
-      padding: 4rem 0; }
+      margin: 1rem 0; }
       .footer .partition__title--text {
         font-size: 2rem;
         color: #fff; }

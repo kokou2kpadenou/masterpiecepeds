@@ -318,10 +318,11 @@
     }
 
     &__title {
-      height: 6rem;
+      min-height: 6rem;
       display: flex;
       align-items: center;
-      padding: 4rem 0;
+      // padding: 4rem 0;
+      margin: 1rem 0;
       &--text {
         font-size: 2rem;
         color: $color-white;
