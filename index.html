@@ -8,6 +8,8 @@
     <title>Middlebrook Pediatrics</title>
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Galindo|Roboto" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./css/flatpickr.min.css"> -->
+    <link rel="stylesheet" href="./css/airbnb.css">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
@@ -686,14 +688,27 @@
             </div>
 
             <div class="appointment__section">
-              <input type="date" class="appointment__section__input" name="date" id="date" value=""  required>
+              <input type="text" class="appointment__section__input flatpickr" name="date" id="date" value="" required>
               <label for="date" class="appointment__section__label translate" data-key="main-appointment-date">Date</label>
             </div>
 
             <div class="appointment__section">
-              <input type="text" class="appointment__section__input" name="object" id="object" value="" required>
+              <!-- <input type="text" class="appointment__section__input" name="object" id="object" value="" required> -->
+
+              <select class="appointment__section__input" id="object" required>
+                <option value="" class="translate" data-key="main-appointment-object-choice">-- Please choose an object --</option>
+                <option value="new" class="translate" data-key="main-appointment-object-new">New patient</option>
+                <option value="annual" class="translate" data-key="main-appointment-object-annual">Annual visit</option>
+                <option value="prenatal" class="translate" data-key="main-appointment-object-prenatal">Prenatal visit</option>
+                <option value="adhd" class="translate" data-key="main-appointment-object-adhd">ADD/ADHD Consultation</option>
+                <option value="other" class="translate" data-key="main-appointment-object-other">Other</option>
+
+              </select>
+
+
               <label for="object" class="appointment__section__label translate" data-key="main-appointment-object">Object</label>
             </div>
+
             <div class="appointment__section">
               <br>
               <!-- live -->
@@ -1048,6 +1063,27 @@
       </div>
     </div>
 
+    <!-- appointment message -->
+    <div class="popup" id="confirmation">
+      <div class="popup__content">
+        <div class="popup__content__heading">
+          <h3 class="heading heading--3 translate" data-key="main-appointment-confirmation">Appointment Confirmation</h3>
+          <!-- <a class="popup__content__close" href="#services">&times;</a> -->
+        </div>
+        <div class="popup__content__text">
+          <svg class="">
+            <use xlink:href="#icon-middlebrook-logo" href="#icon-middlebrook-logo"></use>
+          </svg>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero nemo tempora quaerat possimus ut, a.</p>
+          <ul class="">
+            <li class=""><a href="" class=""><button class="btn"></button></a></li>
+            <li class=""><a href="" class=""><button class="btn"></button></a></li>
+            <li class=""><a href="" class=""><button class="btn"></button></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
     <!-- SVG  -->
     <svg aria-hidden="true" style="position:absolute;width:0;height:0" xmlns="http://www.w3.org/2000/svg" overflow="hidden">
       <defs>
@@ -1156,6 +1192,8 @@
 
 
     <!-- javascript script -->
+    <script src="./js/flatpickr/flatpickr.min.js"></script>
+    <script src="./js/flatpickr/es.js"></script>
     <script src="./js/script.js"></script>
 
 

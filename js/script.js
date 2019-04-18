@@ -42,6 +42,13 @@ var langDict = {
 		'main-appointment-phone': 'Phone Number',
 		'main-appointment-date': 'Date',
 		'main-appointment-object': 'Object',
+		'main-appointment-object-choice': '-- Please choose an object --',
+		'main-appointment-object-new': 'New patient',
+		'main-appointment-object-annual': 'Annual visit',
+		'main-appointment-object-prenatal': 'Prenatal visit',
+		'main-appointment-object-adhd': 'ADD/ADHD Consultation',
+		'main-appointment-object-other': 'Other',
+
 		'main-appointment-btn': 'Sent Request',
 		'main-appointment-note': 'If you are unable to keep your appointment, please give 24 heures notice.',
 		// testimonials
@@ -129,6 +136,12 @@ var langDict = {
 		'main-appointment-phone': 'Número de teléfono',
 		'main-appointment-date': 'Fecha',
 		'main-appointment-object': 'Objeto',
+		'main-appointment-object-choice': '-- Por favor elige un objeto --',
+		'main-appointment-object-new': 'Paciente nuevo',
+		'main-appointment-object-annual': 'Visita anual',
+		'main-appointment-object-prenatal': 'Visita prenatal',
+		'main-appointment-object-adhd': 'Consulta ADD / ADHD',
+		'main-appointment-object-other': 'Otro',
 		'main-appointment-btn': 'Enviar solicitud',
 		'main-appointment-note': 'Si no puede asistir a su cita, por favor envíe un aviso de 24 horas.',
 		'main-testimonials': 'Testimonios',
@@ -218,6 +231,8 @@ function start() {
 			}
 		}
 	}
+	document.getElementsByClassName('flatpickr').flatpickr(calEn);
+
 	// If the lang code retrieved is es swith language
 	if (defaultLang === 'es') {
 		switchLang('es');
@@ -315,10 +330,21 @@ function translation(lang) {
 	if (gmaps != null) {
 		if (lang === 'es') {
 			gmaps.setAttribute('src', 'https://maps.google.com/maps?q=Middlebrook%20Pediatrics&t=&z=9&ie=UTF8&iwloc=&output=embed&hl=es-419');
+			document.getElementsByClassName('flatpickr').flatpickr(calEs);
+
 		} else {
 			gmaps.setAttribute('src', 'https://maps.google.com/maps?q=Middlebrook%20Pediatrics&t=&z=9&ie=UTF8&iwloc=&output=embed');
+			document.getElementsByClassName('flatpickr').flatpickr(calEn);
+
 		}
 	}
+
+	// TODO: translate flatpickr
+	// if (lang === 'es') {
+	// 	flatpickr.localize(flatpickr.l10ns.es);
+	// } else {
+	//
+	// }
 
 	// TODO: Tranlate reCAPTCHA
 
@@ -327,7 +353,7 @@ function translation(lang) {
 // TODO submit form
 var formApt = document.getElementById('form-apt');
 var submitBtn = document.getElementById('submit');
-
+var confirmationIntervalId;
 function enabledBtn() {
 	submitBtn.disabled = false;
 }
@@ -336,30 +362,56 @@ function desabledBtn() {
 	submitBtn.disabled = true;
 }
 
+
+var confirmation = document.getElementById('confirmation');
 function submitHandle(e) {
 	e.preventDefault();
-
-	// var gResponse = grecaptcha.getResponse();
-	// if (gResponse === '' || gResponse === undefined || gResponse.length === 0) {
-	// 	// TODO: ACTION WHEN reCAPTCHA IS NOT ACTIVE
-	// 	alert('no');
-	// } else {
-	// 	// TODO: ACTION WHEN reCAPTCHA IS ACTIVE
-	// 	alert('yes');
-	// }
+	confirmation.classList.toggle('show');
 
 
 	// TODO: show message, don't forget to put timer
-	
+	// confirmationIntervalId = setInterval(showConfirmation, 1000);
 	// TODO: reset reCAPTCHA
-	grecaptcha.reset();
+	// grecaptcha.reset();
 	// TODO: disable submit
-	submitBtn.disabled = true;
+	// submitBtn.disabled = true;
 	// TODO: reset form
-	formApt.reset();
+	// formApt.reset();
 	// TODO: send email
 
 }
 if (formApt != null) {
 	formApt.addEventListener('submit', submitHandle);
-}
+};
+
+
+var calEs = {
+	enableTime: true,
+	altFormat: "F j, Y",
+	dateFormat: 'l, F j, Y H:i',
+	minDate: new Date().fp_incr(5),
+	minTime: '09:00',
+	maxTime: '17:00',
+	time_24hr: true,
+	disable: [
+		function(date) {
+			return (date.getDay() === 0 || date.getDay() === 6);
+		}
+	],
+	locale: flatpickr.l10ns.es,
+};
+
+var calEn = {
+	enableTime: true,
+	altFormat: "F j, Y",
+	dateFormat: 'l, F j, Y H:i',
+	minDate: new Date().fp_incr(5),
+	minTime: '09:00',
+	maxTime: '17:00',
+	disable: [
+		function(date) {
+			return (date.getDay() === 0 || date.getDay() === 6);
+		}
+	],
+	locale: flatpickr.l10ns.en,
+};

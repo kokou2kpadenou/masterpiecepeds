@@ -88,6 +88,15 @@
 
 }
 
+
+.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+}
+
 // Prenatal
 .no-webp #prenatal {
   background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_1500.jpg);

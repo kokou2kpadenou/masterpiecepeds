@@ -543,6 +543,13 @@ body {
     opacity: 1;
     visibility: visible; }
 
+.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible; }
+
 .no-webp #prenatal {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/prenatal/prenatal_1500.jpg); }
   @media only screen and (max-width: 75em) {
