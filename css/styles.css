@@ -40,7 +40,8 @@ body {
         line-height: 12.5vw; } }
     .heading--1 svg {
       width: 8rem;
-      height: 8rem; }
+      height: 8rem;
+      margin-bottom: 2rem; }
       @media only screen and (max-width: 37.5em) {
         .heading--1 svg {
           width: 6rem;
@@ -150,7 +151,8 @@ body {
   display: flex;
   align-items: center;
   font-size: 2.5rem;
-  font-family: 'Galindo', cursive; }
+  font-family: 'Galindo', cursive;
+  color: #fff; }
   @media only screen and (max-width: 37.5em) {
     .little-logo {
       align-items: flex-start; } }
@@ -211,10 +213,13 @@ body {
   border-radius: 5px;
   cursor: pointer;
   letter-spacing: 2.5px; }
-  .btn--red {
+  .btn--pink {
     border: 1px solid #ef6888;
     background-color: #ef6888;
     color: #fff; }
+  .btn--gray {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.1); }
   .btn--white {
     font-size: 2rem;
     border: 1px solid #234b77;
@@ -714,6 +719,29 @@ body {
   @media only screen and (max-width: 37.5em) {
     .webp #sameday {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sameday/sameday_600.webp); } }
+
+.confirmation__header {
+  background-color: #234b77;
+  border-top-right-radius: 1.5rem;
+  border-top-left-radius: 1.5rem;
+  padding: 1rem; }
+
+.confirmation__btns {
+  list-style: none;
+  display: flex;
+  margin-top: 3rem; }
+
+.confirmation__btn {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: calc((100% - 10rem) / 3); }
+  .confirmation__btn:not(:last-of-type) {
+    margin-right: 3rem; }
+  .confirmation__btn button {
+    width: 100%; }
+
+.confirmation__invisible {
+  display: none; }
 
 .navigation__checkbox {
   display: none; }

@@ -1,0 +1,31 @@
+.confirmation {
+  &__header {
+    background-color: $color-primary;
+    border-top-right-radius: 1.5rem;
+    border-top-left-radius: 1.5rem;
+    padding: 1rem;
+  }
+
+  &__btns {
+    list-style: none;
+    display: flex;
+    margin-top: 3rem;
+  }
+
+  &__btn {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: calc((100% - 10rem) / 3 );
+    &:not(:last-of-type) {
+      margin-right: 3rem;
+    }
+    button {
+      // display: block;
+      width: 100%;
+    }
+  }
+
+  &__invisible {
+    display: none;
+  }
+}

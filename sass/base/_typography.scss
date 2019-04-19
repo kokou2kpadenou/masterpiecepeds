@@ -25,6 +25,7 @@ body {
     svg {
       width: 8rem;
       height: 8rem;
+      margin-bottom: 2rem;
       @include responsive(phone) {
         width: 6rem;
         height: 6rem;

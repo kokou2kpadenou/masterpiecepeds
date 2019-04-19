@@ -3,7 +3,8 @@
   align-items: center;
   font-size: 2.5rem;
   font-family: 'Galindo', cursive;
-
+  color: $color-white;
+  
   @include responsive(phone) {
     // margin-top: 2rem;
     align-items: flex-start;

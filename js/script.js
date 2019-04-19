@@ -38,7 +38,7 @@ var langDict = {
 		'main-office-note': 'Weekends by Appointment Only',
 		// make appointment
 		'main-appointment': 'Make Appointment',
-		'main-appointment-fullname': 'Fullname',
+		'main-appointment-fullname': 'Name',
 		'main-appointment-phone': 'Phone Number',
 		'main-appointment-date': 'Date',
 		'main-appointment-object': 'Object',
@@ -132,7 +132,7 @@ var langDict = {
 		'main-office-elt3': 'Cerrado durante el almuerzo',
 		'main-office-note': 'Fines de semana solo con cita',
 		'main-appointment': 'Concertar cita',
-		'main-appointment-fullname': 'Nombre completo',
+		'main-appointment-fullname': 'Nombre',
 		'main-appointment-phone': 'Número de teléfono',
 		'main-appointment-date': 'Fecha',
 		'main-appointment-object': 'Objeto',
@@ -256,7 +256,7 @@ for (var i = 0; i < navigationItem.length; i++) {
 
 
 // Close popup menu when click outside the popup
-var popup = document.getElementsByClassName('popup');
+var popup = document.getElementsByClassName('popup-close');
 
 function closePopupHandle(e) {
 	if (e.target.className === 'popup') {
@@ -353,7 +353,8 @@ function translation(lang) {
 // TODO submit form
 var formApt = document.getElementById('form-apt');
 var submitBtn = document.getElementById('submit');
-var confirmationIntervalId;
+
+
 function enabledBtn() {
 	submitBtn.disabled = false;
 }
@@ -363,23 +364,114 @@ function desabledBtn() {
 }
 
 
-var confirmation = document.getElementById('confirmation');
+var confirmation = document.querySelector('.confirmation');
+var confCancel = document.getElementById('conf-cancel');
+var confEdit = document.getElementById('conf-edit');
+var confConfirm = document.getElementById('conf-confirm');
+var comfirmationMsg1 = document.querySelector('.confirmation__msg--1');
+var comfirmationMsg2 = document.querySelector('.confirmation__msg--2');
+var fullname = document.getElementById('fullname');
+var phone = document.getElementById('phone');
+var date = document.getElementById('date');
+var object = document.getElementById('object');
+var confData = document.getElementsByClassName('confirmation__data');
+
+
 function submitHandle(e) {
 	e.preventDefault();
 	confirmation.classList.toggle('show');
-
-
-	// TODO: show message, don't forget to put timer
-	// confirmationIntervalId = setInterval(showConfirmation, 1000);
-	// TODO: reset reCAPTCHA
-	// grecaptcha.reset();
-	// TODO: disable submit
-	// submitBtn.disabled = true;
-	// TODO: reset form
-	// formApt.reset();
-	// TODO: send email
-
+	fillData();
+	showMsg(1);
 }
+
+// fill Data
+function fillData() {
+	for (var i = 0; i < confData.length; i++) {
+		console.log(confData[i].getAttribute('data-input'));
+		switch (confData[i].getAttribute('data-input')) {
+			case 'name':
+				confData[i].innerText = fullname.value;
+				break;
+			case 'phone':
+				confData[i].innerText = phone.value;
+				break;
+			case 'date':
+				confData[i].innerText = date.value;
+				break;
+			case 'object':
+				confData[i].innerText = object.value;
+				break;
+			default:
+
+		}
+	}
+}
+
+
+// messages
+function showMsg(msg) {
+	if (msg === 1) {
+		comfirmationMsg1.classList.remove('confirmation__invisible');
+		comfirmationMsg2.classList.add('confirmation__invisible');
+		confCancel.classList.remove('confirmation__invisible');
+		confEdit.classList.remove('confirmation__invisible');
+		confConfirm.innerText = 'Confirm';
+	} else {
+		comfirmationMsg1.classList.add('confirmation__invisible');
+		comfirmationMsg2.classList.remove('confirmation__invisible');
+		confCancel.classList.add('confirmation__invisible');
+		confEdit.classList.add('confirmation__invisible');
+		confConfirm.innerText = 'Ok';
+	}
+}
+
+
+// Reset form et close confirmation message
+function aptResetAll() {
+	// reset reCAPTCHA
+	grecaptcha.reset();
+	// disable submit
+	submitBtn.disabled = true;
+	// reset form
+	formApt.reset();
+	// Set focus on Name
+	setFocusFormName();
+	// close confirmation
+	confirmation.classList.toggle('show');
+}
+
+// Set focus on Name
+function setFocusFormName() {
+	// TODO: Set focus on Name
+	fullname.focus();
+}
+
+confCancel.addEventListener('click', function() {
+	aptResetAll();
+});
+
+
+
+confEdit.addEventListener('click', function() {
+	setFocusFormName();
+	confirmation.classList.toggle('show');
+});
+
+
+confConfirm.addEventListener('click', function() {
+	if (this.innerText === 'Confirm') {
+
+		// Change message on the screen
+		showMsg(2);
+		// TODO: send email
+
+	} else {
+		aptResetAll();
+	}
+});
+
+
+
 if (formApt != null) {
 	formApt.addEventListener('submit', submitHandle);
 };
