@@ -65,8 +65,7 @@ var langDict = {
 		'main-contacts-phone': 'Phone Number',
 		'main-contacts-email': 'Email',
 		'main-contacts-address': 'Address',
-		'': '',
-		'': '',
+
 		// footer
 		'main-footer-text1': 'Welcome to Middlebrook Pediatrics, your comprehensive center for pediatric and adolescent care. We provide child-focused, excellent medical care to children from birth to 21 years of age.',
 		'main-footer-text2': 'Our services include: well child care, immunizations, consultations, emergency services and care for acute and chronic illnesses.',
@@ -92,6 +91,15 @@ var langDict = {
 		'global-privacy': 'Privacy Policy',
 		'global-copy': '© 2019 Middlebrook Pediatrics. All rights reserved.',
 		'global-home': 'Home',
+		'main-confirmation-msg1': 'Please review the information you provided and click Confirm button to complete the appointment. In case you want to change the information click on Edit button. And Cancel button to stop the whole process.',
+		'main-confirmation-msg2': 'Dear',
+		'main-confirmation-msg3': 'your appointment about',
+		'main-confirmation-msg4': 'is set to',
+		'main-confirmation-msg5': 'Middlebrook Pediatrics will conctact you on',
+		'main-confirmation-msg6': 'for confirmation.',
+		'main-confirmation-msg7': 'Thank you for your trust.',
+		'main-confirmation-cancel': 'Cancel',
+		'main-confirmation-edit': 'Edit',
 		// terms and Conditions
 		'term-content': '<h4 class=main-doc__heading>This page informs you of our policies regarding the collection, use and disclosure of Personal Information we receive from users of the Site.</h4><p class=main-doc__paragraph>We use your Personal Information only for providing and improving the Site. By using our Site you agree to the collection and use of information in accordance with this policy.<h4 class=main-doc__heading>Information Collection And Use</h4><p class=main-doc__paragraph>While using our Site we may ask you to provide us with certain personally identifiable information which can be used to contact or identify you. Personally identifiable information may include, but is not limited to: your name; Personal Information; Log Data. Like many site operators, we collect information that your browser sends whenever you visit our Site.<h4 class=main-doc__heading>Log Data</h4><p class=main-doc__paragraph>This Log Data may include information such as your computers Internet Protocol & IP address; browser type; browser version; the pages of our Site that you visit; the time and date of your visit; the time spent on those pages and other statistics. In addition we may use third party services such as Google Analytics that collect, monitor and analyze this … The Log Data section is for businesses that use analytics or tracking services in websites or apps, like Google Analytics.<h4 class=main-doc__heading>Communications</h4><p class=main-doc__paragraph>We may use your Personal Information to contact you with newsletters; marketing or promotional materials and other information.<h4 class=main-doc__heading>Cookies</h4><p class=main-doc__paragraph>Cookies are files with small amount of data, which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your computers hard drive. Like many websites, we use “cookies” to collect information. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Site.<h4 class=main-doc__heading>Security</h4><p class=main-doc__paragraph>The security of your Personal Information is important to us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Information, we cannot guarantee its absolute security due to the nature of the process.<h4 class=main-doc__heading>Changes To This Privacy Policy</h4><p class=main-doc__paragraph>This Privacy Policy is effective as of March 31st, 2016 and will remain in effect except with respect to any changes in its provisions in the future, which will be in effect immediately after being posted on this page.<p class=main-doc__paragraph>We reserve the right to update or change our Privacy Policy at any time and you should check this Privacy Policy periodically. Your continued use of the Service after we post any modifications to the Privacy Policy on this page will constitute your acknowledgment of the modifications and your consent to abide and be bound by the modified Privacy Policy.<p class=main-doc__paragraph>If we make any material changes to this Privacy Policy, we will notify you either through the email address you have provided us, or by placing a prominent notice on our Site.<h4 class=main-doc__heading>Contact Us</h4><p class=main-doc__paragraph>If you have any questions about this Terms and Conditions, please contact us!',
 
@@ -181,6 +189,15 @@ var langDict = {
 		'global-privacy': 'Política de privacidad',
 		'global-copy': '© 2019 Middlebrook Pediatrics. Todos los derechos reservados.',
 		'global-home': 'Casa',
+		'main-confirmation-msg1': 'Revise la información que proporcionó y haga clic en el botón Confirmar para completar la cita. En caso de que desee cambiar la información, haga clic en el botón Editar. Y el botón Cancelar para detener todo el proceso.',
+		'main-confirmation-msg2': 'Querido',
+		'main-confirmation-msg3': 'tu cita sonbre',
+		'main-confirmation-msg4': 'está programada para el',
+		'main-confirmation-msg5': 'Middlebrook Pediatrics se pondrá en contacto con usted en',
+		'main-confirmation-msg6': 'para su confirmación.',
+		'main-confirmation-msg7': 'Gracias por tu confianza.',
+		'main-confirmation-cancel': 'Cancelar',
+		'main-confirmation-edit': 'Editar',
 		// terms and Conditions
 		'term-content': '<h4 class = main-doc__heading> Esta página le informa sobre nuestras políticas con respecto a la recopilación, uso y divulgación de la Información personal que recibimos de los usuarios del Sitio. </h4> <p class = main-doc__paragraph> Utilizamos su información personal Sólo para proporcionar y mejorar el sitio. Al utilizar nuestro Sitio, usted acepta la recopilación y el uso de la información de acuerdo con esta política. <H4 class = main-doc__heading> Recopilación y uso de la información </h4> <p class = main-doc__paragraph> Al usar nuestro Sitio, podemos preguntar Usted nos proporcione cierta información de identificación personal que pueda usarse para contactarlo o identificarlo. La información de identificación personal puede incluir, entre otros, su nombre; Informacion personal; Dato de registro. Al igual que muchos operadores del sitio, recopilamos la información que su navegador envía cada vez que visita nuestro Sitio. <H4 class = main-doc__heading> Log Data </h4> <p class = main-doc__paragraph> Estos datos de registro pueden incluir información como sus computadoras Protocolo de Internet y dirección IP; tipo de navegador; versión del navegador; las páginas de nuestro Sitio que usted visita; la hora y fecha de su visita; El tiempo dedicado a esas páginas y otras estadísticas. Además, podemos usar servicios de terceros, como Google Analytics, que recopilan, monitorean y analizan esto ... La sección Datos de registro es para empresas que usan servicios de análisis o seguimiento en sitios web o aplicaciones, como Google Analytics. <H4 class = main-doc__heading> Comunicaciones </h4> <p class = main-doc__paragraph> Podemos usar su información personal para contactarlo con boletines informativos; <h4 class = main-doc__heading> Cookies </h4> <p class = main-doc__paragraph> Las cookies son archivos con una pequeña cantidad de datos, que pueden incluir un identificador único anónimo. Las cookies se envían a su navegador desde un sitio web y se almacenan en el disco duro de su computadora. Como muchos sitios web, utilizamos "cookies" para recopilar información. Puede indicar a su navegador que rechace todas las cookies o que indique cuándo se está enviando una cookie. Sin embargo, si no acepta las cookies, es posible que no pueda utilizar algunas partes de nuestro Sitio. <H4 class = main-doc__heading> Security </h4> <p class = main-doc__paragraph> La seguridad de su información personal es importante para nosotros, pero recuerde que ningún método de transmisión a través de Internet o de almacenamiento electrónico es 100% seguro. Si bien nos esforzamos por utilizar medios comercialmente aceptables para proteger su información personal, no podemos garantizar su seguridad absoluta debido a la naturaleza del proceso. <H4 class = main-doc__heading> Cambios en esta Política de privacidad </h4> <p class = main -doc__paragraph> Esta Política de Privacidad entra en vigencia a partir del 31 de marzo de 2016 y permanecerá vigente, excepto con respecto a cualquier cambio en sus disposiciones en el futuro, que entrará en vigencia inmediatamente después de su publicación en esta página. <p class = main -doc__paragraph> Nos reservamos el derecho de actualizar o cambiar nuestra Política de Privacidad en cualquier momento y usted debe revisar esta Política de Privacidad periódicamente. Su uso continuado del Servicio después de que publiquemos cualquier modificación a la Política de privacidad en esta página constituirá su reconocimiento de las modificaciones y su consentimiento para cumplir y estar sujeto a la Política de privacidad modificada. <P class = main-doc__paragraph> Si hacemos Cualquier cambio sustancial a esta Política de privacidad, se lo notificaremos a través de la dirección de correo electrónico que nos ha proporcionado o mediante un aviso destacado en nuestro sitio. <h4 class = main-doc__heading> Contáctenos </h4> <p class = main-doc__paragraph> Si tiene alguna pregunta acerca de estos Términos y Condiciones, ¡contáctenos!',
 
@@ -213,6 +230,7 @@ function start() {
 			slideshowNavBtn[i].addEventListener('click', slideBtnClickHandle);
 		}
 		slideshowIntervalId = setInterval(Move, 10000);
+
 	}
 
 	// Try to retrieve the old lang code from localStorage if exist
@@ -231,7 +249,11 @@ function start() {
 			}
 		}
 	}
-	document.getElementsByClassName('flatpickr').flatpickr(calEn);
+
+
+	if (customCal.length > 0) {
+		customCal.flatpickr(calEn);
+	}
 
 	// If the lang code retrieved is es swith language
 	if (defaultLang === 'es') {
@@ -240,7 +262,7 @@ function start() {
 
 }
 
-
+var customCal = document.getElementsByClassName('flatpickr');
 
 // Close the menu when a mene element is clicked
 var navigationToggle = document.getElementById('navigation-toggle');
@@ -259,7 +281,7 @@ for (var i = 0; i < navigationItem.length; i++) {
 var popup = document.getElementsByClassName('popup-close');
 
 function closePopupHandle(e) {
-	if (e.target.className === 'popup') {
+	if (e.target.classList.contains('popup-close')) {
 		window.location.hash = 'services';
 	}
 }
@@ -321,8 +343,20 @@ function switchLang(lang) {
 // this function change the language on the UI
 function translation(lang) {
 	for (var i = 0; i < text.length; i++) {
-		// text[i].textContent = langDict[lang][text[i].getAttribute('data-key')];
-		text[i].innerHTML = langDict[lang][text[i].getAttribute('data-key')];
+
+		switch (text[i].getAttribute('data-key')) {
+			case 'term-content':
+			case 'privacy-content':
+				text[i].innerHTML = langDict[lang][text[i].getAttribute('data-key')];
+				break;
+			default:
+				text[i].textContent = langDict[lang][text[i].getAttribute('data-key')];
+		}
+
+		if (text[i].tagName === 'OPTION') {
+			text[i].value = langDict[lang][text[i].getAttribute('data-key')];
+		}
+
 	}
 
 	// Tranlate the google maps
@@ -330,21 +364,15 @@ function translation(lang) {
 	if (gmaps != null) {
 		if (lang === 'es') {
 			gmaps.setAttribute('src', 'https://maps.google.com/maps?q=Middlebrook%20Pediatrics&t=&z=9&ie=UTF8&iwloc=&output=embed&hl=es-419');
-			document.getElementsByClassName('flatpickr').flatpickr(calEs);
+			customCal.flatpickr(calEs);
 
 		} else {
 			gmaps.setAttribute('src', 'https://maps.google.com/maps?q=Middlebrook%20Pediatrics&t=&z=9&ie=UTF8&iwloc=&output=embed');
-			document.getElementsByClassName('flatpickr').flatpickr(calEn);
+			customCal.flatpickr(calEn);
 
 		}
 	}
 
-	// TODO: translate flatpickr
-	// if (lang === 'es') {
-	// 	flatpickr.localize(flatpickr.l10ns.es);
-	// } else {
-	//
-	// }
 
 	// TODO: Tranlate reCAPTCHA
 
@@ -387,23 +415,28 @@ function submitHandle(e) {
 // fill Data
 function fillData() {
 	for (var i = 0; i < confData.length; i++) {
-		console.log(confData[i].getAttribute('data-input'));
 		switch (confData[i].getAttribute('data-input')) {
 			case 'name':
-				confData[i].innerText = fullname.value;
+				confData[i].textContent = fullname.value;
 				break;
 			case 'phone':
-				confData[i].innerText = phone.value;
+				confData[i].textContent = phone.value;
 				break;
 			case 'date':
-				confData[i].innerText = date.value;
+				confData[i].textContent = date.value;
 				break;
 			case 'object':
-				confData[i].innerText = object.value;
+				confData[i].textContent = object.value;
 				break;
 			default:
 
 		}
+	}
+}
+
+function formConfHanlde(e) {
+	if (e.target.classList.contains('confirmation')) {
+		confirmation.classList.toggle('show');
 	}
 }
 
@@ -415,13 +448,17 @@ function showMsg(msg) {
 		comfirmationMsg2.classList.add('confirmation__invisible');
 		confCancel.classList.remove('confirmation__invisible');
 		confEdit.classList.remove('confirmation__invisible');
-		confConfirm.innerText = 'Confirm';
+		confConfirm.innerText = (defaultLang === 'en') ? 'Confirm' : 'Confirmar';
+		confirmation.removeEventListener('click', formConfHanlde);
+
 	} else {
 		comfirmationMsg1.classList.add('confirmation__invisible');
 		comfirmationMsg2.classList.remove('confirmation__invisible');
 		confCancel.classList.add('confirmation__invisible');
 		confEdit.classList.add('confirmation__invisible');
-		confConfirm.innerText = 'Ok';
+		confConfirm.innerText = (defaultLang === 'en') ? 'Ok' : 'De acuerdo';
+		confirmation.addEventListener('click', formConfHanlde);
+
 	}
 }
 
@@ -446,64 +483,74 @@ function setFocusFormName() {
 	fullname.focus();
 }
 
-confCancel.addEventListener('click', function() {
-	aptResetAll();
-});
-
-
-
-confEdit.addEventListener('click', function() {
-	setFocusFormName();
-	confirmation.classList.toggle('show');
-});
-
-
-confConfirm.addEventListener('click', function() {
-	if (this.innerText === 'Confirm') {
-
-		// Change message on the screen
-		showMsg(2);
-		// TODO: send email
-
-	} else {
+if (confCancel) {
+	confCancel.addEventListener('click', function() {
 		aptResetAll();
-	}
-});
+	});
+}
 
 
+if (confEdit) {
+	confEdit.addEventListener('click', function() {
+		// Set focus on Name
+		setFocusFormName();
+		// reset reCAPTCHA
+		grecaptcha.reset();
+		// disable submit
+		submitBtn.disabled = true;
+		confirmation.classList.toggle('show');
+	});
+}
 
-if (formApt != null) {
+
+if (confConfirm) {
+	confConfirm.addEventListener('click', function() {
+		if ((this.innerText === 'Confirm') || (this.innerText === 'Confirmar')) {
+
+			// Change message on the screen
+			showMsg(2);
+			// TODO: send email
+
+		} else {
+			aptResetAll();
+		}
+	});
+}
+
+
+if (formApt) {
 	formApt.addEventListener('submit', submitHandle);
 };
 
+if (customCal.length > 0) {
+	var calEs = {
+		enableTime: true,
+		altFormat: "F j, Y",
+		dateFormat: 'l, F j, Y H:i',
+		minDate: new Date().fp_incr(5),
+		minTime: '09:00',
+		maxTime: '17:00',
+		time_24hr: true,
+		disable: [
+			function(date) {
+				return (date.getDay() === 0 || date.getDay() === 6);
+			}
+		],
+		locale: flatpickr.l10ns.es,
+	};
 
-var calEs = {
-	enableTime: true,
-	altFormat: "F j, Y",
-	dateFormat: 'l, F j, Y H:i',
-	minDate: new Date().fp_incr(5),
-	minTime: '09:00',
-	maxTime: '17:00',
-	time_24hr: true,
-	disable: [
-		function(date) {
-			return (date.getDay() === 0 || date.getDay() === 6);
-		}
-	],
-	locale: flatpickr.l10ns.es,
-};
-
-var calEn = {
-	enableTime: true,
-	altFormat: "F j, Y",
-	dateFormat: 'l, F j, Y H:i',
-	minDate: new Date().fp_incr(5),
-	minTime: '09:00',
-	maxTime: '17:00',
-	disable: [
-		function(date) {
-			return (date.getDay() === 0 || date.getDay() === 6);
-		}
-	],
-	locale: flatpickr.l10ns.en,
-};
+	var calEn = {
+		enableTime: true,
+		altFormat: "F j, Y",
+		dateFormat: 'l, F j, Y H:i',
+		minDate: new Date().fp_incr(5),
+		minTime: '09:00',
+		maxTime: '17:00',
+		disable: [
+			function(date) {
+				return (date.getDay() === 0 || date.getDay() === 6);
+			}
+		],
+		locale: flatpickr.l10ns.en,
+	};
+}

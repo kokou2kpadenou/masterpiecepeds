@@ -1064,7 +1064,7 @@
     </div>
 
     <!-- appointment confirmation message -->
-    <div class="popup confirmation" id="confirmation">
+    <div class="popup confirmation">
       <div class="popup__content">
         <div class="confirmation__header">
           <div class="little-logo">
@@ -1084,20 +1084,20 @@
         <div class="popup__content__text">
 
           <div class="confirmation__msg confirmation__msg--1">
-            <div class=""><span class="translate" data-key="main-appointment-fullname">Name:</span><span class="confirmation__data" data-input="name"></span></div>
-            <div class=""><span class="translate" data-key="main-appointment-phone">Phone:</span><span class="confirmation__data" data-input="phone"></span></div>
-            <div class=""><span class="translate" data-key="main-appointment-date">Date:</span><span class="confirmation__data" data-input="date"></span></div>
-            <div class=""><span class="translate" data-key="main-appointment-object">Object:</span><span class="confirmation__data" data-input="object"></span></div>
+            <div class="confirmation__item"><span class="translate" data-key="main-appointment-fullname">Name</span>: <strong><span class="confirmation__data" data-input="name"></span></strong></div>
+            <div class="confirmation__item"><span class="translate" data-key="main-appointment-phone">Phone</span>: <strong><span class="confirmation__data" data-input="phone"></span></strong></div>
+            <div class="confirmation__item"><span class="translate" data-key="main-appointment-date">Date</span>: <strong><span class="confirmation__data" data-input="date"></span></strong></div>
+            <div class="confirmation__item"><span class="translate" data-key="main-appointment-object">Object</span>: <strong><span class="confirmation__data" data-input="object"></span></strong></div>
             <p class="translate" data-key="main-confirmation-msg1">Please review the information you provided and click Confirm button to complete the appointment. In case you want to change the information click on Edit button. And Cancel button to stop the whole process.</p>
           </div>
 
           <p class="confirmation__msg confirmation__msg--2">
-            M./Ms. <span class="confirmation__data" data-input="name"></span>, your appointment about <span class="confirmation__data" data-input="object"></span> is set to <span class="confirmation__data" data-input="date"></span>. <br> Middlebrook Pediatrics will conctact you on <span class="confirmation__data" data-input="phone"></span> for confirmation. <br> Thank you for your trust.
+            <span class="translate" data-key="main-confirmation-msg2">Dear</span> <span class="confirmation__data" data-input="name"></span>, <span class="translate" data-key="main-confirmation-msg3">your appointment about</span> <span class="confirmation__data" data-input="object"></span> <span class="translate" data-key="main-confirmation-msg4">is set to</span> <span class="confirmation__data" data-input="date"></span>. <br> <span class="translate" data-key="main-confirmation-msg5">Middlebrook Pediatrics will conctact you on</span> <span class="confirmation__data" data-input="phone"></span> <span class="translate" data-key="main-confirmation-msg6">for confirmation.</span> <br> <span class="translate" data-key="main-confirmation-msg7">Thank you for your trust.</span>
           </p>
 
           <ul class="confirmation__btns">
-            <li class="confirmation__btn"><button class="btn btn--gray" id="conf-cancel">Cancel</button></li>
-            <li class="confirmation__btn"><button class="btn btn--gray" id="conf-edit">Edit</button></li>
+            <li class="confirmation__btn"><button class="btn btn--gray translate" id="conf-cancel" data-key="main-confirmation-cancel">Cancel</button></li>
+            <li class="confirmation__btn"><button class="btn btn--gray translate" id="conf-edit" data-key="main-confirmation-edit">Edit</button></li>
             <li class="confirmation__btn"><button class="btn btn--gray" id="conf-confirm">Confirm</button></li>
           </ul>
 

@@ -726,10 +726,15 @@ body {
   border-top-left-radius: 1.5rem;
   padding: 1rem; }
 
+.confirmation__msg {
+  margin: 2rem; }
+
+.confirmation__item {
+  margin-bottom: 1rem; }
+
 .confirmation__btns {
   list-style: none;
-  display: flex;
-  margin-top: 3rem; }
+  display: flex; }
 
 .confirmation__btn {
   flex-grow: 1;

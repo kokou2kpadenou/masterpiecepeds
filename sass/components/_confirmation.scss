@@ -6,10 +6,18 @@
     padding: 1rem;
   }
 
+  &__msg {
+    margin: 2rem;
+  }
+
+  &__item {
+    margin-bottom: 1rem;
+  }
+
   &__btns {
     list-style: none;
     display: flex;
-    margin-top: 3rem;
+    // margin-top: 3rem;
   }
 
   &__btn {
