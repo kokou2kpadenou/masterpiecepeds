@@ -1,0 +1,21 @@
+.calendar-btns {
+  position: absolute;
+  top: -1rem;
+  right: 0;
+  display: flex;
+
+  &__container {
+    position: relative;
+  }
+
+  &__elt {
+    padding: .5rem .8rem;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+  }
+
+}

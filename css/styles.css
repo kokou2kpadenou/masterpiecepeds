@@ -245,6 +245,9 @@ body {
     .btn:hover:disabled {
       transform: none;
       box-shadow: none; }
+      @media only screen and (max-width: 37.5em) {
+        .btn:hover:disabled {
+          padding: 1.2rem; } }
   .btn:active {
     -webkit-transform: translateY(-1px);
     transform: translateY(-1px);
@@ -471,9 +474,8 @@ body {
       .appointment__section__input:focus {
         outline: none;
         border-bottom: 1px solid #2a93c9; }
-      .appointment__section__input:focus:invalid {
-        border-bottom: 1px solid brown; }
     .appointment__section__label {
+      font-size: 1.5rem;
       display: block;
       padding-left: 4px;
       padding-top: 4px;
@@ -735,18 +737,53 @@ body {
 .confirmation__btns {
   list-style: none;
   display: flex; }
+  @media only screen and (max-width: 37.5em) {
+    .confirmation__btns {
+      flex-wrap: wrap; } }
 
 .confirmation__btn {
   flex-grow: 1;
   flex-shrink: 1;
   flex-basis: calc((100% - 10rem) / 3); }
+  @media only screen and (max-width: 37.5em) {
+    .confirmation__btn {
+      flex-basis: 100%; } }
   .confirmation__btn:not(:last-of-type) {
-    margin-right: 3rem; }
+    margin: 0 3rem 0 0; }
+    @media only screen and (max-width: 37.5em) {
+      .confirmation__btn:not(:last-of-type) {
+        margin: 0 0 2rem 0; } }
   .confirmation__btn button {
     width: 100%; }
 
 .confirmation__invisible {
   display: none; }
+
+.calendar-btns {
+  position: absolute;
+  top: -1rem;
+  right: 0;
+  display: flex; }
+  .calendar-btns__container {
+    position: relative; }
+  .calendar-btns__elt {
+    padding: .5rem .8rem;
+    cursor: pointer; }
+  .calendar-btns__icon {
+    width: 2rem;
+    height: 2rem; }
+
+.validation-message {
+  font-size: 1.5rem;
+  margin: 3rem 0;
+  padding: 1rem;
+  border: 1px solid pink;
+  background-color: rgba(255, 192, 203, 0.2);
+  border-radius: 4px; }
+  .validation-message__text {
+    margin-bottom: 1.5rem; }
+  .validation-message__list {
+    margin-left: 3rem; }
 
 .navigation__checkbox {
   display: none; }

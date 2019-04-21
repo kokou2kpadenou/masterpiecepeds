@@ -17,18 +17,25 @@
   &__btns {
     list-style: none;
     display: flex;
-    // margin-top: 3rem;
+    @include responsive(phone) {
+      flex-wrap: wrap;
+    };
   }
 
   &__btn {
     flex-grow: 1;
     flex-shrink: 1;
     flex-basis: calc((100% - 10rem) / 3 );
+    @include responsive(phone) {
+      flex-basis: 100%;
+    };
     &:not(:last-of-type) {
-      margin-right: 3rem;
+      margin: 0 3rem 0 0;
+      @include responsive(phone) {
+        margin: 0 0 2rem 0;
+      };
     }
     button {
-      // display: block;
       width: 100%;
     }
   }

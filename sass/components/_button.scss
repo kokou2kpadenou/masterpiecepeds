@@ -8,14 +8,7 @@
   cursor: pointer;
   letter-spacing: 2.5px;
 
-  // &:disabled {
-  //   background: red;
-  //   &:hover,
-  //   &:active {
-  //     transform: none;
-  //     box-shadow: none;
-  //   }
-  // }
+
 
   &--pink {
     border: 1px solid $color-secondary;
@@ -26,7 +19,6 @@
   &--gray {
     border: 1px solid rgba(0, 0, 0, .1);
     background-color: rgba(0, 0, 0, .1);
-    // color: $color-white;
   }
 
 
@@ -54,7 +46,9 @@
   &:hover {
     @include transform(translateY(-3px));
     @include box-shadow(0 6px 12px rgba(0, 0, 0, .4));
-    &:disabled {
+    &:disabled {    @include responsive(phone) {
+      padding: 1.2rem;
+    };
       transform: none;
       box-shadow: none;
     }

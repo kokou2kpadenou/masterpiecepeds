@@ -206,6 +206,28 @@ var langDict = {
 	}
 };
 
+var confirmation = document.querySelector('.confirmation');
+var confCancel = document.getElementById('conf-cancel');
+var confEdit = document.getElementById('conf-edit');
+var confConfirm = document.getElementById('conf-confirm');
+var comfirmationMsg1 = document.querySelector('.confirmation__msg--1');
+var comfirmationMsg2 = document.querySelector('.confirmation__msg--2');
+var aptFullname = document.getElementById('fullname');
+var aptPhone = document.getElementById('phone');
+var aptDate = document.getElementById('date');
+var aptObject = document.getElementById('object');
+var confData = document.getElementsByClassName('confirmation__data');
+var customCal = document.getElementsByClassName('flatpickr');
+var navigationToggle = document.getElementById('navigation-toggle');
+var navigationItem = document.getElementsByClassName('menu-item');
+var popup = document.getElementsByClassName('popup-close');
+var defaultLang = 'en';
+var btnEn = document.getElementById('en');
+var btnEs = document.getElementById('es');
+var btnLang = document.getElementsByClassName('switch-lang');
+var text = document.getElementsByClassName('translate');
+var formApt = document.getElementById('form-apt');
+var submitBtn = document.getElementById('submit');
 
 onload  = start;
 
@@ -262,12 +284,8 @@ function start() {
 
 }
 
-var customCal = document.getElementsByClassName('flatpickr');
 
 // Close the menu when a mene element is clicked
-var navigationToggle = document.getElementById('navigation-toggle');
-var navigationItem = document.getElementsByClassName('menu-item');
-
 function navToggleClickHandle() {
 	navigationToggle.checked = false;
 }
@@ -278,8 +296,6 @@ for (var i = 0; i < navigationItem.length; i++) {
 
 
 // Close popup menu when click outside the popup
-var popup = document.getElementsByClassName('popup-close');
-
 function closePopupHandle(e) {
 	if (e.target.classList.contains('popup-close')) {
 		window.location.hash = 'services';
@@ -299,13 +315,6 @@ window.addEventListener('hashchange', function(event) {
 
 
 // switch language functionality
-var defaultLang = 'en';
-var btnEn = document.getElementById('en');
-var btnEs = document.getElementById('es');
-var btnLang = document.getElementsByClassName('switch-lang');
-var text = document.getElementsByClassName('translate');
-
-
 
 // Click on the switch language buttons
 function switchBtnClickHandle(e) {
@@ -378,10 +387,6 @@ function translation(lang) {
 
 }
 
-// TODO submit form
-var formApt = document.getElementById('form-apt');
-var submitBtn = document.getElementById('submit');
-
 
 function enabledBtn() {
 	submitBtn.disabled = false;
@@ -392,17 +397,8 @@ function desabledBtn() {
 }
 
 
-var confirmation = document.querySelector('.confirmation');
-var confCancel = document.getElementById('conf-cancel');
-var confEdit = document.getElementById('conf-edit');
-var confConfirm = document.getElementById('conf-confirm');
-var comfirmationMsg1 = document.querySelector('.confirmation__msg--1');
-var comfirmationMsg2 = document.querySelector('.confirmation__msg--2');
-var fullname = document.getElementById('fullname');
-var phone = document.getElementById('phone');
-var date = document.getElementById('date');
-var object = document.getElementById('object');
-var confData = document.getElementsByClassName('confirmation__data');
+
+
 
 
 function submitHandle(e) {
@@ -412,27 +408,35 @@ function submitHandle(e) {
 	showMsg(1);
 }
 
+if (formApt) {
+	formApt.addEventListener('submit', submitHandle);
+};
+
+
 // fill Data
 function fillData() {
 	for (var i = 0; i < confData.length; i++) {
 		switch (confData[i].getAttribute('data-input')) {
 			case 'name':
-				confData[i].textContent = fullname.value;
+				confData[i].textContent = aptFullname.value;
 				break;
 			case 'phone':
-				confData[i].textContent = phone.value;
+				confData[i].textContent = aptPhone.value;
 				break;
 			case 'date':
-				confData[i].textContent = date.value;
+				confData[i].textContent = aptDate.value;
 				break;
 			case 'object':
-				confData[i].textContent = object.value;
+				confData[i].textContent = aptObject.value;
 				break;
 			default:
 
 		}
 	}
 }
+
+
+
 
 function formConfHanlde(e) {
 	if (e.target.classList.contains('confirmation')) {
@@ -463,7 +467,7 @@ function showMsg(msg) {
 }
 
 
-// Reset form et close confirmation message
+// Reset form
 function aptResetAll() {
 	// reset reCAPTCHA
 	grecaptcha.reset();
@@ -471,25 +475,25 @@ function aptResetAll() {
 	submitBtn.disabled = true;
 	// reset form
 	formApt.reset();
-	// Set focus on Name
-	setFocusFormName();
-	// close confirmation
-	confirmation.classList.toggle('show');
 }
 
 // Set focus on Name
 function setFocusFormName() {
-	// TODO: Set focus on Name
-	fullname.focus();
+	aptFullname.focus();
 }
 
+// Cancel button click
 if (confCancel) {
 	confCancel.addEventListener('click', function() {
 		aptResetAll();
+		// close confirmation
+		confirmation.classList.toggle('show');
+		// Set focus on Name
+		setFocusFormName();
 	});
 }
 
-
+// Edit button click
 if (confEdit) {
 	confEdit.addEventListener('click', function() {
 		// Set focus on Name
@@ -502,26 +506,28 @@ if (confEdit) {
 	});
 }
 
-
+// Confirmation button click
 if (confConfirm) {
 	confConfirm.addEventListener('click', function() {
 		if ((this.innerText === 'Confirm') || (this.innerText === 'Confirmar')) {
-
 			// Change message on the screen
 			showMsg(2);
 			// TODO: send email
 
-		} else {
+			// reset the form
 			aptResetAll();
+
+
+		} else {
+			// close confirmation
+			confirmation.classList.toggle('show');
 		}
 	});
 }
 
 
-if (formApt) {
-	formApt.addEventListener('submit', submitHandle);
-};
 
+// flatpickr prop for espanish and emglish
 if (customCal.length > 0) {
 	var calEs = {
 		enableTime: true,
@@ -537,6 +543,8 @@ if (customCal.length > 0) {
 			}
 		],
 		locale: flatpickr.l10ns.es,
+		plugins: [new confirmDatePlugin({})],
+		wrap: true,
 	};
 
 	var calEn = {
@@ -552,5 +560,30 @@ if (customCal.length > 0) {
 			}
 		],
 		locale: flatpickr.l10ns.en,
+		plugins: [new confirmDatePlugin({})],
+		wrap: true,
 	};
+}
+
+
+// Phone input mask
+phone.addEventListener('input', function (e) {
+  var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+  e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+});
+
+function showValidationMsg() {
+	if ((aptFullname.value === '') || (aptPhone.vale === '') || (aptObject.value === '') || (aptDate === '') || aptPhone.validity.patternMistmach) {
+		// TODO: Build the message
+		// TODO: Show validation message
+		// TODO: Disable sent button
+	} else {
+		if (notRobotCheck) {
+			// TODO: Hide validation message
+			// TODO: Active sent button
+		} else {
+			// TODO: Show validation message
+			// TODO: Disable sent button			
+		}
+	}
 }

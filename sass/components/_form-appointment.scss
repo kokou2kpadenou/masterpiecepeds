@@ -20,13 +20,14 @@
       }
 
 
-      &:focus:invalid {
-        border-bottom: 1px solid brown;
-      }
+      // &:focus:invalid {
+      //   border-bottom: 1px solid brown;
+      // }
 
     }
 
     &__label {
+      font-size: 1.5rem;
       display: block;
       padding-left: 4px;
       padding-top: 4px;
