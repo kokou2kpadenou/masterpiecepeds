@@ -55,21 +55,23 @@
 
   &__nav {
     position: absolute;
-    top: 50%;
-    left: 4rem;
-    width: 25rem;
-    text-align: center;
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translateX(-50%);
+    top: 90%;
 
 
-    @include responsive(phone) {
-      left: 50%;
-      transform: translate(-50%, 0);
-      top: 90%;
+    @include responsive(tablet-port) {
+
+      top: 50%;
+      left: 4rem;
+      width: 25rem;
+      // text-align: center;
+      transform: translateY(-50%);
     }
 
+
     &__btn {
-      display: block;
+      display: inline-block;
       width: 2rem;
       height: 2rem;
       margin: 1.5rem 1.5rem;
@@ -86,8 +88,8 @@
         }
       }
 
-      @include responsive(phone) {
-        display: inline-block;
+      @include responsive(tablet-port) {
+        display: block;
       }
     }
 
