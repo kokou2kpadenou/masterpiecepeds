@@ -16,23 +16,23 @@
 
   &__btns {
     list-style: none;
-    display: flex;
-    @include responsive(phone) {
-      flex-wrap: wrap;
+    @include responsive(tablet-port) {
+      display: flex;
     };
   }
 
   &__btn {
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: calc((100% - 10rem) / 3 );
-    @include responsive(phone) {
-      flex-basis: 100%;
+
+    @include responsive(tablet-port) {
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: calc((100% - 10rem) / 3 );
     };
+    
     &:not(:last-of-type) {
-      margin: 0 3rem 0 0;
-      @include responsive(phone) {
-        margin: 0 0 2rem 0;
+      margin: 0 0 2rem 0;
+      @include responsive(tablet-port) {
+        margin: 0 3rem 0 0;
       };
     }
     button {

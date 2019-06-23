@@ -8,17 +8,26 @@
 
 html {
 
-  font-size: 62.5%;
-  @include responsive(table-land) {
-    font-size: 56.25%;
-  }
+  font-size: 48%;
 
   @include responsive(table-port) {
     font-size: 50%;
   }
 
+  @include responsive(table-land) {
+    font-size: 56.25%;
+  }
+
+  @include responsive(desktop) {
+    font-size: 62.5%;
+  }
+
   @include responsive(big-desktop) {
     font-size: 75%;
+  }
+
+  @supports (scroll-behavior: smooth) {
+    scroll-behavior: smooth;
   }
 
 }

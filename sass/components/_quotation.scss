@@ -4,7 +4,7 @@
     font-size: 1.6rem;
     line-height: 2rem;
     text-align: center;
-    @include responsive(table-port) {
+    @include responsive(tablet-port) {
       height: auto;
     }
     &__icon {
@@ -30,6 +30,8 @@
 
     &__desc {
       margin-left: 1rem;
+      white-space: nowrap;
+
       &__name {
         font-size: 1.6rem;
         font-weight: bold;

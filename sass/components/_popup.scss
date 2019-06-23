@@ -13,9 +13,9 @@
 
   &__content {
     position: relative;
-    width: 70%;
-    @include responsive(phone) {
-      width: 90%;
+    width: 90%;
+    @include responsive(tablet-port) {
+      width: 70%;
     }
     border: 1px solid $color-white;
     background-color: $color-white;
@@ -54,20 +54,19 @@
       }
     }
     &__heading {
-      height: 35rem;
+      height: 25rem;
       background-position: top;
       background-repeat: no-repeat;
       background-size: cover;
       border-top-left-radius: 1.5rem;
       border-top-right-radius: 1.5rem;
       display: flex;
-      justify-content: flex-end;
+      justify-content: center;
       align-items: flex-end;
       background-color: $color-gray-2;
-      @include responsive(phone) {
-        height: 25rem;
-        justify-content: center;
-        text-align: center;
+      @include responsive(tablet-port) {
+        height: 35rem;
+        justify-content: flex-end;
       }
 
     }
@@ -99,18 +98,18 @@
 
 // Prenatal
 .no-webp #prenatal {
-  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_1500.jpg);
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_600.jpg);
 
-  @include responsive(table-land) {
-    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_1200.jpg);
-  }
-
-  @include responsive(table-port) {
+  @include responsive(tablet-port) {
     background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_900.jpg);
   }
 
-  @include responsive(phone) {
-    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_600.jpg);
+  @include responsive(tablet-land) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_1200.jpg);
+  }
+
+  @include responsive(desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_1500.jpg);
   }
 
   @include responsive(big-desktop) {
@@ -119,14 +118,15 @@
 }
 
 .webp #prenatal {
-  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_1500.webp);
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_600.webp);
 
-  @include responsive(table-land) {
+
+  @include responsive(tablet-land) {
     background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_1200.webp);
   }
 
-  @include responsive(phone) {
-    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_600.webp);
+  @include responsive(desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/prenatal/prenatal_1500.webp);
   }
 
   @include responsive(big-desktop) {
@@ -136,18 +136,18 @@
 
 // breastfeeding
 .no-webp #breastfeeding {
-  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_1500.jpg);
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_600.jpg);
 
-  @include responsive(table-land) {
-    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_1200.jpg);
-  }
-
-  @include responsive(table-port) {
+  @include responsive(tablet-port) {
     background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_900.jpg);
   }
 
-  @include responsive(phone) {
-    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_600.jpg);
+  @include responsive(tablet-land) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_1200.jpg);
+  }
+
+  @include responsive(desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_1500.jpg);
   }
 
   @include responsive(big-desktop) {
@@ -156,18 +156,18 @@
 }
 
 .webp #breastfeeding {
-  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_1500.webp);
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_600.webp);
 
-  @include responsive(table-land) {
-    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_1200.webp);
-  }
-
-  @include responsive(table-port) {
+  @include responsive(tablet-port) {
     background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_900.webp);
   }
 
-  @include responsive(phone) {
-    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_600.webp);
+  @include responsive(tablet-land) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_1200.webp);
+  }
+
+  @include responsive(desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/breastfeeding/breastfeeding_1500.webp);
   }
 
   @include responsive(big-desktop) {
@@ -178,18 +178,18 @@
 
 // Check Examen
 .no-webp #check-examen {
-  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen/check-examen_1500.jpg);
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen/check-examen_600.jpg);
 
-  @include responsive(table-land) {
-    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen/check-examen_1200.jpg);
-  }
-
-  @include responsive(table-port) {
+  @include responsive(tablet-port) {
     background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen/check-examen_900.jpg);
   }
 
-  @include responsive(phone) {
-    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen/check-examen_600.jpg);
+  @include responsive(tablet-land) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen/check-examen_1200.jpg);
+  }
+
+  @include responsive(desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen/check-examen_1500.jpg);
   }
 
   @include responsive(big-desktop) {
@@ -198,14 +198,14 @@
 }
 
 .webp #check-examen {
-  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen/check-examen_1500.webp);
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen/check-examen_600.webp);
 
-  @include responsive(table-land) {
+  @include responsive(tablet-land) {
     background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen/check-examen_1200.webp);
   }
 
-  @include responsive(phone) {
-    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen/check-examen_600.webp);
+  @include responsive(desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/check-examen/check-examen_1500.webp);
   }
 
   @include responsive(big-desktop) {
@@ -216,18 +216,18 @@
 
 // Sports
 .no-webp #sports {
-  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_1500.jpg);
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_600.jpg);
 
-  @include responsive(table-land) {
-    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_1200.jpg);
-  }
-
-  @include responsive(table-port) {
+  @include responsive(tablet-port) {
     background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_900.jpg);
   }
 
-  @include responsive(phone) {
-    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_600.jpg);
+  @include responsive(tablet-land) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_1200.jpg);
+  }
+
+  @include responsive(desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_1500.jpg);
   }
 
   @include responsive(big-desktop) {
@@ -236,18 +236,18 @@
 }
 
 .webp #sports {
-  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_1500.webp);
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_600.webp);
 
-  @include responsive(table-land) {
-    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_1200.webp);
-  }
-
-  @include responsive(table-port) {
+  @include responsive(tablet-port) {
     background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_900.webp);
   }
 
-  @include responsive(phone) {
-    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_600.webp);
+  @include responsive(tablet-land) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_1200.webp);
+  }
+
+  @include responsive(desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sports/sports_1500.webp);
   }
 
   @include responsive(big-desktop) {
@@ -257,18 +257,18 @@
 
 // ADHD
 .no-webp #adhd {
-  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd/adhd_1500.jpg);
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd/adhd_600.jpg);
 
-  @include responsive(table-land) {
-    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd/adhd_1200.jpg);
-  }
-
-  @include responsive(table-port) {
+  @include responsive(tablet-port) {
     background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd/adhd_900.jpg);
   }
 
-  @include responsive(phone) {
-    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd/adhd_600.jpg);
+  @include responsive(tablet-land) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd/adhd_1200.jpg);
+  }
+
+  @include responsive(desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd/adhd_1500.jpg);
   }
 
   @include responsive(big-desktop) {
@@ -277,14 +277,14 @@
 }
 
 .webp #adhd {
-  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd/adhd_1500.webp);
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd/adhd_600.webp);
 
-  @include responsive(table-land) {
+  @include responsive(tablet-land) {
     background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd/adhd_1200.webp);
   }
 
-  @include responsive(phone) {
-    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd/adhd_600.webp);
+  @include responsive(desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/adhd/adhd_1500.webp);
   }
 
   @include responsive(big-desktop) {
@@ -294,18 +294,18 @@
 
 // Same Day Emergency
 .no-webp #sameday {
-  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday/sameday_1500.jpg);
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday/sameday_600.jpg);
 
-  @include responsive(table-land) {
-    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday/sameday_1200.jpg);
-  }
-
-  @include responsive(table-port) {
+  @include responsive(tablet-port) {
     background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday/sameday_900.jpg);
   }
 
-  @include responsive(phone) {
-    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday/sameday_600.jpg);
+  @include responsive(tablet-land) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday/sameday_1200.jpg);
+  }
+
+  @include responsive(desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday/sameday_1500.jpg);
   }
 
   @include responsive(big-desktop) {
@@ -314,14 +314,14 @@
 }
 
 .webp #sameday {
-  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday/sameday_1500.webp);
+  background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday/sameday_600.webp);
 
-  @include responsive(table-land) {
+  @include responsive(tablet-land) {
     background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday/sameday_1200.webp);
   }
 
-  @include responsive(phone) {
-    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday/sameday_600.webp);
+  @include responsive(desktop) {
+    background-image: linear-gradient($color-gray-1, $color-gray-1), url(../images/services/sameday/sameday_1500.webp);
   }
 
 }

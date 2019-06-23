@@ -46,9 +46,7 @@
   &:hover {
     @include transform(translateY(-3px));
     @include box-shadow(0 6px 12px rgba(0, 0, 0, .4));
-    &:disabled {    @include responsive(phone) {
-      padding: 1.2rem;
-    };
+    &:disabled {
       transform: none;
       box-shadow: none;
     }

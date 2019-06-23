@@ -4,24 +4,25 @@
   margin: 2rem 0;
 
   &__img {
-    width: 4rem;
-    height: 4rem;
-    margin-right: 1rem;
+    width: 2.8rem;
+    height: 2.8rem;
+    margin-right: .5rem;
     fill: $color-primary-ligth;
-    @include responsive(phone) {
-      width: 2.8rem;
-      height: 2.8rem;
-      margin-right: .5rem;
+    @include responsive(tablet-port) {
+      width: 4rem;
+      height: 4rem;
+      margin-right: 1rem;
     }
+
     &--menu {
-      width: 3rem;
-      height: 3rem;
-      margin-right: .5rem;
+      width: 2rem;
+      height: 2rem;
+      margin-right: .2rem;
       fill: $color-white-dark;
-      @include responsive(phone) {
-        width: 2rem;
-        height: 2rem;
-        margin-right: .2rem;
+      @include responsive(tablet-port) {
+        width: 3rem;
+        height: 3rem;
+        margin-right: .5rem;
       }
     }
   }
@@ -33,9 +34,9 @@
     }
 
     &__value {
-      font-size: 2.2rem;
-      @include responsive(phone) {
-        font-size: 1.8rem;
+      font-size: 1.8rem;
+      @include responsive(tablet-port) {
+        font-size: 2.2rem;
       }
       a:link,
       a:visited {
@@ -43,9 +44,9 @@
         color: inherit;
       }
       &--menu {
-        font-size: 1.6rem;
-        @include responsive(phone) {
-          font-size: 1.2rem;
+        font-size: 1.2rem;
+        @include responsive(tablet-port) {
+          font-size: 1.6rem;
         }
         a:link,
         a:visited {
@@ -59,9 +60,7 @@
     }
 
     &__extra {
-      @include responsive(phone) {
-        font-size: 1.4rem;
-      }
+      font-size: 1.4rem;
     }
   }
 

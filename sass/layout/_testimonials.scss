@@ -6,29 +6,25 @@
 
   &__all {
     list-style: none;
-    display: flex;
+    display: block;
     margin: 0 2.5rem;
     &__tile {
       position: relative;
-      // flex: 0 0 calc((100% - 12rem) / 3);
-      width: calc((100% - 12rem) / 3);
+      width: 100%;
       padding: 6.5rem 1.5rem 1rem 1.5rem;
       border: 1px solid $color-primary;
       box-shadow: 6px 6px 6px rgba(0, 0, 0, .6);
       border-radius: .8rem;
-      &:not(:last-of-type) {
-        margin-right: 6rem;
-      }
+      margin-bottom: 6rem;
     }
-    @include responsive(table-port) {
-      // flex-direction: column;
-      display: block;
+
+    @include responsive(tablet-port) {
+      display: flex;
       &__tile {
-        width: 100%;
-        // &:not(:last-of-type) {
-        //   margin-right: 0rem;
-        // }
-        margin-bottom: 6rem;
+        width: calc((100% - 12rem) / 3);
+        &:not(:last-of-type) {
+          margin-right: 6rem;
+        }
       }
     }
 
