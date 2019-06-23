@@ -1,18 +1,22 @@
 .service {
   list-style: none;
   margin: 2rem;
-  display: flex;
-  flex-wrap: wrap;
+
+  @include responsive(tablet-port) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   &__elt {
     margin: 3rem;
-    width: calc((100% - 18rem) / 3);
-    @include responsive(table-port) {
+    @include responsive(tablet-port) {
       width: calc((100% - 12rem) / 2);
     }
-    @include responsive(phone) {
-      width: calc((100% - 6rem));
-    }
+
+    @include responsive(tablet-land) {
+      width: calc((100% - 18rem) / 3);
+    };
+
   }
 
   &__link {

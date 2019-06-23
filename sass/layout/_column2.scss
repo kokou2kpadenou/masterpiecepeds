@@ -1,10 +1,10 @@
 .col2 {
-  display: flex;
-  justify-content: space-between;
-  align-items: stretch;
+  // display: block;
 
-  @include responsive(table-port) {
-    display: block;
+  @include responsive(tablet-port) {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
   }
 
   &__elt {
