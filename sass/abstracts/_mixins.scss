@@ -35,30 +35,6 @@
   border: 2px solid $property;
 }
 
-// @mixin responsive ($breakpoint) {
-//   @if $breakpoint == phone {
-//     @media only screen and (max-width: 37.5em) {
-//       @content
-//     };
-//   }
-//   @if $breakpoint == table-port {
-//     @media only screen and (max-width: 56.25em) {
-//       @content
-//     };
-//   }
-//   @if $breakpoint == table-land {
-//     @media only screen and (max-width: 75em) {
-//       @content
-//     };
-//   }
-//   @if $breakpoint == big-desktop {
-//     @media only screen and (min-width: 112.5em) {
-//       @content
-//     };
-//   }
-//
-// }
-
 // Different breack points
 @mixin responsive($breakpoint) {
   // 600px and plus (600px / 16px = 37.5em) ==> tablet portrait
