@@ -392,7 +392,7 @@ function enabledBtn() {
 	submitBtn.disabled = false;
 }
 
-function desabledBtn() {
+function disabledBtn() {
 	submitBtn.disabled = true;
 }
 
@@ -583,7 +583,7 @@ function showValidationMsg() {
 			// TODO: Active sent button
 		} else {
 			// TODO: Show validation message
-			// TODO: Disable sent button			
+			// TODO: Disable sent button
 		}
 	}
 }
