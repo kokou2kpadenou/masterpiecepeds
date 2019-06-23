@@ -10,15 +10,14 @@
 
   &__area {
     max-width: 80rem;
-    width: 70%;
+    width: 95%;
     height: 40rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border-radius: 10px;
 
-    @include responsive(phone) {
-      width: 95%;
+    @include responsive(tablet-port) {
+      width: 75%;
     }
 
   }
@@ -34,18 +33,17 @@
   p {
     color: $color-white;
     font-size: 2rem;
-    @include responsive(phone) {
-      font-size: 1.6rem;
-    }
   }
 
   &__buttons {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+
     margin-top: 4rem;
+    text-align: center;
 
     .telephone {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       a:link,
       a:visited {
         text-decoration: none;
@@ -61,13 +59,14 @@
         }
 
       }
-      @include responsive(phone) {
-        margin-bottom: 2rem;
-      }
+      margin: 2rem 0;
+
     }
 
-    @include responsive(phone) {
-      flex-direction: column;
+    @include responsive(tablet-port) {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
     }
 
   }
@@ -162,18 +161,18 @@
 
 
 .no-webp #testimonials {
-  background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1500.jpg);
+  background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-600.jpg);
 
-  @include responsive(table-land) {
-    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1200.jpg);
-  }
-
-  @include responsive(table-port) {
+  @include responsive(tablet-port) {
     background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-900.jpg);
   }
 
-  @include responsive(phone) {
-    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-600.jpg);
+  @include responsive(tablet-land) {
+    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1200.jpg);
+  }
+
+  @include responsive(desktop) {
+    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1500.jpg);
   }
 
   @include responsive(big-desktop) {
@@ -183,18 +182,18 @@
 
 .webp #testimonials {
   color: $color-gray-3;
-  background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1500.webp);
+  background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-600.webp);
 
-  @include responsive(table-land) {
-    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1200.webp);
-  }
-
-  @include responsive(table-port) {
+  @include responsive(tablet-port) {
     background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-900.webp);
   }
 
-  @include responsive(phone) {
-    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-600.webp);
+  @include responsive(tablet-land) {
+    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1200.webp);
+  }
+
+  @include responsive(desktop) {
+    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1500.webp);
   }
 
   @include responsive(big-desktop) {
@@ -231,14 +230,14 @@
     margin: 5rem auto;
   }
   &__phone {
-    margin-top: 3rem;
+    margin-top: 4rem;
     & a:link,
     & a:visited {
       text-decoration: none;
       font-size: 6rem;
       color: $color-secondary;
       font-weight: bold;
-      @include responsive(phone) {
+      @include responsive(tablet-port) {
         font-size: 4rem;
       }
       span {
@@ -259,9 +258,10 @@
   }
   &__logo {
     margin: 1rem;
+    width: 250px;
     & img {
-      @include responsive(phone) {
-        width: 250px;
+      @include responsive(tablet-port) {
+        width: auto;
       }
     }
   }
@@ -275,9 +275,9 @@
   .line {
     display: flex;
     align-items: center;
-    padding: 0 4rem;
-    @include responsive(phone) {
-      padding: 0 3rem;
+    padding: 0 3rem;
+    @include responsive(tablet-port) {
+      padding: 0 4rem;
     }
     &--top {
       height: 6rem;
@@ -290,38 +290,42 @@
     }
 
     &--bottom {
-      height: 5rem;
+      height: auto;
+      flex-direction: column;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      line-height: 2rem;
       background-color: $color-primary;
-      @include responsive(phone) {
-        display: block;
-        text-align: center;
-        height: auto;
-        padding: 1.5rem 0;
-        line-height: 2rem;
+      @include responsive(tablet-port) {
+        height: 5rem;
+        flex-direction: row;
       }
     }
   }
 
   .partition {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
     width: 100%;
-    @include responsive(table-port) {
+    @include responsive(tablet-port) {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
       flex-wrap: wrap;
     }
     list-style: none;
-    &__elt {
-      &:not(:last-of-type) {
-        padding-right: 5rem;
+
+    @include responsive(tablet-port) {
+      &__elt {
+        &:not(:last-of-type) {
+          padding-right: 5rem;
+        }
       }
-    }
+    };
+
 
     &__title {
       min-height: 6rem;
       display: flex;
       align-items: center;
-      // padding: 4rem 0;
       margin: 1rem 0;
       &--text {
         font-size: 2rem;
@@ -364,18 +368,19 @@
 
 
     #partition-desc {
-      max-width: 60rem;
-       @include responsive(table-port) {
-           width: 100%;
-           max-width: none;
+       @include responsive(tablet-port) {
+         width: 100%;
        }
+       @include responsive(tablet-land) {
+        max-width: 60rem;
+       };
 
     }
 
 
     #partition-office {
-       @include responsive(phone) {
-          width: 100%;
+       @include responsive(tablet-port) {
+          max-width: 30rem;
        }
     }
 
