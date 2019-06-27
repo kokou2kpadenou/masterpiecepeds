@@ -1201,7 +1201,7 @@ body {
     max-width: 60rem;
     width: 80%;
     font-size: 2rem;
-    margin: 5rem auto; }
+    margin: 2rem auto 5rem auto; }
   .emergency__phone {
     margin-top: 4rem; }
     .emergency__phone a:link,
@@ -1226,7 +1226,7 @@ body {
     font-size: 2rem;
     margin: 5rem auto; }
   .affiliation__logo {
-    margin: 1rem;
+    margin: 2rem auto 1rem auto;
     width: 250px; }
     @media only screen and (min-width: 37.5em) {
       .affiliation__logo img {

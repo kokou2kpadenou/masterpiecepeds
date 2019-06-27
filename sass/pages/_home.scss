@@ -227,7 +227,7 @@
     max-width: 60rem;
     width: 80%;
     font-size: 2rem;
-    margin: 5rem auto;
+    margin: 2rem auto 5rem auto;
   }
   &__phone {
     margin-top: 4rem;
@@ -257,7 +257,7 @@
     margin: 5rem auto;
   }
   &__logo {
-    margin: 1rem;
+    margin: 2rem auto 1rem auto;
     width: 250px;
     & img {
       @include responsive(tablet-port) {
