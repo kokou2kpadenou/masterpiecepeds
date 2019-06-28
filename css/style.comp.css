@@ -370,6 +370,9 @@ body {
   font-size: 1.6rem;
   line-height: 2rem;
   text-align: center; }
+  @media only screen and (min-width: 37.5em) {
+    .quotation__text {
+      height: auto; } }
   .quotation__text__icon {
     width: 2rem;
     height: 2rem;
@@ -388,7 +391,8 @@ body {
     border-radius: 100%;
     box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.6); }
   .quotation__author__desc {
-    margin-left: 1rem; }
+    margin-left: 1rem;
+    white-space: nowrap; }
     .quotation__author__desc__name {
       font-size: 1.6rem;
       font-weight: bold; }
@@ -469,6 +473,12 @@ body {
       padding-left: 4px;
       padding-top: 4px;
       color: #234b77; }
+    .appointment__section__error {
+      color: #fff;
+      border: 1px solid pink;
+      padding: 0 .5rem;
+      background-color: rgba(255, 192, 203, 0.9);
+      border-radius: 4px; }
 
 .popup {
   position: fixed;
@@ -760,18 +770,6 @@ body {
     width: 2rem;
     height: 2rem; }
 
-.validation-message {
-  font-size: 1.5rem;
-  margin: 3rem 0;
-  padding: 1rem;
-  border: 1px solid pink;
-  background-color: rgba(255, 192, 203, 0.2);
-  border-radius: 4px; }
-  .validation-message__text {
-    margin-bottom: 1.5rem; }
-  .validation-message__list {
-    margin-left: 3rem; }
-
 .navigation__checkbox {
   display: none; }
 
@@ -886,7 +884,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   background-image: linear-gradient(transparent 0%, transparent 50%, #fff 50%);
-  background-size: 100% 220%;
+  background-size: 110% 220%;
   background-position: top;
   border-radius: 5px;
   transition: all .4s; }
@@ -1142,24 +1140,44 @@ body {
 #appointment #makeappointment {
   background-color: rgba(91, 91, 93, 0.1); }
 
-@media only screen and (max-width: 355px) {
-  .g-recaptcha {
-    transform: scale(0.7);
-    transform-origin: 0 0; } }
+.g-recaptcha {
+  margin-bottom: 2rem; }
+  @media only screen and (max-width: 355px) {
+    .g-recaptcha {
+      transform: scale(0.7);
+      transform-origin: 0 0; } }
 
 #testimonials {
   color: rgba(0, 0, 0, 0.8);
   background-size: cover; }
 
 .no-webp #testimonials {
-  background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1500.jpg); }
+  background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-600.jpg); }
+  @media only screen and (min-width: 37.5em) {
+    .no-webp #testimonials {
+      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-900.jpg); } }
+  @media only screen and (min-width: 56.25em) {
+    .no-webp #testimonials {
+      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1200.jpg); } }
+  @media only screen and (min-width: 75em) {
+    .no-webp #testimonials {
+      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1500.jpg); } }
   @media only screen and (min-width: 93.75em) {
     .no-webp #testimonials {
       background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1800.jpg); } }
 
 .webp #testimonials {
   color: rgba(0, 0, 0, 0.8);
-  background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1500.webp); }
+  background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-600.webp); }
+  @media only screen and (min-width: 37.5em) {
+    .webp #testimonials {
+      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-900.webp); } }
+  @media only screen and (min-width: 56.25em) {
+    .webp #testimonials {
+      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1200.webp); } }
+  @media only screen and (min-width: 75em) {
+    .webp #testimonials {
+      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1500.webp); } }
   @media only screen and (min-width: 93.75em) {
     .webp #testimonials {
       background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1800.webp); } }
@@ -1179,15 +1197,19 @@ body {
     max-width: 60rem;
     width: 80%;
     font-size: 2rem;
-    margin: 5rem auto; }
+    margin: 2rem auto 5rem auto; }
   .emergency__phone {
-    margin-top: 3rem; }
+    margin-top: 4rem; }
     .emergency__phone a:link,
     .emergency__phone a:visited {
       text-decoration: none;
       font-size: 6rem;
       color: #ef6888;
       font-weight: bold; }
+      @media only screen and (min-width: 37.5em) {
+        .emergency__phone a:link,
+        .emergency__phone a:visited {
+          font-size: 4rem; } }
       .emergency__phone a:link span,
       .emergency__phone a:visited span {
         font-weight: normal; }
@@ -1200,7 +1222,11 @@ body {
     font-size: 2rem;
     margin: 5rem auto; }
   .affiliation__logo {
-    margin: 1rem; }
+    margin: 2rem auto 1rem auto;
+    width: 250px; }
+    @media only screen and (min-width: 37.5em) {
+      .affiliation__logo img {
+        width: auto; } }
 
 .footer {
   color: rgba(255, 255, 255, 0.5);

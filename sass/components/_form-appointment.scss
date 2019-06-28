@@ -19,7 +19,9 @@
         border-bottom: 1px solid $color-primary-ligth;
       }
 
-
+      // &[value=""] {
+      //   color: rgba(0, 0, 0, 0.2);
+      // }
       // &:focus:invalid {
       //   border-bottom: 1px solid brown;
       // }
@@ -32,6 +34,14 @@
       padding-left: 4px;
       padding-top: 4px;
       color: $color-primary;
+    }
+
+    &__error {
+      color: #fff;
+      border: 1px solid pink;
+      padding: 0 .5rem;
+      background-color: rgba(255, 192, 203, .9);
+      border-radius: 4px;
     }
 
   }

@@ -149,8 +149,6 @@
           </div>
         </div>
 
-
-
       </nav>
 
     </div>
@@ -678,22 +676,20 @@
           <h2 class="heading heading--2 heading--2left translate" data-key="main-appointment">Make Appointment</h2>
           <form class="appointment" id="form-apt">
             <div class="appointment__section">
-              <input type="text" class="appointment__section__input" name="fullname" id="fullname" value="" placeholder="Tape your name here.">
-              <label for="fullname" class="appointment__section__label translate" data-key="main-appointment-fullname">Name</label>
+              <input type="text" class="appointment__section__input translate" name="fullname" id="fullname" value="" data-key="main-appointment-fullname-placeholder" placeholder="Tape your name here.">
+              <label for="fullname" class="appointment__section__label"><span class="translate" data-key="main-appointment-fullname" id="labfullname">Name</span> <span id="erfullname"></span></label>
             </div>
 
             <div class="appointment__section">
-              <input type="tel" class="appointment__section__input" name="phone" id="phone" value="" placeholder="(555) 222-2568" pattern="\([0-9]{3}\) [0-9]{3}-[0-9]{4}">
-              <label for="phone" class="appointment__section__label translate" data-key="main-appointment-phone">Phone Number</label>
+              <input type="tel" class="appointment__section__input" name="phone" id="phone" value="" placeholder="(555) 222-2568">
+              <label for="phone" class="appointment__section__label"><span class="translate" data-key="main-appointment-phone" id="labphone">Phone Number</span> <span id="erphone"></span></label>
 
             </div>
 
-
-
             <div class="appointment__section">
 
-              <select class="appointment__section__input" id="object">
-                <option value="" class="translate" data-key="main-appointment-object-choice">-- Please choose an object --</option>
+              <select class="appointment__section__input" id="object" name="object">
+                <option style="color:rgba(0, 0, 0, 0.2)" value="" class="translate" data-key="main-appointment-object-choice">-- Please choose an object --</option>
                 <option value="New patient" class="translate" data-key="main-appointment-object-new">New patient</option>
                 <option value="Annual visit" class="translate" data-key="main-appointment-object-annual">Annual visit</option>
                 <option value="Prenatal visit" class="translate" data-key="main-appointment-object-prenatal">Prenatal visit</option>
@@ -702,13 +698,12 @@
 
               </select>
 
-
-              <label for="object" class="appointment__section__label translate" data-key="main-appointment-object">Object</label>
+              <label for="object" class="appointment__section__label"><span class="translate" data-key="main-appointment-object" id="labobject">Object</span> <span id="erobject"></span></label>
             </div>
 
             <div class="appointment__section">
               <div class="flatpickr calendar-btns__container">
-                <input type="text" class="appointment__section__input" name="date" id="date" value="" data-input placeholder="Select date and time...">
+                <input type="text" class="appointment__section__input translate" data-key="main-appointment-date-placeholder" name="date" id="date" value="" data-input placeholder="Select date and time...">
                 <div class="calendar-btns">
                   <span class="input-button calendar-btns__elt" data-toggle>
                     <svg class="calendar-btns__icon">
@@ -723,7 +718,7 @@
                 </div>
               </div>
 
-              <label for="date" class="appointment__section__label translate" data-key="main-appointment-date">Date</label>
+              <label for="date" class="appointment__section__label"><span class="translate" data-key="main-appointment-date" id="labdate">Date</span> <span id="erdate"></span></label>
             </div>
 
             <div class="appointment__section">
@@ -736,18 +731,10 @@
                 class="g-recaptcha"
                 data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
                 data-theme="light"
-                data-callback="enabledBtn"
-                data-expired-callback="desabledBtn"
-                data-error-callback="disabledBtn"
+                data-callback="robotChecked"
+                data-expired-callback="robotUnchecked"
+                data-error-callback="robotUnchecked"
               >
-              </div>
-              <div class="validation-message">
-                <p class="validation-message__text">The following actions must be performed before the sent request button activated:</p>
-                <ol class="validation-message__list">
-                  <li class="">Name, Phone number, Date can't be empty.</li>
-                  <li class="">Choose an object.</li>
-                  <li class="">Check 'I'am not robot'.</li>
-                </ol>
               </div>
               <button class="btn btn--white translate" id="submit" data-key="main-appointment-btn" type="submit" disabled>Sent Request</button>
             </div>

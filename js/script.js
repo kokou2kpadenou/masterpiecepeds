@@ -1,3 +1,9 @@
+/*
+	-----------------------------------------------------------------------------
+		Variables
+	-----------------------------------------------------------------------------
+*/
+// Language Dictionary
 var langDict = {
 	'en': {
 		// index.html
@@ -39,9 +45,13 @@ var langDict = {
 		// make appointment
 		'main-appointment': 'Make Appointment',
 		'main-appointment-fullname': 'Name',
+		'main-appointment-fullname-placeholder': 'Tape your name here.',
 		'main-appointment-phone': 'Phone Number',
+		'main-appointment-phone-placeholder': '(555) 222-2568',
 		'main-appointment-date': 'Date',
+		'main-appointment-date-placeholder': 'Select date and time...',
 		'main-appointment-object': 'Object',
+		'main-appointment-object-placeholder': '',
 		'main-appointment-object-choice': '-- Please choose an object --',
 		'main-appointment-object-new': 'New patient',
 		'main-appointment-object-annual': 'Annual visit',
@@ -141,9 +151,13 @@ var langDict = {
 		'main-office-note': 'Fines de semana solo con cita',
 		'main-appointment': 'Concertar cita',
 		'main-appointment-fullname': 'Nombre',
+		'main-appointment-fullname-placeholder': 'Grabe su nombre aquí.',
 		'main-appointment-phone': 'Número de teléfono',
+		'main-appointment-phone-placeholder': '(555) 222-2568',
 		'main-appointment-date': 'Fecha',
+		'main-appointment-date-placeholder': 'Seleccionar fecha y hora ...',
 		'main-appointment-object': 'Objeto',
+		'main-appointment-object-placeholder': '',
 		'main-appointment-object-choice': '-- Por favor elige un objeto --',
 		'main-appointment-object-new': 'Paciente nuevo',
 		'main-appointment-object-annual': 'Visita anual',
@@ -206,6 +220,7 @@ var langDict = {
 	}
 };
 
+// Others variables
 var confirmation = document.querySelector('.confirmation');
 var confCancel = document.getElementById('conf-cancel');
 var confEdit = document.getElementById('conf-edit');
@@ -228,6 +243,20 @@ var btnLang = document.getElementsByClassName('switch-lang');
 var text = document.getElementsByClassName('translate');
 var formApt = document.getElementById('form-apt');
 var submitBtn = document.getElementById('submit');
+var validationMessage = {
+	fullname: 'Name required.',
+	phone: 'Phone number required.',
+	object: 'Object required.',
+	date: 'Date required.',
+	recaptcha: 'Check I am not a robot.'
+}
+
+
+/*
+	-----------------------------------------------------------------------------
+		Action after loading.
+	-----------------------------------------------------------------------------
+*/
 
 onload  = start;
 
@@ -285,6 +314,13 @@ function start() {
 }
 
 
+/*
+	-----------------------------------------------------------------------------
+		others
+	-----------------------------------------------------------------------------
+*/
+
+
 // Close the menu when a mene element is clicked
 function navToggleClickHandle() {
 	navigationToggle.checked = false;
@@ -314,11 +350,15 @@ window.addEventListener('hashchange', function(event) {
 });
 
 
-// switch language functionality
+/*
+	-----------------------------------------------------------------------------
+		switch language implementation
+	-----------------------------------------------------------------------------
+*/
+
 
 // Click on the switch language buttons
 function switchBtnClickHandle(e) {
-
 	e.preventDefault();
 	if (this.classList.contains('btn--enabled')) {
 		defaultLang = (this.getAttribute('id') === 'es') ? 'es' : 'en';
@@ -347,9 +387,18 @@ function switchLang(lang) {
 	}
 	// Start the changing the language on UI
 	translation(lang);
+
+	// Close the Menu
+	navToggleClickHandle();
 }
 
-// this function change the language on the UI
+
+/*
+	-----------------------------------------------------------------------------
+		UI translate
+	-----------------------------------------------------------------------------
+*/
+
 function translation(lang) {
 	for (var i = 0; i < text.length; i++) {
 
@@ -359,12 +408,18 @@ function translation(lang) {
 				text[i].innerHTML = langDict[lang][text[i].getAttribute('data-key')];
 				break;
 			default:
-				text[i].textContent = langDict[lang][text[i].getAttribute('data-key')];
+				if (text[i].tagName === 'INPUT') {
+					text[i].placeholder = langDict[lang][text[i].getAttribute('data-key')];
+				}	else {
+					text[i].textContent = langDict[lang][text[i].getAttribute('data-key')];
+				}
 		}
 
 		if (text[i].tagName === 'OPTION') {
-			text[i].value = langDict[lang][text[i].getAttribute('data-key')];
+			var optionVal = langDict[lang][text[i].getAttribute('data-key')];
+			text[i].value = ((optionVal === '-- Please choose an object --') || (optionVal === '-- Por favor elige un objeto --')) ? '' : optionVal;
 		}
+
 
 	}
 
@@ -388,18 +443,13 @@ function translation(lang) {
 }
 
 
-function enabledBtn() {
-	submitBtn.disabled = false;
-}
-
-function disabledBtn() {
-	submitBtn.disabled = true;
-}
 
 
-
-
-
+/*
+	-----------------------------------------------------------------------------
+		Confirmation Dialog
+	-----------------------------------------------------------------------------
+*/
 
 function submitHandle(e) {
 	e.preventDefault();
@@ -436,8 +486,6 @@ function fillData() {
 }
 
 
-
-
 function formConfHanlde(e) {
 	if (e.target.classList.contains('confirmation')) {
 		confirmation.classList.toggle('show');
@@ -469,11 +517,8 @@ function showMsg(msg) {
 
 // Reset form
 function aptResetAll() {
-	// reset reCAPTCHA
 	grecaptcha.reset();
-	// disable submit
 	submitBtn.disabled = true;
-	// reset form
 	formApt.reset();
 }
 
@@ -486,9 +531,7 @@ function setFocusFormName() {
 if (confCancel) {
 	confCancel.addEventListener('click', function() {
 		aptResetAll();
-		// close confirmation
 		confirmation.classList.toggle('show');
-		// Set focus on Name
 		setFocusFormName();
 	});
 }
@@ -496,11 +539,8 @@ if (confCancel) {
 // Edit button click
 if (confEdit) {
 	confEdit.addEventListener('click', function() {
-		// Set focus on Name
 		setFocusFormName();
-		// reset reCAPTCHA
 		grecaptcha.reset();
-		// disable submit
 		submitBtn.disabled = true;
 		confirmation.classList.toggle('show');
 	});
@@ -510,25 +550,25 @@ if (confEdit) {
 if (confConfirm) {
 	confConfirm.addEventListener('click', function() {
 		if ((this.innerText === 'Confirm') || (this.innerText === 'Confirmar')) {
-			// Change message on the screen
 			showMsg(2);
 			// TODO: send email
 
-			// reset the form
 			aptResetAll();
-
-
 		} else {
-			// close confirmation
 			confirmation.classList.toggle('show');
 		}
 	});
 }
 
 
+/*
+	-----------------------------------------------------------------------------
+		flatpickr props for espanish and english
+	-----------------------------------------------------------------------------
+*/
 
-// flatpickr prop for espanish and emglish
 if (customCal.length > 0) {
+	// espanish
 	var calEs = {
 		enableTime: true,
 		altFormat: "F j, Y",
@@ -547,6 +587,7 @@ if (customCal.length > 0) {
 		wrap: true,
 	};
 
+	// english
 	var calEn = {
 		enableTime: true,
 		altFormat: "F j, Y",
@@ -566,24 +607,73 @@ if (customCal.length > 0) {
 }
 
 
-// Phone input mask
-phone.addEventListener('input', function (e) {
-  var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
-  e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
-});
 
-function showValidationMsg() {
-	if ((aptFullname.value === '') || (aptPhone.vale === '') || (aptObject.value === '') || (aptDate === '') || aptPhone.validity.patternMistmach) {
-		// TODO: Build the message
-		// TODO: Show validation message
-		// TODO: Disable sent button
-	} else {
-		if (notRobotCheck) {
-			// TODO: Hide validation message
-			// TODO: Active sent button
+/*
+	-----------------------------------------------------------------------------
+		Form validation
+	-----------------------------------------------------------------------------
+*/
+
+
+// Hook Input handle function to the  control
+var inputs = document.getElementsByClassName('appointment__section__input');
+for (var i = 0; i < inputs.length; i++) {
+	inputs[i].addEventListener('input', handleInput);
+}
+
+// Event Input handle function
+function handleInput(e) {
+	var labelName = document.getElementById('lab' + e.target.name).textContent;
+	var requiredMsg = defaultLang === 'es' ? 'Se requiere ' + labelName + '.' : labelName + ' is required.';
+
+	if (e.target.type === 'tel') {
+		// Check the format of the phone
+		var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
+		e.target.value = !x[2] ? x[1] : '(' + x[1] + ') ' + x[2] + (x[3] ? '-' + x[3] : '');
+
+		if (/\([0-9]{3}\) [0-9]{3}-[0-9]{4}/.test(e.target.value)) {
+			delete validationMessage[e.target.name];
+		} else if (e.target.value !== '') {
+			validationMessage[e.target.name] = defaultLang === 'es' ? 'El formato correcto es (555) 222-2568' :'Correct format is (555) 222-2568';
 		} else {
-			// TODO: Show validation message
-			// TODO: Disable sent button
+			validationMessage[e.target.name] = requiredMsg;
 		}
+
+	} else if (e.target.value === '') {
+		validationMessage[e.target.name] = requiredMsg;
+	} else {
+		delete validationMessage[e.target.name];
 	}
+
+	showValidationMsg(e.target.name, validationMessage);
+	btnSetEnable(validationMessage);
+}
+
+// Validation message display
+function showValidationMsg(elt, msg) {
+	var label = document.getElementById('er' + elt);
+	if (msg[elt]) {
+		label.textContent = msg[elt];
+		label.classList.add('appointment__section__error');
+	} else {
+		label.textContent = '';
+		label.classList.remove('appointment__section__error');	}
+}
+
+// Submit button enabled according to form validation.
+function btnSetEnable(msg) {
+	submitBtn.disabled = !(Object.keys(msg).length === 0);
+}
+
+
+// I am not robot checked
+function robotChecked() {
+	delete validationMessage.recaptcha;
+	btnSetEnable(validationMessage);
+}
+
+// I am not robot not checked
+function robotUnchecked() {
+	validationMessage.recaptcha = 'Check I am not robot.';
+	btnSetEnable(validationMessage);
 }
