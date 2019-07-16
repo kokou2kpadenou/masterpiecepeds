@@ -232,10 +232,14 @@
   }
   &__phone {
     margin-top: 4rem;
+    font-size: 4rem;
+    @include responsive(tablet-port) {
+      font-size: 6rem;
+    };
+
     & a:link,
     & a:visited {
       text-decoration: none;
-      font-size: 6rem;
       color: $color-secondary;
       font-weight: bold;
       @include responsive(tablet-port) {

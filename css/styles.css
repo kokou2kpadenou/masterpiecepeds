@@ -316,7 +316,9 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 90%; }
+    top: 90%;
+    width: 90vw;
+    text-align: center; }
     @media only screen and (min-width: 37.5em) {
       .slideshow__nav {
         top: 50%;
@@ -327,7 +329,7 @@ body {
       display: inline-block;
       width: 2rem;
       height: 2rem;
-      margin: 1.5rem 1.5rem;
+      margin: 1rem 1rem;
       border-radius: 100%;
       cursor: pointer;
       transition: all .4s;
@@ -339,6 +341,7 @@ body {
           transform: scale(1.5); } }
       @media only screen and (min-width: 37.5em) {
         .slideshow__nav__btn {
+          margin: 1.5rem 1.5rem;
           display: block; } }
     @media only screen and (hover: hover) {
       .slideshow__nav #nav-btn1:hover {
@@ -1199,11 +1202,14 @@ body {
     font-size: 2rem;
     margin: 2rem auto 5rem auto; }
   .emergency__phone {
-    margin-top: 4rem; }
+    margin-top: 4rem;
+    font-size: 4rem; }
+    @media only screen and (min-width: 37.5em) {
+      .emergency__phone {
+        font-size: 6rem; } }
     .emergency__phone a:link,
     .emergency__phone a:visited {
       text-decoration: none;
-      font-size: 6rem;
       color: #ef6888;
       font-weight: bold; }
       @media only screen and (min-width: 37.5em) {
