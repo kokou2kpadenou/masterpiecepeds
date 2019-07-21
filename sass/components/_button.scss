@@ -79,6 +79,7 @@
 
   &--enabled,
   &--disabled {
+    color: $color-white;
     &:link,
     &:visited {
       color: $color-white;
