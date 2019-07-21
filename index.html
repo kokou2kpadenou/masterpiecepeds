@@ -8,11 +8,12 @@
     <title>Middlebrook Pediatrics</title>
     <link rel="shortcut icon" type="image/png" href="favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Galindo|Roboto" rel="stylesheet">
-    <!-- <link rel="preconnect" href="https://maps.google.com" as="document"> -->
+
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/flatpickr.css">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="stylesheet" href="./css/confirmDate.css">
 
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script>
       /*! modernizr 3.6.0 (Custom Build) | MIT *
       * https://modernizr.com/download/?-webp-setclasses !*/
@@ -36,32 +37,32 @@
           <div class="navigation__menu-top">
             <ul class="navigation__list">
               <li class="navigation__item">
-                <a href="#" class="navigation__link menu-item translate" data-key='menu-home'>
+                <a href="#" class="navigation__link menu-item">
                   Home
                 </a>
               </li>
               <li class="navigation__item">
-                <a href="#services" class="navigation__link menu-item translate" data-key='menu-services'>
+                <a href="#services" class="navigation__link menu-item">
                   Services
                 </a>
               </li>
               <li class="navigation__item">
-                <a href="#emergency" class="navigation__link menu-item translate" data-key='menu-emergency'>
+                <a href="#emergency" class="navigation__link menu-item">
                   Emergency
                 </a>
               </li>
               <li class="navigation__item">
-                <a href="#appointment" class="navigation__link menu-item translate" data-key='menu-appointment'>
+                <a href="#appointment" class="navigation__link menu-item">
                   Appointment
                 </a>
               </li>
               <li class="navigation__item">
-                <a href="#testimonials" class="navigation__link menu-item translate" data-key='menu-testimonials'>
+                <a href="#testimonials" class="navigation__link menu-item">
                   Testimonials
                 </a>
               </li>
               <li class="navigation__item">
-                <a href="#contacts" class="navigation__link menu-item translate" data-key='menu-contacts'>
+                <a href="#contacts" class="navigation__link menu-item" >
                   Contacts
                 </a>
               </li>
@@ -73,17 +74,17 @@
 
             <!-- Language switch -->
             <div class="navigation__menu-bottom__switch">
-              <a class="btn btn--disabled switch-lang" id="en" href="">English</a>
-              <a class="btn btn--enabled switch-lang" id="es" href="">Español</a>
+              <span class="btn btn--disabled">English</span>
+              <a class="btn btn--enabled" href="./es">Español</a>
             </div>
 
             <!-- Menu extra -->
             <div class="">
               <div class="navigation__menu-bottom__extra">
-                <a class="menu-item translate" href="#team" data-key='menu-ourteam'>Our team</a>
+                <a class="menu-item" href="#team" >Our team</a>
               </div>
               <div class="navigation__menu-bottom__extra">
-                <a class="menu-item translate" href="#appointment" data-key='menu-officehours'>Office hours</a>
+                <a class="menu-item" href="#appointment" >Office hours</a>
               </div>
             </div>
 
@@ -120,13 +121,6 @@
                   </svg>
                 </a>
               </li>
-              <!-- <li class="social__elt">
-                <a class="social__link" href="#" target="_blank" rel="noreferrer nofollow" aria-label="Go to Middlebrook Pediatrics googleplus">
-                  <svg class="social__img" aria-hidden="true">
-                    <use xlink:href="#icon-google-with-circle" href="#icon-google-with-circle"></use>
-                  </svg>
-                </a>
-              </li> -->
               <li class="social__elt">
                 <a class="social__link" href="https://twitter.com/" target="_blank" rel="noreferrer nofollow" aria-label="Go to Middlebrook Pediatrics twitter">
                   <svg class="social__img" aria-hidden="true">
@@ -139,10 +133,10 @@
             <!-- Terms and Conditons, Privacy, Copyright -->
             <div class="copy copy--menu">
               <ul class="copy__term">
-                <li><a class="menu-item translate" href="terms.html" data-key='global-terms'>Terms and Conditions</a> </li>
-                <li><a class="menu-item translate" href="privacy.html" data-key='global-privacy'>Privacy Policy</a> </li>
+                <li><a class="menu-item" href="terms.html" >Terms and Conditions</a> </li>
+                <li><a class="menu-item" href="privacy.html" >Privacy Policy</a> </li>
               </ul>
-              <p class="copy__msg translate" data-key='global-copy'>&copy; 2019 Middlebrook Pediatrics. All rights reserved.</p>
+              <p class="copy__msg" >&copy; 2019 Middlebrook Pediatrics. All rights reserved.</p>
             </div>
 
 
@@ -499,7 +493,7 @@
                 </span>
               </h1>
             </a>
-            <p class="translate" data-key="main-header-slogan">Pediatric & Adolescent Medecine</p>
+            <p class="" >Pediatric & Adolescent Medecine</p>
             <div class="header__buttons">
               <div class="telephone">
                 <a href="tel:1-301-330-4130" aria-hidden="true">
@@ -512,7 +506,7 @@
                 </a>
               </div>
               <div class="">
-                <a class="btn btn--pink translate" href="#appointment" data-key="main-header-btnappointment">MAKE AN APPOINTMENT</a>
+                <a class="btn btn--pink" href="#appointment" >MAKE AN APPOINTMENT</a>
               </div>
             </div>
 
@@ -526,7 +520,7 @@
 
     <!-- Service Section -->
     <section id="services" class="section-padding">
-      <h2 class="heading heading--2 translate" data-key="main-services">Services</h2>
+      <h2 class="heading heading--2" >Services</h2>
       <p></p>
       <ul class="service">
         <li class="service__elt">
@@ -534,7 +528,7 @@
             <svg class="service__img">
               <use xlink:href="#icon-prenatal" href="#icon-prenatal"></use>
             </svg>
-            <p class="service__desc translate" data-key="main-services-prenatal">Prenatal visits</p>
+            <p class="service__desc" >Prenatal visits</p>
           </a>
         </li>
         <li class="service__elt">
@@ -542,7 +536,7 @@
             <svg class="service__img">
               <use xlink:href="#icon-breastfeeding" href="#icon-breastfeeding"></use>
             </svg>
-            <p class="service__desc translate" data-key="main-services-breastfeeding">Breastfeeding Advise & Support</p>
+            <p class="service__desc" >Breastfeeding Advice & Support</p>
           </a>
         </li>
         <li class="service__elt">
@@ -550,7 +544,7 @@
             <svg class="service__img">
               <use xlink:href="#icon-checkexamen" href="#icon-checkexamen"></use>
             </svg>
-            <p class="service__desc translate" data-key="main-services-exams">Well-check Exams</p>
+            <p class="service__desc" >Well-check Exams</p>
           </a>
         </li>
         <li class="service__elt">
@@ -558,7 +552,7 @@
             <svg class="service__img">
               <use xlink:href="#icon-sports" href="#icon-sports"></use>
             </svg>
-            <p class="service__desc translate" data-key="main-services-sport">Sports Physicals</p>
+            <p class="service__desc" >Sports Physicals</p>
           </a>
         </li>
         <li class="service__elt">
@@ -566,7 +560,7 @@
             <svg class="service__img">
               <use xlink:href="#icon-adhd" href="#icon-adhd"></use>
             </svg>
-            <p class="service__desc translate" data-key="main-services-adhd">ADD/ADHD Consultation</p>
+            <p class="service__desc" >ADD/ADHD Consultation</p>
           </a>
         </li>
         <li class="service__elt">
@@ -574,7 +568,7 @@
             <svg class="service__img">
               <use xlink:href="#icon-sameday" href="#icon-sameday"></use>
             </svg>
-            <p class="service__desc translate" data-key="main-services-sameday">Same Day Emergency</p>
+            <p class="service__desc" >Same Day Emergency</p>
           </a>
         </li>
       </ul>
@@ -586,12 +580,12 @@
         <svg aria-hidden="true">
           <use xlink:href="#icon-emergency" href="#icon-emergency"></use>
         </svg>
-        <span class="text-part translate" data-key="main-emergency">Emergency & After Hours Calls</span>
+        <span class="text-part" >Emergency & After Hours Calls</span>
       </h2>
       <div class="emergency__text">
-        <p class="paragraph translate" data-key="main-emergency-text1">There is always a physician available and on call 24 hours a day, seven days a week for emergency assistance and after hours advice.</p>
+        <p class="paragraph" >There is always a physician available and on call 24 hours a day, seven days a week for emergency assistance and after hours advice.</p>
         <br>
-        <p class="paragraph translate" data-key="main-emergency-text2">For after hours assistance, please call the number below to contact the on-call physician.</p>
+        <p class="paragraph" >For after hours assistance, please call the number below to contact the on-call physician.</p>
         <div class="emergency__phone">
           <a href="tel:1-301-330-4130"><span>(301)</span>330 4130</a>
         </div>
@@ -606,25 +600,25 @@
           <div>
             <div class="card">
               <div class="card__img">
-                <img class="card__img__src" src="images/doctor-pic.jpg" alt="Head Doctor Photo">
+                <img class="card__img__src easy-loading" src="" data-img="images/doctor-pic.jpg" alt="Head Doctor Photo">
               </div>
               <h2 class="card__name">Dr. Veronica Omenka</h2>
               <div>M.D, FAAP</div>
-              <div class="card__title translate" data-key="main-team-title">Head Doctor, Pediatrics</div>
+              <div class="card__title" >Head Doctor, Pediatrics</div>
             </div>
           </div>
         </div>
         <div class="col2__elt" id="team2">
-          <p class="paragraph translate" data-key="main-team-desc">Dr Veronica C. Omenka, MD is a practicing Pediatrician in Montgomery Village, MD. Dr. Omenka graduated from Lagos State University College of Medicine in 1992 and has been in practice for 27 years. She completed a residency at Maimonides Medical Center.</p>
+          <p class="paragraph" >Dr Veronica C. Omenka, MD is a practicing Pediatrician in Montgomery Village, MD. Dr. Omenka graduated from Lagos State University College of Medicine in 1992 and has been in practice for 27 years. She completed a residency at Maimonides Medical Center.</p>
           <br>
           <div class="message">
             <svg class="message__icon">
               <use xlink:href="#icon-quote-left" href="#icon-quote-left"></use>
             </svg>
-            <p class="message__content translate" data-key="main-team-quote">Our highest priority is you, your comfort, your well-being, your total health!</p>
+            <p class="message__content" >Our highest priority is you, your comfort, your well-being, your total health!</p>
           </div>
 
-          <p class="paragraph translate" data-key="main-team-nurse">We have a high quality, dedicated, qualify and talented nurses team.</p>
+          <p class="paragraph" >We have a high quality, dedicated, qualify and talented nurses team.</p>
         </div>
       </div>
 
@@ -634,11 +628,11 @@
 
     <!-- Affiliation -->
     <section id="affiliation" class="section-padding">
-      <h2 class="heading heading--2 translate" data-key="main-affiliation">Hospital Affiliation</h2>
+      <h2 class="heading heading--2" >Hospital Affiliation</h2>
       <div class="affiliation">
         <div class="affiliation__logo">
           <a href="https://www.adventisthealthcare.com/locations/shady-grove-medical-center/" target="_blank" rel="noreferrer nofollow">
-            <img src="./images/affiliation-logo.png" alt="Go to Shady Grove Adventist Hospital">
+            <img class="easy-loading" src="" data-img="./images/affiliation-logo.png" alt="Go to Shady Grove Adventist Hospital">
           </a>
         </div>
         <div class="affiliation__text">
@@ -653,57 +647,66 @@
     <section id="appointment">
       <div class="col2">
         <div class="col2__elt" id="officehours">
-          <h2 class="heading heading--2 heading--2left translate" data-key="main-office">Office Hours</h2>
-          <p class="paragraph translate" data-key="main-office-text">We recommend regularly scheduled preventive healthcare visits during which we monitor the child as a whole: growth and development, safety and nutrition, immunization and encourage preventive health measures.</p>
+          <h2 class="heading heading--2 heading--2left" >Office Hours</h2>
+          <p class="paragraph" >We recommend regularly scheduled preventive healthcare visits during which we monitor the child as a whole: growth and development, safety and nutrition, immunization and encourage preventive health measures.</p>
           <ul class="open">
             <li class="open__elt">
-              <div class="open__elt__day translate" data-key="main-office-elt1">Monday - Thursday</div>
+              <div class="open__elt__day" >Monday - Thursday</div>
               <div class="open__elt__hour">09:00 - 17:00</div>
             </li>
             <li class="open__elt">
-              <div class="open__elt__day translate" data-key="main-office-elt2">Friday</div>
+              <div class="open__elt__day" >Friday</div>
               <div class="open__elt__hour">09:00 - 13:00</div>
             </li>
             <li class="open__elt">
-              <div class="open__elt__day translate" data-key="main-office-elt3">Closed for lunch</div>
+              <div class="open__elt__day" >Closed for lunch</div>
               <div class="open__elt__hour">12:30 - 13:30</div>
             </li>
           </ul>
-          <p style="color: #234b77;" class="translate" data-key="main-office-note">Weekends by Appointment Only</p>
+          <p style="color: #234b77;" class="" >Weekends by Appointment Only</p>
         </div>
 
         <div  class="col2__elt" id="makeappointment">
-          <h2 class="heading heading--2 heading--2left translate" data-key="main-appointment">Make Appointment</h2>
+          <h2 class="heading heading--2 heading--2left" >Make Appointment</h2>
           <form class="appointment" id="form-apt">
             <div class="appointment__section">
-              <input type="text" class="appointment__section__input translate" name="fullname" id="fullname" value="" data-key="main-appointment-fullname-placeholder" placeholder="Tape your name here.">
-              <label for="fullname" class="appointment__section__label"><span class="translate" data-key="main-appointment-fullname" id="labfullname">Name</span> <span id="erfullname"></span></label>
+              <input type="text" class="appointment__section__input" name="fullname" id="fullname" value="" placeholder="Tape your name here">
+              <label for="fullname" class="appointment__section__label">
+                <span id="labfullname">Name</span>
+                <span id="erfullname"></span>
+              </label>
             </div>
 
             <div class="appointment__section">
               <input type="tel" class="appointment__section__input" name="phone" id="phone" value="" placeholder="(555) 222-2568">
-              <label for="phone" class="appointment__section__label"><span class="translate" data-key="main-appointment-phone" id="labphone">Phone Number</span> <span id="erphone"></span></label>
+              <label for="phone" class="appointment__section__label">
+                <span id="labphone">Phone Number</span>
+                <span id="erphone"></span>
+              </label>
 
             </div>
 
             <div class="appointment__section">
 
               <select class="appointment__section__input" id="object" name="object">
-                <option style="color:rgba(0, 0, 0, 0.2)" value="" class="translate" data-key="main-appointment-object-choice">-- Please choose an object --</option>
-                <option value="New patient" class="translate" data-key="main-appointment-object-new">New patient</option>
-                <option value="Annual visit" class="translate" data-key="main-appointment-object-annual">Annual visit</option>
-                <option value="Prenatal visit" class="translate" data-key="main-appointment-object-prenatal">Prenatal visit</option>
-                <option value="ADD/ADHD Consultation" class="translate" data-key="main-appointment-object-adhd">ADD/ADHD Consultation</option>
-                <option value="Other" class="translate" data-key="main-appointment-object-other">Other</option>
+                <option style="color:rgba(0, 0, 0, 0.2)" value="" class="" >-- Please choose an object --</option>
+                <option value="New patient" class="" >New patient</option>
+                <option value="Annual visit" class="" >Annual visit</option>
+                <option value="Prenatal visit" class="" >Prenatal visit</option>
+                <option value="ADD/ADHD Consultation" class="" >ADD/ADHD Consultation</option>
+                <option value="Other" class="" >Other</option>
 
               </select>
 
-              <label for="object" class="appointment__section__label"><span class="translate" data-key="main-appointment-object" id="labobject">Object</span> <span id="erobject"></span></label>
+              <label for="object" class="appointment__section__label">
+                <span id="labobject">object</span>
+                <span id="erobject"></span>
+              </label>
             </div>
 
             <div class="appointment__section">
               <div class="flatpickr calendar-btns__container">
-                <input type="text" class="appointment__section__input translate" data-key="main-appointment-date-placeholder" name="date" id="date" value="" data-input placeholder="Select date and time...">
+                <input type="text" class="appointment__section__input" placeholder="Select date and time..."  id="date" name="date" data-input>
                 <div class="calendar-btns">
                   <span class="input-button calendar-btns__elt" data-toggle>
                     <svg class="calendar-btns__icon">
@@ -718,7 +721,10 @@
                 </div>
               </div>
 
-              <label for="date" class="appointment__section__label"><span class="translate" data-key="main-appointment-date" id="labdate">Date</span> <span id="erdate"></span></label>
+              <label for="date" class="appointment__section__label">
+                <span id="labdate">Date</span>
+                <span id="erdate"></span>
+              </label>
             </div>
 
             <div class="appointment__section">
@@ -736,7 +742,7 @@
                 data-error-callback="robotUnchecked"
               >
               </div>
-              <button class="btn btn--white translate" id="submit" data-key="main-appointment-btn" type="submit" disabled>Sent Request</button>
+              <button class="btn btn--white" id="submit"  disabled>Sent Request</button>
             </div>
 
           </form>
@@ -744,7 +750,7 @@
             <svg class="">
               <use xlink:href="#icon-warning" href="#icon-warning"></use>
             </svg>
-            <p class="translate" data-key="main-appointment-note">If you are unable to keep your appointment, please give 24 heures notice.</p>
+            <p class="" >If you are unable to keep your appointment, please give 24 heures notice.</p>
           </div>
         </div>
       </div>
@@ -753,7 +759,7 @@
     <!-- Testimonials -->
     <section id="testimonials" class="section-padding">
 
-      <h2 class="heading heading--2 translate" data-key="main-testimonials">Testimonials</h2>
+      <h2 class="heading heading--2" >Testimonials</h2>
 
       <div class="testimonials">
 
@@ -765,17 +771,17 @@
                 <svg class="quotation__text__icon">
                   <use xlink:href="#icon-quote-left" href="#icon-quote-left"></use>
                 </svg>
-                <span class="translate" data-key="main-testimonials-quote1">
+                <span class="" >
                   One of the best physician I have interacted with. Very nice, accommodating and knows what she is doing.
                 </span>
               </p>
               <div class="quotation__author">
-                <img class="quotation__author__img" src="./images/customer-1.jpg" alt="Customer image">
+                <img class="quotation__author__img easy-loading" src="" data-img="./images/customer-1.jpg" alt="Customer image">
                 <dl class="quotation__author__desc">
                   <dt class="quotation__author__desc__name">
                     Kokou Kpadenou
                   </dt>
-                  <dd class="quotation__author__desc__title translate" data-key="main-testimonials-title1">
+                  <dd class="quotation__author__desc__title" >
                     Front-End Developer
                   </dd>
                 </dl>
@@ -790,18 +796,18 @@
                 <svg class="quotation__text__icon">
                   <use xlink:href="#icon-quote-left" href="#icon-quote-left"></use>
                 </svg>
-                <span class="translate" data-key="main-testimonials-quote2">
+                <span class="" >
                   Taking my kids to a padiatric has never been easier. They just loved the welcoming and warm atmosphere in there!
                 </span>
 
               </p>
               <div class="quotation__author">
-                <img class="quotation__author__img" src="./images/customer-2.jpg" alt="Customer image">
+                <img class="quotation__author__img easy-loading" src="" data-img="./images/customer-2.jpg" alt="Customer image">
                 <dl class="quotation__author__desc">
                   <dt class="quotation__author__desc__name">
                     Coco Amouzou
                   </dt>
-                  <dd class="quotation__author__desc__title translate" data-key="main-testimonials-title2">
+                  <dd class="quotation__author__desc__title" >
                     Contractor
                   </dd>
                 </dl>
@@ -816,18 +822,18 @@
                 <svg class="quotation__text__icon">
                   <use xlink:href="#icon-quote-left" href="#icon-quote-left"></use>
                 </svg>
-                <span class="translate" data-key="main-testimonials-quote3">
+                <span class="" >
                   We've taken both of our daughters to Middlebrook Pediatrics since they were born and have never regretted it.
                 </span>
 
               </p>
               <div class="quotation__author">
-                <img class="quotation__author__img" src="./images/customer-3.jpg" alt="Customer image">
+                <img class="quotation__author__img easy-loading" src="" data-img="./images/customer-3.jpg" alt="Customer image">
                 <dl class="quotation__author__desc">
                   <dt class="quotation__author__desc__name">
                     Jose Ramirez
                   </dt>
-                  <dd class="quotation__author__desc__title translate" data-key="main-testimonials-title3">
+                  <dd class="quotation__author__desc__title" >
                     CEO
                   </dd>
                 </dl>
@@ -845,14 +851,14 @@
 
       <div class="col2">
         <div class="col2__elt" id="contact-part">
-          <h2 class="heading heading--2 heading--2left translate" data-key="main-contacts">Contacts</h2>
-          <p class="paragraph translate" data-key="main-contacts-text">Middlebrook Pediatric is located at Montgomery village in Maryland, less than 1 minutes drive from Montgomery Village Center. Our strategy position makes us accessible for residents from Gaithersburg, Germantown and Rockville.</p>
+          <h2 class="heading heading--2 heading--2left" >Contacts</h2>
+          <p class="paragraph" >Middlebrook Pediatric is located at Montgomery village in Maryland, less than 1 minutes drive from Montgomery Village Center. Our strategy position makes us accessible for residents from Gaithersburg, Germantown and Rockville.</p>
           <div class="address">
             <svg class="address__img">
               <use xlink:href="#icon-ios-telephone" href="#icon-ios-telephone"></use>
             </svg>
             <div class="address__info">
-              <div class="address__info__label translate" data-key="main-contacts-phone">
+              <div class="address__info__label" >
                 Phone Number
               </div>
               <div class="address__info__value">
@@ -865,7 +871,7 @@
               <use xlink:href="#icon-email" href="#icon-email"></use>
             </svg>
             <div class="address__info">
-              <div class="address__info__label translate" data-key="main-contacts-email">
+              <div class="address__info__label" >
                 Email
               </div>
               <div class="address__info__value">
@@ -878,7 +884,7 @@
               <use xlink:href="#icon-location-pin" href="#icon-location-pin"></use>
             </svg>
             <div class="address__info">
-              <div class="address__info__label translate" data-key="main-contacts-address">
+              <div class="address__info__label" >
                 Address
               </div>
               <div class="address__info__value">
@@ -892,7 +898,7 @@
         </div>
 
         <div class="col2__elt" id="maps">
-          <iframe title="Google Map - Middlebrook" id="gmap_canvas" src="https://maps.google.com/maps?q=Middlebrook%20Pediatrics&t=&z=9&ie=UTF8&iwloc=&output=embed"></iframe>
+          <iframe class="easy-loading" title="Google Map - Middlebrook Pediatrics location" id="gmap_canvas" src="" data-img="https://maps.google.com/maps?q=Middlebrook%20Pediatrics&t=&z=9&ie=UTF8&iwloc=&output=embed"></iframe>
         </div>
 
       </div>
@@ -911,13 +917,6 @@
               </svg>
             </a>
           </li>
-          <!-- <li class="social__elt">
-            <a class="social__link" href="https:" target="_blank" rel="noreferrer nofollow" aria-label="Go to Middlebrook Pediatrics googleplus">
-              <svg class="social__img">
-                <use xlink:href="#icon-google-with-circle" href="#icon-google-with-circle"></use>
-              </svg>
-            </a>
-          </li> -->
           <li class="social__elt">
             <a class="social__link" href="https://twitter.com/" target="_blank" rel="noreferrer nofollow" aria-label="Go to Middlebrook Pediatrics twitter">
               <svg class="social__img">
@@ -949,35 +948,35 @@
               </a>
             </div>
             <div class="partition__content">
-              <p class="translate" data-key="main-footer-text1">Welcome to Middlebrook Pediatrics, your comprehensive center for pediatric and adolescent care. We provide child-focused, excellent medical care to children from birth to 21 years of age.</p>
-              <p class="translate" data-key="main-footer-text2">Our services include: well child care, immunizations, consultations, emergency services and care for acute and chronic illnesses.</p>
+              <p class="" >Welcome to Middlebrook Pediatrics, your comprehensive center for pediatric and adolescent care. We provide child-focused, excellent medical care to children from birth to 21 years of age.</p>
+              <p class="" >Our services include: well child care, immunizations, consultations, emergency services and care for acute and chronic illnesses.</p>
             </div>
           </li>
           <li class="partition__elt" id="partition-office">
-            <div class="partition__title partition__title--text translate" data-key="main-footer-office">
+            <div class="partition__title partition__title--text" >
               Office
             </div>
             <div class="partition__content">
               <p>18528 OFFICE PARK DRIVE, <br>MONTGOMERY VILLAGE (GAITHERSBURG), <br>MD 20886</p>
               <p><a class="partition__content__link" href="tel:(301)330-4130">(301) 330-4130</a> <br> <a class="partition__content__link" href="mailto:middlebrookpediatrics@live.com">middlebrookpediatrics@live.com</a> </p>
               <br>
-              <p class="translate" data-key="main-footer-office-line1">Monday - Thursday: 9:00 AM - 5:00 PM</p>
-              <p class="translate" data-key="main-footer-office-line2">Friday: 9:00 AM - 1:00 PM</p>
-              <p class="translate" data-key="main-footer-office-line3">We are closed for lunch from 12:30 PM - 1:30 PM</p>
-              <p class="translate" data-key="main-footer-office-line4">Weekends by Appointment Only</p>
+              <p class="" >Monday - Thursday: 9:00 AM - 5:00 PM</p>
+              <p class="" >Friday: 9:00 AM - 1:00 PM</p>
+              <p class="" >We are closed for lunch from 12:30 PM - 1:30 PM</p>
+              <p class="" >Weekends by Appointment Only</p>
             </div>
           </li>
 
           <li class="partition__elt" id="partition-links">
-            <div class="partition__title partition__title--text translate" data-key="main-footer-links">
+            <div class="partition__title partition__title--text" >
               Quick Links
             </div>
             <div class="partition__content">
               <ul>
-                <li><a href="#team" class="translate" data-key="main-footer-links-team">Team</a></li>
-                <li><a href="#affiliation" class="translate" data-key="main-footer-links-affiliation">Affiliation</a></li>
-                <li><a href="#testimonials" class="translate" data-key="main-footer-links-testimonials">Testimonials</a></li>
-                <li><a href="#contacts" class="translate" data-key="main-footer-links-contacts">Contacts</a></li>
+                <li><a href="#team" class="" >Team</a></li>
+                <li><a href="#affiliation" class="" >Affiliation</a></li>
+                <li><a href="#testimonials" class="" >Testimonials</a></li>
+                <li><a href="#contacts" class="" >Contacts</a></li>
               </ul>
             </div>
           </li>
@@ -987,10 +986,10 @@
 
       <div class="line line--bottom copy">
         <ul class="copy__term">
-          <li><a href="terms.html" class="translate" data-key="global-terms">Terms and Conditions</a> </li>
-          <li><a href="privacy.html" class="translate" data-key="global-privacy">Privacy Policy</a> </li>
+          <li><a href="terms.html" class="" >Terms and Conditions</a> </li>
+          <li><a href="privacy.html" class="" >Privacy Policy</a> </li>
         </ul>
-        <p class="copy__msg translate" data-key="global-copy">&copy; 2019 Middlebrook Pediatrics. All rights reserved.</p>
+        <p class="copy__msg" >&copy; 2019 Middlebrook Pediatrics. All rights reserved.</p>
       </div>
 
     </footer>
@@ -1000,11 +999,11 @@
     <div class="popup popup-close" id="popup-prenatal">
       <div class="popup__content">
         <div class="popup__content__heading" id="prenatal">
-          <h3 class="heading heading--3 translate" data-key="main-services-prenatal">Prenatal visits</h3>
+          <h3 class="heading heading--3" >Prenatal visits</h3>
           <a class="popup__content__close" href="#services">&times;</a>
         </div>
         <div class="popup__content__text">
-          <p class="paragraph translate" data-key="main-services-prenatal-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p class="paragraph" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         </div>
       </div>
     </div>
@@ -1013,11 +1012,11 @@
     <div class="popup popup-close" id="popup-breastfeeding">
       <div class="popup__content">
         <div class="popup__content__heading" id="breastfeeding">
-          <h3 class="heading heading--3 translate" data-key="main-services-breastfeeding">Breastfeeding Advise & Support</h3>
+          <h3 class="heading heading--3" >Breastfeeding Advice & Support</h3>
           <a class="popup__content__close" href="#services">&times;</a>
         </div>
         <div class="popup__content__text">
-          <p class="paragraph translate" data-key="main-services-breastfeeding-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p class="paragraph" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         </div>
       </div>
     </div>
@@ -1026,11 +1025,11 @@
     <div class="popup popup-close" id="popup-check-examen">
       <div class="popup__content">
         <div class="popup__content__heading" id="check-examen">
-          <h3 class="heading heading--3 translate" data-key="main-services-exams">Well-check Exams</h3>
+          <h3 class="heading heading--3" >Well-check Exams</h3>
           <a class="popup__content__close" href="#services">&times;</a>
         </div>
         <div class="popup__content__text">
-          <p class="paragraph translate" data-key="main-services-exams-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p class="paragraph" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         </div>
       </div>
     </div>
@@ -1039,11 +1038,11 @@
     <div class="popup popup-close" id="popup-sports">
       <div class="popup__content">
         <div class="popup__content__heading" id="sports">
-          <h3 class="heading heading--3 translate" data-key="main-services-sport">Sports Physicals</h3>
+          <h3 class="heading heading--3" >Sports Physicals</h3>
           <a class="popup__content__close" href="#services">&times;</a>
         </div>
         <div class="popup__content__text">
-          <p class="paragraph translate" data-key="main-services-sport-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p class="paragraph" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         </div>
       </div>
     </div>
@@ -1052,11 +1051,11 @@
     <div class="popup popup-close" id="popup-adhd">
       <div class="popup__content">
         <div class="popup__content__heading" id="adhd">
-          <h3 class="heading heading--3 translate" data-key="main-services-adhd">ADD/ADHD Consultation</h3>
+          <h3 class="heading heading--3" >ADD/ADHD Consultation</h3>
           <a class="popup__content__close" href="#services">&times;</a>
         </div>
         <div class="popup__content__text">
-          <p class="paragraph translate" data-key="main-services-adhd-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p class="paragraph" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         </div>
       </div>
     </div>
@@ -1065,11 +1064,11 @@
     <div class="popup popup-close" id="popup-sameday">
       <div class="popup__content">
         <div class="popup__content__heading" id="sameday">
-          <h3 class="heading heading--3 translate" data-key="main-services-sameday">Same Day Emergency</h3>
+          <h3 class="heading heading--3" >Same Day Emergency</h3>
           <a class="popup__content__close" href="#services">&times;</a>
         </div>
         <div class="popup__content__text">
-          <p class="paragraph translate" data-key="main-services-sameday-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+          <p class="paragraph" >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
         </div>
       </div>
     </div>
@@ -1095,20 +1094,20 @@
         <div class="popup__content__text">
 
           <div class="confirmation__msg confirmation__msg--1">
-            <div class="confirmation__item"><span class="translate" data-key="main-appointment-fullname">Name</span>: <strong><span class="confirmation__data" data-input="name"></span></strong></div>
-            <div class="confirmation__item"><span class="translate" data-key="main-appointment-phone">Phone</span>: <strong><span class="confirmation__data" data-input="phone"></span></strong></div>
-            <div class="confirmation__item"><span class="translate" data-key="main-appointment-date">Date</span>: <strong><span class="confirmation__data" data-input="date"></span></strong></div>
-            <div class="confirmation__item"><span class="translate" data-key="main-appointment-object">Object</span>: <strong><span class="confirmation__data" data-input="object"></span></strong></div>
-            <p class="translate" data-key="main-confirmation-msg1">Please review the information you provided and click Confirm button to complete the appointment. In case you want to change the information click on Edit button. And Cancel button to stop the whole process.</p>
+            <div class="confirmation__item"><span>Name</span>: <strong><span class="confirmation__data" data-input="name"></span></strong></div>
+            <div class="confirmation__item"><span>Phone</span>: <strong><span class="confirmation__data" data-input="phone"></span></strong></div>
+            <div class="confirmation__item"><span>Date</span>: <strong><span class="confirmation__data" data-input="date"></span></strong></div>
+            <div class="confirmation__item"><span>Object</span>: <strong><span class="confirmation__data" data-input="object"></span></strong></div>
+            <p class="" >Please review the information you provided and click Confirm button to complete the appointment. In case you want to change the information click on Edit button. And Cancel button to stop the whole process.</p>
           </div>
 
           <p class="confirmation__msg confirmation__msg--2">
-            <span class="translate" data-key="main-confirmation-msg2">Dear</span> <span class="confirmation__data" data-input="name"></span>, <span class="translate" data-key="main-confirmation-msg3">your appointment about</span> <span class="confirmation__data" data-input="object"></span> <span class="translate" data-key="main-confirmation-msg4">is set to</span> <span class="confirmation__data" data-input="date"></span>. <br> <span class="translate" data-key="main-confirmation-msg5">Middlebrook Pediatrics will conctact you on</span> <span class="confirmation__data" data-input="phone"></span> <span class="translate" data-key="main-confirmation-msg6">for confirmation.</span> <br> <span class="translate" data-key="main-confirmation-msg7">Thank you for your trust.</span>
+            <span class="" >Thank you for your trust.</span>
           </p>
 
           <ul class="confirmation__btns">
-            <li class="confirmation__btn"><button class="btn btn--gray translate" id="conf-cancel" data-key="main-confirmation-cancel">Cancel</button></li>
-            <li class="confirmation__btn"><button class="btn btn--gray translate" id="conf-edit" data-key="main-confirmation-edit">Edit</button></li>
+            <li class="confirmation__btn"><button class="btn btn--gray" id="conf-cancel" >Cancel</button></li>
+            <li class="confirmation__btn"><button class="btn btn--gray" id="conf-edit" >Edit</button></li>
             <li class="confirmation__btn"><button class="btn btn--gray" id="conf-confirm">Confirm</button></li>
           </ul>
 
@@ -1232,8 +1231,37 @@
     <!-- javascript script -->
 
     <script src="./js/flatpickr/flatpickr.min.js"></script>
-    <script src="./js/flatpickr/es.js"></script>
     <script src="./js/flatpickr/confirmDate.js"></script>
+    <script>
+
+      var defaultLang = 'en';
+
+      /*
+        -----------------------------------------------------------------------------
+          flatpickr props for english
+        -----------------------------------------------------------------------------
+      */
+
+
+      var cal = {
+        enableTime: true,
+        altFormat: "F j, Y",
+        dateFormat: 'l, F j, Y H:i',
+        minDate: new Date().fp_incr(5),
+        minTime: '09:00',
+        maxTime: '17:00',
+        disable: [
+          function(date) {
+            return (date.getDay() === 0 || date.getDay() === 6);
+          }
+        ],
+        locale: flatpickr.l10ns.en,
+        plugins: [new confirmDatePlugin({})],
+        wrap: true,
+      };
+
+    </script>
+
     <script src="./js/script.js"></script>
 
 
