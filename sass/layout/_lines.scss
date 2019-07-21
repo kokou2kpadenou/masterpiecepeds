@@ -1,0 +1,30 @@
+.line {
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+  @include responsive(tablet-port) {
+    padding: 0 4rem;
+  }
+  &--top {
+    height: 6rem;
+    background-color: rgb(42,84,131);
+  }
+  &--middle {
+    height: auto;
+    background-color: #244e7d;
+    padding-bottom: 2rem;
+  }
+
+  &--bottom {
+    height: auto;
+    flex-direction: column;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    line-height: 2rem;
+    background-color: $color-primary;
+    @include responsive(tablet-port) {
+      height: 5rem;
+      flex-direction: row;
+    }
+  }
+}
