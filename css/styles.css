@@ -541,170 +541,95 @@ body {
   opacity: 1;
   visibility: visible; }
 
-.no-webp #prenatal {
+#prenatal {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/prenatal/prenatal_600.jpg); }
   @media only screen and (min-width: 37.5em) {
-    .no-webp #prenatal {
+    #prenatal {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/prenatal/prenatal_900.jpg); } }
   @media only screen and (min-width: 56.25em) {
-    .no-webp #prenatal {
+    #prenatal {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/prenatal/prenatal_1200.jpg); } }
   @media only screen and (min-width: 75em) {
-    .no-webp #prenatal {
+    #prenatal {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/prenatal/prenatal_1500.jpg); } }
   @media only screen and (min-width: 93.75em) {
-    .no-webp #prenatal {
+    #prenatal {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/prenatal/prenatal_1800.jpg); } }
 
-.webp #prenatal {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/prenatal/prenatal_600.webp); }
-  @media only screen and (min-width: 56.25em) {
-    .webp #prenatal {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/prenatal/prenatal_1200.webp); } }
-  @media only screen and (min-width: 75em) {
-    .webp #prenatal {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/prenatal/prenatal_1500.webp); } }
-  @media only screen and (min-width: 93.75em) {
-    .webp #prenatal {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/prenatal/prenatal_1800.webp); } }
-
-.no-webp #breastfeeding {
+#breastfeeding {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/breastfeeding/breastfeeding_600.jpg); }
   @media only screen and (min-width: 37.5em) {
-    .no-webp #breastfeeding {
+    #breastfeeding {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/breastfeeding/breastfeeding_900.jpg); } }
   @media only screen and (min-width: 56.25em) {
-    .no-webp #breastfeeding {
+    #breastfeeding {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/breastfeeding/breastfeeding_1200.jpg); } }
   @media only screen and (min-width: 75em) {
-    .no-webp #breastfeeding {
+    #breastfeeding {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/breastfeeding/breastfeeding_1500.jpg); } }
   @media only screen and (min-width: 93.75em) {
-    .no-webp #breastfeeding {
+    #breastfeeding {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/breastfeeding/breastfeeding_1800.jpg); } }
 
-.webp #breastfeeding {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/breastfeeding/breastfeeding_600.webp); }
-  @media only screen and (min-width: 37.5em) {
-    .webp #breastfeeding {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/breastfeeding/breastfeeding_900.webp); } }
-  @media only screen and (min-width: 56.25em) {
-    .webp #breastfeeding {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/breastfeeding/breastfeeding_1200.webp); } }
-  @media only screen and (min-width: 75em) {
-    .webp #breastfeeding {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/breastfeeding/breastfeeding_1500.webp); } }
-  @media only screen and (min-width: 93.75em) {
-    .webp #breastfeeding {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/breastfeeding/breastfeeding_1800.webp); } }
-
-.no-webp #check-examen {
+#check-examen {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/check-examen/check-examen_600.jpg); }
   @media only screen and (min-width: 37.5em) {
-    .no-webp #check-examen {
+    #check-examen {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/check-examen/check-examen_900.jpg); } }
   @media only screen and (min-width: 56.25em) {
-    .no-webp #check-examen {
+    #check-examen {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/check-examen/check-examen_1200.jpg); } }
   @media only screen and (min-width: 75em) {
-    .no-webp #check-examen {
+    #check-examen {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/check-examen/check-examen_1500.jpg); } }
   @media only screen and (min-width: 93.75em) {
-    .no-webp #check-examen {
+    #check-examen {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/check-examen/check-examen_1800.jpg); } }
 
-.webp #check-examen {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/check-examen/check-examen_600.webp); }
-  @media only screen and (min-width: 56.25em) {
-    .webp #check-examen {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/check-examen/check-examen_1200.webp); } }
-  @media only screen and (min-width: 75em) {
-    .webp #check-examen {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/check-examen/check-examen_1500.webp); } }
-  @media only screen and (min-width: 93.75em) {
-    .webp #check-examen {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/check-examen/check-examen_1800.webp); } }
-
-.no-webp #sports {
+#sports {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sports/sports_600.jpg); }
   @media only screen and (min-width: 37.5em) {
-    .no-webp #sports {
+    #sports {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sports/sports_900.jpg); } }
   @media only screen and (min-width: 56.25em) {
-    .no-webp #sports {
+    #sports {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sports/sports_1200.jpg); } }
   @media only screen and (min-width: 75em) {
-    .no-webp #sports {
+    #sports {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sports/sports_1500.jpg); } }
   @media only screen and (min-width: 93.75em) {
-    .no-webp #sports {
+    #sports {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sports/sports_1800.jpg); } }
 
-.webp #sports {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sports/sports_600.webp); }
-  @media only screen and (min-width: 37.5em) {
-    .webp #sports {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sports/sports_900.webp); } }
-  @media only screen and (min-width: 56.25em) {
-    .webp #sports {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sports/sports_1200.webp); } }
-  @media only screen and (min-width: 75em) {
-    .webp #sports {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sports/sports_1500.webp); } }
-  @media only screen and (min-width: 93.75em) {
-    .webp #sports {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sports/sports_1800.webp); } }
-
-.no-webp #adhd {
+#adhd {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/adhd/adhd_600.jpg); }
   @media only screen and (min-width: 37.5em) {
-    .no-webp #adhd {
+    #adhd {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/adhd/adhd_900.jpg); } }
   @media only screen and (min-width: 56.25em) {
-    .no-webp #adhd {
+    #adhd {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/adhd/adhd_1200.jpg); } }
   @media only screen and (min-width: 75em) {
-    .no-webp #adhd {
+    #adhd {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/adhd/adhd_1500.jpg); } }
   @media only screen and (min-width: 93.75em) {
-    .no-webp #adhd {
+    #adhd {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/adhd/adhd_1800.jpg); } }
 
-.webp #adhd {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/adhd/adhd_600.webp); }
-  @media only screen and (min-width: 56.25em) {
-    .webp #adhd {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/adhd/adhd_1200.webp); } }
-  @media only screen and (min-width: 75em) {
-    .webp #adhd {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/adhd/adhd_1500.webp); } }
-  @media only screen and (min-width: 93.75em) {
-    .webp #adhd {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/adhd/adhd_1800.webp); } }
-
-.no-webp #sameday {
+#sameday {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sameday/sameday_600.jpg); }
   @media only screen and (min-width: 37.5em) {
-    .no-webp #sameday {
+    #sameday {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sameday/sameday_900.jpg); } }
   @media only screen and (min-width: 56.25em) {
-    .no-webp #sameday {
+    #sameday {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sameday/sameday_1200.jpg); } }
   @media only screen and (min-width: 75em) {
-    .no-webp #sameday {
+    #sameday {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sameday/sameday_1500.jpg); } }
   @media only screen and (min-width: 93.75em) {
-    .no-webp #sameday {
+    #sameday {
       background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sameday/sameday_1800.jpg); } }
-
-.webp #sameday {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sameday/sameday_600.webp); }
-  @media only screen and (min-width: 56.25em) {
-    .webp #sameday {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sameday/sameday_1200.webp); } }
-  @media only screen and (min-width: 75em) {
-    .webp #sameday {
-      background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/services/sameday/sameday_1500.webp); } }
 
 .confirmation__header {
   background-color: #234b77;
@@ -1214,37 +1139,20 @@ body {
 #testimonials {
   color: rgba(0, 0, 0, 0.8);
   background-size: cover; }
-
-.no-webp #testimonials {
-  background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-600.jpg); }
-  @media only screen and (min-width: 37.5em) {
-    .no-webp #testimonials {
-      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-900.jpg); } }
-  @media only screen and (min-width: 56.25em) {
-    .no-webp #testimonials {
-      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1200.jpg); } }
-  @media only screen and (min-width: 75em) {
-    .no-webp #testimonials {
-      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1500.jpg); } }
-  @media only screen and (min-width: 93.75em) {
-    .no-webp #testimonials {
-      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1800.jpg); } }
-
-.webp #testimonials {
-  color: rgba(0, 0, 0, 0.8);
-  background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-600.webp); }
-  @media only screen and (min-width: 37.5em) {
-    .webp #testimonials {
-      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-900.webp); } }
-  @media only screen and (min-width: 56.25em) {
-    .webp #testimonials {
-      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1200.webp); } }
-  @media only screen and (min-width: 75em) {
-    .webp #testimonials {
-      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1500.webp); } }
-  @media only screen and (min-width: 93.75em) {
-    .webp #testimonials {
-      background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1800.webp); } }
+  #testimonials.visible {
+    background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-600.jpg); }
+    @media only screen and (min-width: 37.5em) {
+      #testimonials.visible {
+        background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-900.jpg); } }
+    @media only screen and (min-width: 56.25em) {
+      #testimonials.visible {
+        background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1200.jpg); } }
+    @media only screen and (min-width: 75em) {
+      #testimonials.visible {
+        background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1500.jpg); } }
+    @media only screen and (min-width: 93.75em) {
+      #testimonials.visible {
+        background-image: linear-gradient(rgba(145, 199, 50, 0.3), rgba(145, 199, 50, 0.3)), url(../images/background-testimonials/background-testimonials-1800.jpg); } }
 
 #contacts #maps {
   padding: 0; }
