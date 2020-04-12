@@ -155,52 +155,35 @@
 
 
 // testimonials
+
+
+
 #testimonials {
   color: $color-gray-3;
   background-size: cover;
-}
 
+  &.visible {
+    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-600.jpg);
 
-.no-webp #testimonials {
-  background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-600.jpg);
+    @include responsive(tablet-port) {
+      background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-900.jpg);
+    }
 
-  @include responsive(tablet-port) {
-    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-900.jpg);
-  }
+    @include responsive(tablet-land) {
+      background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1200.jpg);
+    }
 
-  @include responsive(tablet-land) {
-    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1200.jpg);
-  }
+    @include responsive(desktop) {
+      background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1500.jpg);
+    }
 
-  @include responsive(desktop) {
-    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1500.jpg);
-  }
-
-  @include responsive(big-desktop) {
-    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1800.jpg);
-  }
-}
-
-.webp #testimonials {
-  color: $color-gray-3;
-  background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-600.webp);
-
-  @include responsive(tablet-port) {
-    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-900.webp);
-  }
-
-  @include responsive(tablet-land) {
-    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1200.webp);
-  }
-
-  @include responsive(desktop) {
-    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1500.webp);
-  }
-
-  @include responsive(big-desktop) {
-    background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1800.webp);
+    @include responsive(big-desktop) {
+      background-image: linear-gradient(rgba(145, 199, 50, .3), rgba(145, 199, 50, .3)), url(../images/background-testimonials/background-testimonials-1800.jpg);
+    }
+    
   }
 }
+
 
 // contacts
 #contacts {
@@ -270,132 +253,4 @@
       }
     }
   }
-}
-
-
-// footer
-.footer {
-  color: $color-white-dark;
-  background-color: #244e7d;
-  .line {
-    display: flex;
-    align-items: center;
-    padding: 0 3rem;
-    @include responsive(tablet-port) {
-      padding: 0 4rem;
-    }
-    &--top {
-      height: 6rem;
-      background-color: rgb(42,84,131);
-    }
-    &--middle {
-      height: auto;
-      background-color: #244e7d;
-      padding-bottom: 2rem;
-    }
-
-    &--bottom {
-      height: auto;
-      flex-direction: column;
-      padding-top: 1.5rem;
-      padding-bottom: 1.5rem;
-      line-height: 2rem;
-      background-color: $color-primary;
-      @include responsive(tablet-port) {
-        height: 5rem;
-        flex-direction: row;
-      }
-    }
-  }
-
-  .partition {
-    width: 100%;
-    @include responsive(tablet-port) {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
-    list-style: none;
-
-    @include responsive(tablet-port) {
-      &__elt {
-        &:not(:last-of-type) {
-          padding-right: 5rem;
-        }
-      }
-    };
-
-
-    &__title {
-      min-height: 6rem;
-      display: flex;
-      align-items: center;
-      margin: 1rem 0;
-      &--text {
-        font-size: 2rem;
-        color: $color-white;
-      }
-    }
-
-    &__content {
-      font-size: 1.4rem;
-      line-height: 3rem;
-      &__link {
-        &:link,
-        &:visited {
-          text-decoration: none;
-          color: $color-white-dark;
-
-        }
-        &:hover,
-        &:active {
-          color: $color-white;
-        }
-      }
-      ul {
-        list-style: none;
-        a {
-          &:link,
-          &:visited {
-            text-decoration: none;
-            font-size: 1.6rem;
-            color: $color-white-dark;
-
-          }
-          &:hover,
-          &:active {
-            color: $color-white;
-          }
-        }
-      }
-    }
-
-
-    #partition-desc {
-       @include responsive(tablet-port) {
-         width: 100%;
-       }
-       @include responsive(tablet-land) {
-        max-width: 60rem;
-       };
-
-    }
-
-
-    #partition-office {
-       @include responsive(tablet-port) {
-          max-width: 30rem;
-       }
-    }
-
-
-    #partition-links {
-      width: 15rem;
-    }
-
-  }
-
-
-
 }
