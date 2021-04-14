@@ -3,6 +3,7 @@
   &__text {
     font-size: 1.6rem;
     line-height: 2rem;
+        color: $color-white-dark;
     text-align: center;
     @include responsive(tablet-port) {
       height: auto;
@@ -10,7 +11,7 @@
     &__icon {
       width: 2rem;
       height: 2rem;
-      fill: $color-primary;
+      fill: $color-white;
       margin-right: .5rem;
     }
   }
@@ -35,10 +36,12 @@
       &__name {
         font-size: 1.6rem;
         font-weight: bold;
+        color: $color-white;
       }
 
       &__title {
         font-size: 1.2rem;
+        color: $color-white-dark;
       }
     }
 

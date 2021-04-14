@@ -1,7 +1,7 @@
 {
-  "name": "middlebrookspediatrics",
+  "name": "masterpiecepediatrics",
   "version": "1.0.0",
-  "description": "Web Site of Middlebrook Pediatrics",
+  "description": "Web Site of Masterpiece Pediatrics",
   "main": "index.js",
   "directories": {
     "doc": "docs"
