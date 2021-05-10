@@ -37,15 +37,15 @@
   "author": "Kokou Kpadenou",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^9.7.6",
-    "html-minifier": "^3.5.21",
+    "autoprefixer": "^10.2.5",
+    "html-minifier": "^4.0.0",
     "live-server": "^1.2.1",
-    "node-sass": "^4.14.1",
+    "node-sass": "^6.0.0",
     "npm-run-all": "^4.1.5",
-    "postcss-cli": "^7.1.0",
-    "uglify-js": "^3.8.1"
+    "postcss-cli": "^8.3.1",
+    "uglify-js": "^3.13.5"
   },
   "dependencies": {
-    "flatpickr": "^4.6.3"
+    "flatpickr": "^4.6.9"
   }
 }
