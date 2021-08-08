@@ -37,13 +37,13 @@
   "author": "Kokou Kpadenou",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^10.2.5",
+    "autoprefixer": "^10.3.1",
     "html-minifier": "^4.0.0",
     "live-server": "^1.2.1",
-    "node-sass": "^6.0.0",
+    "node-sass": "^6.0.1",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^8.3.1",
-    "uglify-js": "^3.13.5"
+    "uglify-js": "^3.14.1"
   },
   "dependencies": {
     "flatpickr": "^4.6.9"
